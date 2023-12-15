@@ -1,9 +1,9 @@
-
+import { Main } from "./Main";
 
 function App() {
   return (
-    <main>
-      <div className="text-2xl font-semibold">World News</div>
+    <main className="relative">
+      <Main/>
     </main>
   );
 }
