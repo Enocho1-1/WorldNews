@@ -13,11 +13,18 @@ main{
   min-height: 90vh;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 /* Header Elements */
 
 .nav_secondary_item{
   height: inherit;
-  width: 100px;
+  width: 6.25rem;
   color: #e5e7eb;
 }
 
@@ -26,7 +33,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 23px;
+  font-size: 1.25rem;
   padding: 4px 0;
 }
 
@@ -42,3 +49,4 @@ main{
 .nav_secondary_item:nth-child(2):hover{
   background-color: #cc3700;
 }
+

@@ -79,6 +79,7 @@ export const Header = () => {
     }
   ]
   const [category,setCategory] = useState(navOptions[0])
+  const [search, setSearch] = useState(true)
 
   return (
     <header className="flex flex-col">
@@ -131,7 +132,7 @@ export const Header = () => {
               </a>
             ))}
           </nav>
-          <aside className="nav_secondary bg-gray-700 h-[100%] w-[15%] flex justify-evenly">
+          <aside className={ search ? ("nav_secondary bg-gray-700 h-[100%] w-[25%] flex justify-evenly") : ("nav_secondary bg-gray-700 h-[100%] w-[15%] flex justify-evenly")}>
               <div className="nav_secondary_item flex justify-center items-center text-lg">
                 <span className="bi bi-tv"></span>
                 <h1 className="mx-2 ">LIVE</h1>
@@ -141,8 +142,15 @@ export const Header = () => {
                 <span className="bi bi-cloud-sun"></span>
               </div>
 
-              <div className="nav_secondary_item">
-                <span className="bi bi-search"></span>
+              <div className={ search ? ("text-gray-200 w-[15.625rem] flex justify-center items-center hover:cursor-pointer"): ("nav_secondary_item")}>
+                <span onClick={() => setSearch(!search)} className="bi bi-search"></span>
+                { search && 
+                  (
+                    <form>
+                      <input type="text" className=" ml-4 text-md bg-transparent" placeholder="Search..." />
+                    </form>
+                  )
+                }
               </div> 
           </aside>
         </div>
