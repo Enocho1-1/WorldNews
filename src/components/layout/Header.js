@@ -82,10 +82,10 @@ export const Header = () => {
   const [search, setSearch] = useState(true)
 
   return (
-    <header className="flex flex-col">
+    <header className="stcky top-0 w-inherit flex flex-col">
 
       {/* First Layer */}
-       <div className="sticky bg-gray-900 w-inherit h-[3.75rem] flex justify-between">
+       <div className="bg-gray-900  min-h-[3.75rem] flex justify-between">
           <aside className=" bg-orange_red text-gray-900 px-4 h-inherit text-[2.5rem] flex items-center font-open_sans"> 
             <h1 className="font-light">World</h1>
             <p className="font-semibold">News.</p>
@@ -107,10 +107,13 @@ export const Header = () => {
                   </ul>
               </div>
             </div>
+            
           </aside>
-          <h1 className={`absolute top-2 left-[23%] ${category.text} text-4xl`}>{category.name}</h1>
+          {/* Category */}
+          <h1 className={`absolute top-2 left-[27%] ${category.text} text-4xl`}>{category.name}</h1>
+
           {/* Social Media */}
-          <aside className="h-inherit flex items-center mr-6">
+          <aside className="h-inherit flex items-center mr-6 max-[728px]:hidden">
             <h1 className="text-gray-200 text-md font-medium">Join us</h1>
         
             <span className="flex">
@@ -124,16 +127,16 @@ export const Header = () => {
         </div>
 
         {/* Second Layer */}
-        <div className="flex w-inherit h-[2rem]">
-          <nav className={`${category.color} h-[100%] w-[85%] flex justify-around font-open_sans`}>
+        <div className="flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
+          <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
             {navOptions.map((item,index) => (
               <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
                 {item.name}
               </a>
             ))}
           </nav>
-          <aside className={ search ? ("nav_secondary bg-gray-700 h-[100%] w-[25%] flex justify-evenly") : ("nav_secondary bg-gray-700 h-[100%] w-[15%] flex justify-evenly")}>
-              <div className="nav_secondary_item flex justify-center items-center text-lg">
+          <aside className={ search ? ("nav_secondary  w-[25%] max-[1340px]:w-[100%]") : ("nav_secondary w-[15%] max-[1340px]:w-[100%]")}>
+              <div className="nav_secondary_item flex justify-center text-lg">
                 <span className="bi bi-tv"></span>
                 <h1 className="mx-2 ">LIVE</h1>
               </div>

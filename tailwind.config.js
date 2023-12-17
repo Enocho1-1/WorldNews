@@ -9,12 +9,12 @@ module.exports = {
       colors:{
         orange_red:"#ff4500",
         dark_orange:"#cc3700",
-        vivid_cyan: "#1fcae5",
-        pure_green: "#89e200",
+        vivid_cyan: "#18b9d2",
+        pure_green: "#7ac900",
         bright_blue: "#2563eb",
-        pure_yellow: "#ffff00",
+        pure_yellow: "#e6e600",
         pure_gray: "#a9a9a9",
-        moderate_violet: "#7447d1"
+        moderate_violet: "#5b2eb7"
       }
     },
   },
