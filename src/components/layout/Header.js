@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import twitter from "../../assets/social_media/twitter.png"
 import youtube from "../../assets/social_media/youtube.png"
 import instagram from "../../assets/social_media/instagram.png"
@@ -80,7 +80,6 @@ export const Header = () => {
   ]
   const [category,setCategory] = useState(navOptions[0])
 
-  console.log(category)
   return (
     <header className="flex flex-col">
 
@@ -127,12 +126,25 @@ export const Header = () => {
         <div className="flex w-inherit h-[1.875rem]">
           <nav className={`${category.color} h-[100%] w-[85%] flex justify-around font-open_sans`}>
             {navOptions.map((item,index) => (
-              <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg">
+              <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
                 {item.name}
               </a>
             ))}
           </nav>
-          <aside className="bg-gray-700 h-[100%] w-[15%]"></aside>
+          <aside className="nav_secondary bg-gray-700 h-[100%] w-[15%] flex justify-evenly">
+              <div className="nav_secondary_item flex justify-center items-center text-lg">
+                <span className="bi bi-tv"></span>
+                <h1 className="mx-2 ">LIVE</h1>
+              </div>
+
+               <div className="nav_secondary_item">
+                <span className="bi bi-cloud-sun"></span>
+              </div>
+
+              <div className="nav_secondary_item">
+                <span className="bi bi-search"></span>
+              </div> 
+          </aside>
         </div>
     </header>
    
