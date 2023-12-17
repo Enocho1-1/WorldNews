@@ -1,11 +1,12 @@
 /* eslint-disable */
-import { Header,Footer } from "./components"
+import { useMatchMedia } from "./hooks"
+import { Header,MobileHeader ,Footer } from "./components"
 
 export const Main = () => {
-
+  const { myQuery } = useMatchMedia(720)
   return (
     <div className="m-auto max-w-[1600px]">
-        <Header/>
+      { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
     </div>
   )
 }
