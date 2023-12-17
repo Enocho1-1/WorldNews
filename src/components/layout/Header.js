@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
 import twitter from "../../assets/social_media/twitter.png"
 import youtube from "../../assets/social_media/youtube.png"
 import instagram from "../../assets/social_media/instagram.png"
@@ -33,6 +34,53 @@ export const Header = () => {
     }
 
   ]
+  const navOptions = [
+    { 
+      name:"NEWS",
+      color:"bg-dark_orange",
+      text: "text-dark_orange",
+      path: "/"
+    },
+    { 
+      name:"BUSINESS",
+      color:"bg-vivid_cyan",
+      text: "text-vivid_cyan",
+      path: "/business"
+    },
+    { 
+      name:"SPORTS",
+      color:"bg-pure_green",
+      text: "text-pure_green",
+      path: "/sports"
+    },
+    { 
+      name:"ENTERTAINMENT",
+      color:"bg-bright_blue",
+      text: "text-bright_blue",
+      path: "/entertainment"
+    },
+    { 
+      name:"HEALTH",
+      color:"bg-pure_yellow",
+      text: "text-pure_yellow",
+      path: "/health"
+    },
+    { 
+      name:"SCIENCE",
+      color:"bg-pure_gray",
+      text: "text-pure_gray",
+      path: "/science"
+    },
+    { 
+      name:"TECHNOLOGY",
+      color:"bg-moderate_violet",
+      text: "text-moderate_violet",
+      path: "/tech"
+    }
+  ]
+  const [category,setCategory] = useState(navOptions[0])
+
+  console.log(category)
   return (
     <header className="flex flex-col">
 
@@ -60,7 +108,7 @@ export const Header = () => {
               </div>
             </div>
           </aside>
-
+          <h1 className={`absolute top-2 left-[23%] ${category.text} text-4xl`}>{category.name}</h1>
           {/* Social Media */}
           <aside className="h-inherit flex items-center mr-6">
             <h1 className="text-gray-200 text-md font-medium">Join us</h1>
@@ -75,8 +123,15 @@ export const Header = () => {
           </aside>
         </div>
 
+        {/* Second Layer */}
         <div className="flex w-inherit h-[1.875rem]">
-          <nav className="bg-dark_orange h-[100%] w-[85%]"></nav>
+          <nav className={`${category.color} h-[100%] w-[85%] flex justify-around font-open_sans`}>
+            {navOptions.map((item,index) => (
+              <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg">
+                {item.name}
+              </a>
+            ))}
+          </nav>
           <aside className="bg-gray-700 h-[100%] w-[15%]"></aside>
         </div>
     </header>
