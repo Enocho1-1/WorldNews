@@ -124,7 +124,7 @@ export const Header = () => {
         </div>
 
         {/* Second Layer */}
-        <div className="flex w-inherit h-[1.875rem]">
+        <div className="flex w-inherit h-[2rem]">
           <nav className={`${category.color} h-[100%] w-[85%] flex justify-around font-open_sans`}>
             {navOptions.map((item,index) => (
               <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
