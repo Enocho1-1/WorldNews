@@ -4,10 +4,10 @@ export const MobileHeader = () => {
   const [language, setLanguage] = useState("EN")
   const [hidden, setHidden] = useState(false)
   return (
-    <header className="relative w-100" data-testid="mobile-header">
-      <div className="bg-orange_red text-gray-900 relative h-[4.688rem] w-inherit">
+    <header className="relative w-[100%]" data-testid="mobile-header">
+      <div className="bg-orange_red text-gray-900  h-[4.688rem] w-[100%]">
         <aside className="px-2 py-2 h-inherit min-[480px]:text-[2.2rem] max-[480px]:text-[2.4rem]  flex justify-evenly min-[390px]:justify-between">
-            <aside className="flex">
+            <div className="flex">
               <span className="bi bi-list mr-2 hover:cursor-pointer"></span>
               <>
                 <h1 className="font-light">World</h1>
@@ -31,7 +31,7 @@ export const MobileHeader = () => {
                       </ul>
                   </div>
                 </div>
-            </aside>
+            </div>
 
             {/* Live TV Icon */}
             <span className="bi bi-tv self-center hover:cursor-pointer"></span>
