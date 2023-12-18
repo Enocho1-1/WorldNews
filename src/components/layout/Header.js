@@ -80,7 +80,8 @@ export const Header = () => {
   ]
   const [category,setCategory] = useState(navOptions[0])
   const [search, setSearch] = useState(true)
-  const mobilestyling = ""
+  const hiddenSearchStyling= "nav_secondary w-[15%]"
+  const SearchStyling= "nav_secondary w-[25%]"
 
   return (
     <header className="stcky top-0 w-inherit flex flex-col">
@@ -144,7 +145,7 @@ export const Header = () => {
           </nav>
 
           {/* Live,Weather,Search Menu */}
-          <aside className={ search ? ("nav_secondary  w-[25%]") : ("nav_secondary w-[15%]")}>
+          <aside className={ search ? (`${SearchStyling}`) : (`${hiddenSearchStyling}`)}>
               <div className="nav_secondary_item flex justify-center text-lg">
                 <span className="bi bi-tv"></span>
                 <h1 className="mx-2 ">LIVE</h1>
