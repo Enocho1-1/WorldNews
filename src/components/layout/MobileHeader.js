@@ -2,6 +2,6 @@
 
 export const MobileHeader = () => {
   return (
-    <div>MobileHeader</div>
+    <div data-testid="mobile-header">MobileHeader</div>
   )
 }
