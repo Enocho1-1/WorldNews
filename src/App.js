@@ -2,7 +2,7 @@ import { Main } from "./Main";
 
 function App() {
   return (
-    <main className="relative">
+    <main>
       <Main/>
     </main>
   );

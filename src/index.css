@@ -11,6 +11,7 @@
 }
 
 main{
+  position: relative;
   overflow-x: hidden;
   min-height: 90vh;
 }
@@ -59,11 +60,23 @@ button:focus {
   background-color: #cc3700;
 }
 
-  /* Media Query for Large screens */
-  @media (max-width: 1340px) {
-    
-  .nav_secondary{
-    width: 100%;
-  }
+/* ID Selectors */
+#header{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 5; 
+  transform: translate(-50%, -50%);
+  height: 3.5rem;
+  min-width: 1600px;
+}
+
+/* Media Query for Large screens */
+@media (max-width: 1340px) {
+  
+.nav_secondary{
+  width: 100%;
+}
 }
 

@@ -5,7 +5,7 @@ import { Header,MobileHeader ,Footer } from "./components"
 export const Main = () => {
   const { myQuery } = useMatchMedia(720)
   return (
-    <div className="m-auto max-w-[1600px]">
+    <div className="relative mt-6">
       { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
     </div>
   )
