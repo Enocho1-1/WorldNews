@@ -25,6 +25,10 @@ button:focus {
 
 /* Header Elements */
 
+.desktop-second-layer{
+  box-shadow: -7px 11px 5px -7px rgba(33,32,33,1);
+}
+
 .nav_secondary{
   background-color: #374151;
   display: flex;

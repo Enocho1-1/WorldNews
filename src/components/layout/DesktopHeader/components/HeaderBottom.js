@@ -8,7 +8,7 @@ export const HeaderBottom = ({headerObject}) => {
   const SearchStyling= "nav_secondary w-[25%]"
 
   return (
-    <div className="relative flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
+    <div className="relative desktop-second-layer flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
     {/* Category Nav Menu */}
     <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
       {navOptions.map((item,index) => (
