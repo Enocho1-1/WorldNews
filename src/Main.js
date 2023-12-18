@@ -1,5 +1,7 @@
 /* eslint-disable */
 import { useMatchMedia } from "./hooks"
+
+import { AllRoutes } from "./routes/AllRoutes"
 import { Header,MobileHeader ,Footer } from "./components"
 
 export const Main = () => {
@@ -7,6 +9,7 @@ export const Main = () => {
   return (
     <div className="m-auto max-w-[1600px]">
       { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
+        <AllRoutes/>
     </div>
   )
 }

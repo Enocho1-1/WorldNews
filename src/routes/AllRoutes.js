@@ -1,9 +1,7 @@
-/* eslint-disable */
-import { useState } from "react"
-import { HeaderTop,HeaderBottom } from "./components"
+import { Route,Routes } from "react-router-dom"
+import { CategoryPage } from "../pages"
 
-export const Header = () => {
-
+export const AllRoutes = () => {
   const navOptions = [
     { 
       name:"NEWS",
@@ -48,22 +46,13 @@ export const Header = () => {
       path: "/tech"
     }
   ]
-  const [category,setCategory] = useState(navOptions[0])
-  const [search, setSearch] = useState(true)
-
-  const headerObj = {
-    navOptions: navOptions,
-    category:category,
-    search:search,
-    setCategory:setCategory,
-    setSearch:setSearch
-  }
-  
   return (
-    <header id="header">
-        <HeaderTop category={category}/>
-        <HeaderBottom headerObject={headerObj}/>
-    </header>
-   
+   <>
+    <Routes>
+      { navOptions.map((item,index) => (
+        <Route key={index} path={item.path} element={<CategoryPage title={item.name} />}/>
+      ))}
+    </Routes>
+   </>
   )
 }

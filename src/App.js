@@ -1,9 +1,12 @@
 import { Main } from "./Main";
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
     <main>
-      <Main/>
+      <BrowserRouter>
+        <Main/>
+      </BrowserRouter>
     </main>
   );
 }

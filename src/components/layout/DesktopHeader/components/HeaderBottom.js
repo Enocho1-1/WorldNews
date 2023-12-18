@@ -1,5 +1,6 @@
-
 /* eslint-disable */
+import { NavLink } from "react-router-dom"
+
 export const HeaderBottom = ({headerObject}) => {
 
   const { navOptions,category,search,setCategory,setSearch} = headerObject
@@ -11,9 +12,10 @@ export const HeaderBottom = ({headerObject}) => {
     {/* Category Nav Menu */}
     <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
       {navOptions.map((item,index) => (
-        <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
-          {item.name}
-        </a>
+    
+          <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
+              <NavLink to={`${item.path}`}>{item.name} </NavLink>
+          </a>
       ))}
     </nav>
 
