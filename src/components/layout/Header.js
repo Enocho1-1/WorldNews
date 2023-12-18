@@ -80,18 +80,19 @@ export const Header = () => {
   ]
   const [category,setCategory] = useState(navOptions[0])
   const [search, setSearch] = useState(true)
+  const mobilestyling = ""
 
   return (
     <header className="stcky top-0 w-inherit flex flex-col">
 
       {/* First Layer */}
-       <div className="relative bg-gray-900  min-h-[3.75rem] flex justify-between">
-          <aside className=" flex font-open_sans"> 
+       <div className="relative bg-gray-900  max-h-[3.5rem] flex justify-between">
+          <aside className="flex font-open_sans"> 
             <div className="bg-orange_red text-gray-900 px-4 h-inherit text-[2.5rem] flex items-center">
-              <h1 className="font-light">World</h1>
+                <h1 className="font-light">World</h1>
                 <p className="font-semibold">News.</p>
 
-                {/* Language Dropdown */}
+                {/* Language Dropdown Menu*/}
                 <div className="relative">
                   <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" onClick={ () => setHidden(!hidden)} className=" font-medium text-[1.25rem] px-5 py-2.5 text-center inline-flex items-center" type="button">{language}<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
@@ -119,7 +120,7 @@ export const Header = () => {
           </aside>
 
           {/* Social Media Icons */}
-          <aside className="h-inherit flex justify-between items-center mr-6 max-[728px]:hidden">
+          <aside className="h-inherit flex justify-between items-center mr-6 max-md:hidden">
             <span className="flex">
               <h1 className="text-gray-200 text-md font-medium">Join us</h1>
               { socials.map((item,index) => (
@@ -133,6 +134,7 @@ export const Header = () => {
 
         {/* Second Layer */}
         <div className="flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
+          {/* Category Nav Menu */}
           <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
             {navOptions.map((item,index) => (
               <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
@@ -140,7 +142,9 @@ export const Header = () => {
               </a>
             ))}
           </nav>
-          <aside className={ search ? ("nav_secondary  w-[25%] max-[1340px]:w-[100%]") : ("nav_secondary w-[15%] max-[1340px]:w-[100%]")}>
+
+          {/* Live,Weather,Search Menu */}
+          <aside className={ search ? ("nav_secondary  w-[25%]") : ("nav_secondary w-[15%]")}>
               <div className="nav_secondary_item flex justify-center text-lg">
                 <span className="bi bi-tv"></span>
                 <h1 className="mx-2 ">LIVE</h1>

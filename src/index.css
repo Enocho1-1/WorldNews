@@ -59,3 +59,11 @@ button:focus {
   background-color: #cc3700;
 }
 
+  /* Media Query for Large screens */
+  @media (max-width: 1340px) {
+    
+  .nav_secondary{
+    width: 100%;
+  }
+}
+
