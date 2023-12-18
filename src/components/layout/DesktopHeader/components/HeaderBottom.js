@@ -12,10 +12,7 @@ export const HeaderBottom = ({headerObject}) => {
     {/* Category Nav Menu */}
     <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
       {navOptions.map((item,index) => (
-    
-          <a key={index} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">
-              <NavLink to={`${item.path}`}>{item.name} </NavLink>
-          </a>
+          <NavLink key={index} to={`${item.path}`} onClick={() => setCategory(item)} className="hover:cursor-pointer mx-2 text-lg font-medium">{item.name} </NavLink>
       ))}
     </nav>
 
