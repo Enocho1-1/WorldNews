@@ -7,7 +7,7 @@ module.exports = {
         open_sans: ["Open Sans", "sans-serif"],
       },
       colors:{
-        orange_red:"#ff4500",
+        orange_red:"#e63e00",
         dark_orange:"#cc3700",
         vivid_cyan: "#18b9d2",
         pure_green: "#7ac900",

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { useState } from "react";
-import { Link } from "react-router-dom"
 import twitter from "../../../../assets/social_media/twitter.png"
 import youtube from "../../../../assets/social_media/youtube.png"
 import instagram from "../../../../assets/social_media/instagram.png"

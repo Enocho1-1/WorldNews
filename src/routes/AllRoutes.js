@@ -1,5 +1,5 @@
 import { Route,Routes } from "react-router-dom"
-import { CategoryPage } from "../pages"
+import { CategoryPage,Weather } from "../pages"
 
 export const AllRoutes = () => {
   const navOptions = [
@@ -59,6 +59,7 @@ export const AllRoutes = () => {
       { navOptions.map((item,index) => (
         <Route key={index} path={item.path} element={<CategoryPage option={item} />}/>
       ))}
+      <Route  path="/weather" element={<Weather />}/>
     </Routes>
    </>
   )
