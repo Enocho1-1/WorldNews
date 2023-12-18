@@ -8,7 +8,8 @@ export const HeaderTop = ({isHidden,setIsHidden}) => {
     <div id="mobileHeader">
         <aside className="px-2 py-2 h-inherit min-[480px]:text-[2.2rem] max-[480px]:text-[2.4rem]  flex justify-evenly min-[390px]:justify-between">
             <div className="flex">
-            <span onClick={() => setIsHidden(!isHidden)} className="bi bi-list mr-2 hover:cursor-pointer"></span>
+            { isHidden ? (<span onClick={() => setIsHidden(!isHidden)} className="bi bi-x-lg mr-2 hover:cursor-pointer"></span>) : ( <span onClick={() => setIsHidden(!isHidden)} className="bi bi-list mr-2 hover:cursor-pointer"></span>)}
+           
             <>
                 <h1 className="font-light">World</h1>
                 <p className="font-semibold">News.</p>
@@ -21,7 +22,7 @@ export const HeaderTop = ({isHidden,setIsHidden}) => {
                 </button>
 
         
-                <div id="dropdownHover" className={hidden ? (`absolute top-[90%] left-[40%] z-10 bg-gray-200 text-gray-900 divide-y divide-gray-100 rounded-lg shadow w-auto">`) : (`absolute top-[90%] left-[40%] z-10 hidden bg-gray-200 text-gray-900 divide-y divide-gray-100 rounded-lg shadow w-auto">`)}>
+                <div id="dropdownHover" className={hidden ? (`absolute top-[90%] left-[40%] z-20 bg-gray-200 text-gray-900 divide-y divide-gray-100 rounded-lg shadow w-auto">`) : (`absolute top-[90%] left-[40%] z-10 hidden bg-gray-200 text-gray-900 divide-y divide-gray-100 rounded-lg shadow w-auto">`)}>
                     <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownHoverButton">
                     { ["EN","FR"].map((item,index) => (
                         <li key={index} >
