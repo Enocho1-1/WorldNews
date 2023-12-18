@@ -70,9 +70,18 @@ button:focus {
 
 /* ID Selectors */
 #header{
-  position: sticky;
-  top: 5%;
+  position: fixed;
+  max-width: 1600px;
+  width: 100%;
+}
+
+#mobileHeader{
+  display: fixed;
+  color: #111827;
+  background-color: #ff4500;
+  height: 4.688rem;
   width: inherit;
+  max-width: inherit;
 }
 
 /* Media Query for Large screens */

@@ -4,8 +4,8 @@ export const MobileHeader = () => {
   const [language, setLanguage] = useState("EN")
   const [hidden, setHidden] = useState(false)
   return (
-    <header className="relative w-[100%]" data-testid="mobile-header">
-      <div className="bg-orange_red text-gray-900  h-[4.688rem] w-[100%]">
+    <header className="max-w-full w-[100%]" data-testid="mobile-header">
+      <div id="mobileHeader">
         <aside className="px-2 py-2 h-inherit min-[480px]:text-[2.2rem] max-[480px]:text-[2.4rem]  flex justify-evenly min-[390px]:justify-between">
             <div className="flex">
               <span className="bi bi-list mr-2 hover:cursor-pointer"></span>
@@ -13,7 +13,7 @@ export const MobileHeader = () => {
                 <h1 className="font-light">World</h1>
                 <p className="font-semibold">News.</p>
               </>
-                {/* Language Dropdown Menu*/}
+            
                 <div className="relative">
                   <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" onClick={ () => setHidden(!hidden)} className=" font-medium text-[1rem] px-5 py-2.5 text-center inline-flex items-center" type="button">{language}<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
@@ -33,7 +33,7 @@ export const MobileHeader = () => {
                 </div>
             </div>
 
-            {/* Live TV Icon */}
+          
             <span className="bi bi-tv self-center hover:cursor-pointer"></span>
           </aside>
       </div>

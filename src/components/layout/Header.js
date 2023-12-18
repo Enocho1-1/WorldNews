@@ -51,7 +51,7 @@ export const Header = () => {
   const [category,setCategory] = useState(navOptions[0])
   const [search, setSearch] = useState(true)
 
-  const headerBottomObj = {
+  const headerObj = {
     navOptions: navOptions,
     category:category,
     search:search,
@@ -62,7 +62,7 @@ export const Header = () => {
   return (
     <header id="header">
         <HeaderTop category={category}/>
-        <HeaderBottom headerObject={headerBottomObj}/>
+        <HeaderBottom headerObject={headerObj}/>
     </header>
    
   )
