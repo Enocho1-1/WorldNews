@@ -33,9 +33,9 @@ export const HeaderTop = ({category}) => {
   
     ]
   return (
-    <div className="relative bg-gray-900  h-inherit flex justify-between">
+    <div className="bg-gray-900  h-inherit flex justify-between">
         <aside className="flex font-open_sans"> 
-        <div className="bg-orange_red text-gray-900 px-4 h-inherit text-[2.5rem] flex items-center">
+        <div className="bg-orange_red text-gray-900 px-4 h-inherit text-[2.2rem] flex items-center">
             <h1 className="font-light">World</h1>
             <p className="font-semibold">News.</p>
 
@@ -61,7 +61,7 @@ export const HeaderTop = ({category}) => {
 
         {/* Category Name*/}
         <div className=" mx-2 flex justify-center items-center h-inherit bg-gray-900">
-        <h1 className={`${category.text} text-4xl`}>{category.name}</h1>
+          <h1 className={`${category.text} text-[2.2rem]`}>{category.name}</h1>
         </div>
         
         </aside>

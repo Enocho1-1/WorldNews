@@ -7,7 +7,7 @@ export const HeaderBottom = ({headerObject}) => {
   const SearchStyling= "nav_secondary w-[25%]"
 
   return (
-    <div className="flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
+    <div className="relative flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
     {/* Category Nav Menu */}
     <nav className={`${category.color} h-inherit w-[85%] max-[1340px]:w-[100%] flex flex-wrap justify-around font-open_sans`}>
       {navOptions.map((item,index) => (
@@ -28,7 +28,7 @@ export const HeaderBottom = ({headerObject}) => {
           <span className="bi bi-cloud-sun"></span>
         </div>
 
-        <div className={ search ? ("text-gray-200 w-[15.625rem] flex justify-center items-center hover:cursor-pointer"): ("nav_secondary_item")}>
+        <div className={ search ? ("nav_secondary_extended"): ("nav_secondary_item")}>
           <span onClick={() => setSearch(!search)} className="bi bi-search"></span>
           { search && 
             (

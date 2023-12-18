@@ -40,6 +40,14 @@ button:focus {
   color: #e5e7eb;
 }
 
+.nav_secondary_extended{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15.625rem;
+  color: #e5e7eb;
+}
+
 
 .nav_secondary_item:nth-child(2),.nav_secondary_item:nth-child(3){
   display: flex;
@@ -62,14 +70,9 @@ button:focus {
 
 /* ID Selectors */
 #header{
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  left: 50%;
-  top: 5; 
-  transform: translate(-50%, -50%);
-  height: 3.5rem;
-  min-width: 1600px;
+  position: sticky;
+  top: 5%;
+  width: inherit;
 }
 
 /* Media Query for Large screens */
