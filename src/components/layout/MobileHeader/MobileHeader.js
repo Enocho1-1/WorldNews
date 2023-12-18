@@ -1,12 +1,13 @@
 /* eslint-disable */
-import { HeaderTop,HeaderBottom } from "./components"
+import { useState } from "react"
+import { HeaderTop,HeaderBottom,SideMenu } from "./components"
 
 export const MobileHeader = () => {
- 
+  const [isHidden, setIsHidden] = useState(false)
   return (
-    <header className="max-w-full w-[100%]" data-testid="mobile-header">
-      <HeaderTop/>
-      <HeaderBottom />
+    <header className="relative max-w-full w-[100%]" data-testid="mobile-header">
+      <HeaderTop isHidden={isHidden} setIsHidden={setIsHidden}/>
+      <HeaderBottom isHidden={isHidden} />
     </header>
   )
 }

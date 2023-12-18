@@ -1,14 +1,14 @@
 /* eslint-disable */
 import { useState } from "react"
 
-export const HeaderTop = () => {
+export const HeaderTop = ({isHidden,setIsHidden}) => {
     const [language, setLanguage] = useState("EN")
     const [hidden, setHidden] = useState(false)
   return (
     <div id="mobileHeader">
         <aside className="px-2 py-2 h-inherit min-[480px]:text-[2.2rem] max-[480px]:text-[2.4rem]  flex justify-evenly min-[390px]:justify-between">
             <div className="flex">
-            <span className="bi bi-list mr-2 hover:cursor-pointer"></span>
+            <span onClick={() => setIsHidden(!isHidden)} className="bi bi-list mr-2 hover:cursor-pointer"></span>
             <>
                 <h1 className="font-light">World</h1>
                 <p className="font-semibold">News.</p>
