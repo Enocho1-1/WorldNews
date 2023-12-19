@@ -29,6 +29,7 @@ export const HeaderBottom = ({headerObject}) => {
           <NavLink to="/weather"><span className="bi bi-cloud-sun"></span></NavLink>
         </div>
 
+        {/* Search Input */}
         <div className={ search ? ("nav_secondary_extended"): ("nav_secondary_item")}>
           <span onClick={() => setSearch(!search)} className="bi bi-search"></span>
           { search && 

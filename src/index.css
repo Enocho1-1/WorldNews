@@ -65,13 +65,21 @@ button:focus {
 }
 
 .nav_secondary_item:nth-child(1):hover{
-  background-color: #1fcae5;
-}
-
-.nav_secondary_item:nth-child(2):hover{
   background-color: #cc3700;
 }
 
+.nav_secondary_item:nth-child(2):hover{
+  background-color: #1fcae5;
+}
+
+/* Just In Elements */
+.just-in-list > li:nth-child(odd){
+  background-color: #d1d5db;
+}
+
+.just-in-list > li:nth-child(even){
+  background-color: #f3f4f6;
+}
 /* ID Selectors */
 #header{
   position: fixed;
