@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom"
 import {navOptions} from "../../../arrays/NavOptions"
 
 export const SideMenu = ({setIsHidden}) => {
-  // console.log(navOptions)
-  const notActive = "bg-gray-900 py-4 pl-6 border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%]"
+  const notActive = "bg-gray-900 py-4 pl-6  border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%] hover:border-l-[10px] hover:border-b-[1px]"
   return (
     <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] font-open_sans bg-gray-900">
         <form className="relative">
@@ -14,7 +13,6 @@ export const SideMenu = ({setIsHidden}) => {
 
         {/* Category Buttons */}
         <ul className="w-inherit flex flex-col">
-           {/* <li className="bg-gray-900 py-2 border-l-[10px] border-b-[1px] border-l-yellow-300 border-b-yellow-300 pl-6 w-[100%] text-gray-200 "> NEWS</li> */}
            {navOptions.map((item,index) => (
             <NavLink key={index} to={item.path} onClick={() => setIsHidden(false)} className={({isActive}) => isActive ? (`bg-gray-900 py-2 border-l-[10px] border-b-[1px] text-md ${item.left} ${item.bottom} pl-6 w-[100%] text-gray-200`) : notActive }>
               {item.name}
