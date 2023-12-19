@@ -77,6 +77,7 @@ button:focus {
   position: fixed;
   max-width: 1600px;
   width: 100%;
+  z-index: 20;
 }
 
 #mobileHeader{
@@ -87,6 +88,12 @@ button:focus {
   width: inherit;
   max-width: inherit;
 }
+
+
+#just-in{
+  z-index: 5;
+}
+
 
 /* Media Query for Large screens */
 @media (max-width: 1340px) {
