@@ -9,4 +9,10 @@ describe("Test Mobile Side Menu", () => {
         const sideMenu = screen.getByTestId("side-menu")
         expect(sideMenu).toBeTruthy()
     })
+
+    test("Render navagation option correctly", () => {
+        render(<SideMenu/>, {wrapper: BrowserRouter})
+        const navOptions = screen.getByTestId("nav-options")
+        expect(navOptions).toBeInstanceOf(HTMLUListElement)
+    })
 })

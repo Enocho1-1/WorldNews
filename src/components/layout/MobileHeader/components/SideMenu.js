@@ -27,7 +27,7 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
         </form>
 
         {/* Category Buttons */}
-        <ul className="w-inherit flex flex-col">
+        <ul className="w-inherit flex flex-col" data-testid="nav-options"> 
            {sideNavOption.map((item,index) => (
             <NavLink key={index} to={item.path} onClick={() => sideMenuClick(item)} className={({isActive}) => isActive ? (`bg-gray-900 py-2 border-l-[10px] border-b-[1px] text-md ${item.left} ${item.bottom} pl-6 w-[100%] text-gray-200`) : notActive }>
               {item.name}
