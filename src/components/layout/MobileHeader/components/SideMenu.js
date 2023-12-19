@@ -4,6 +4,17 @@ import {navOptions} from "../../../arrays/NavOptions"
 
 export const SideMenu = ({setIsHidden,setCategory}) => {
   const notActive = "bg-gray-900 py-4 pl-6  border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%] hover:border-l-[10px] hover:border-b-[1px]"
+  const weatherOption =  { 
+    name:"WEATHER",
+    color:"bg-dark_orange",
+    text: "text-dark_orange",
+    border:"border-dark_orange",
+    left: "border-l-dark_orange",
+    bottom: "border-b-dark_orange",
+    path: "/weather"
+  }
+  const sideNavOption = [...navOptions, weatherOption]
+  console.log(sideNavOption)
   const sideMenuClick = (item) => {
     setIsHidden(false)
     setCategory(item)
@@ -17,7 +28,7 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
 
         {/* Category Buttons */}
         <ul className="w-inherit flex flex-col">
-           {navOptions.map((item,index) => (
+           {sideNavOption.map((item,index) => (
             <NavLink key={index} to={item.path} onClick={() => sideMenuClick(item)} className={({isActive}) => isActive ? (`bg-gray-900 py-2 border-l-[10px] border-b-[1px] text-md ${item.left} ${item.bottom} pl-6 w-[100%] text-gray-200`) : notActive }>
               {item.name}
             </NavLink>
