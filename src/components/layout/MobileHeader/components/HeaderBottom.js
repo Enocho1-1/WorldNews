@@ -1,6 +1,6 @@
 import { SideMenu } from "./SideMenu"
 
-export const HeaderBottom = ({isHidden}) => {
+export const HeaderBottom = ({isHidden,setIsHidden}) => {
   return (
     <div className="relative h-[50px] w-[100%] flex font-open_sans">
       {/* Category Topic */}
@@ -13,7 +13,7 @@ export const HeaderBottom = ({isHidden}) => {
       </button>
 
       {/* SideMenu */}
-      { isHidden && <SideMenu/>}
+      { isHidden && <SideMenu setIsHidden={setIsHidden}/>}
     </div>
   )
 }

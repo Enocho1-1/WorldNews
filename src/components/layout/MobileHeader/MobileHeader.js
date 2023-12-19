@@ -7,7 +7,7 @@ export const MobileHeader = () => {
   return (
     <header className="relative max-w-full w-[100%]" data-testid="mobile-header">
       <HeaderTop isHidden={isHidden} setIsHidden={setIsHidden}/>
-      <HeaderBottom isHidden={isHidden} />
+      <HeaderBottom isHidden={isHidden} setIsHidden={setIsHidden}/>
     </header>
   )
 }

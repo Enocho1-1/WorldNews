@@ -4,6 +4,8 @@ export  const navOptions = [
       color:"bg-dark_orange",
       text: "text-dark_orange",
       border:"border-dark_orange",
+      left: "border-l-dark_orange",
+      bottom: "border-b-dark_orange",
       path: "/news"
     },
     { 
@@ -11,6 +13,8 @@ export  const navOptions = [
       color:"bg-vivid_cyan",
       text: "text-vivid_cyan",
       border:"border-vivid_cyan",
+      left: "border-l-vivid_cyan",
+      bottom: "border-b-vivid_cyan",
       path: "/business"
     },
     { 
@@ -18,6 +22,8 @@ export  const navOptions = [
       color:"bg-pure_green",
       text: "text-pure_green",
       border:"border-pure_green",
+      left: "border-l-pure_green",
+      bottom: "border-b-pure_green",
       path: "/sports"
     },
     { 
@@ -25,6 +31,8 @@ export  const navOptions = [
       color:"bg-bright_blue",
       text: "text-bright_blue",
       border:"border-bright_blue",
+      left: "border-l-bright_blue",
+      bottom: "border-b-bright_blue",
       path: "/entertainment"
     },
     { 
@@ -32,6 +40,8 @@ export  const navOptions = [
       color:"bg-pure_yellow",
       text: "text-pure_yellow",
       border:"border-pure_yellow",
+      left: "border-l-pure_yellow",
+      bottom: "border-b-pure_yellow",
       path: "/health"
     },
     { 
@@ -39,6 +49,8 @@ export  const navOptions = [
       color:"bg-pure_gray",
       text: "text-pure_gray",
       border:"border-pure_gray",
+      left: "border-l-pure_gray",
+      bottom: "border-b-pure_gray",
       path: "/science"
     },
     { 
@@ -46,6 +58,8 @@ export  const navOptions = [
       color:"bg-moderate_violet",
       text: "text-moderate_violet",
       border:"border-moderate_violet",
+      left: "border-l-moderate_violet",
+      bottom: "border-b-moderate_violet",
       path: "/tech"
     }
   ]

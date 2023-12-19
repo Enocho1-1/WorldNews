@@ -1,19 +1,26 @@
 /* eslint-disable */
 import { NavLink } from "react-router-dom"
+import {navOptions} from "../../../arrays/NavOptions"
 
-export const SideMenu = () => {
+export const SideMenu = ({setIsHidden}) => {
+  // console.log(navOptions)
+  const notActive = "bg-gray-900 py-4 pl-6 border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%]"
   return (
-    <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] bg-gray-900">
+    <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] font-open_sans bg-gray-900">
         <form className="relative">
             <input type="text" className="w-[100%] py-2 px-2 text-md text-white bg-gray-700" placeholder="Search..." />
             <span className="text-white text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></span>
         </form>
 
         {/* Category Buttons */}
-        {/* <ul>
-           
-           
-        </ul> */}
+        <ul className="w-inherit flex flex-col">
+           {/* <li className="bg-gray-900 py-2 border-l-[10px] border-b-[1px] border-l-yellow-300 border-b-yellow-300 pl-6 w-[100%] text-gray-200 "> NEWS</li> */}
+           {navOptions.map((item,index) => (
+            <NavLink key={index} to={item.path} onClick={() => setIsHidden(false)} className={({isActive}) => isActive ? (`bg-gray-900 py-2 border-l-[10px] border-b-[1px] text-md ${item.left} ${item.bottom} pl-6 w-[100%] text-gray-200`) : notActive }>
+              {item.name}
+            </NavLink>
+           ))}
+        </ul>
     </div>
   )
 }
