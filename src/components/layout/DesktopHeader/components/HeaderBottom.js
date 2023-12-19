@@ -8,6 +8,15 @@ export const HeaderBottom = ({headerObject}) => {
   const SearchStyling= "nav_secondary w-[25%]"
   const istActiveClass = "mx-2 text-lg font-bold"
   const isNotActive = "hover:cursor-pointer mx-2 text-lg font-medium"
+  const weatherOption =  { 
+    name:"WEATHER",
+    color:"bg-light_cyan",
+    text: "text-light_cyan",
+    border:"border-light_cyan",
+    left: "border-l-light_cyan",
+    bottom: "border-b-light_cyan",
+    path: "/weather"
+  }
 
   return (
     <div className="relative desktop-second-layer flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
@@ -26,7 +35,7 @@ export const HeaderBottom = ({headerObject}) => {
         </div>
 
          <div className="nav_secondary_item">
-          <NavLink to="/weather"><span className="bi bi-cloud-sun"></span></NavLink>
+          <NavLink to="/weather"><span className="bi bi-cloud-sun" onClick={() => setCategory(weatherOption)}></span></NavLink>
         </div>
 
         {/* Search Input */}
