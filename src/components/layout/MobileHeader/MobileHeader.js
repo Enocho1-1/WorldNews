@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useState } from "react"
-import { HeaderTop,HeaderBottom,SideMenu } from "./components"
+import { HeaderTop,HeaderBottom } from "./components"
 
 export const MobileHeader = () => {
   const [isHidden, setIsHidden] = useState(false)

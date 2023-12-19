@@ -20,7 +20,7 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
     setCategory(item)
   }
   return (
-    <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] font-open_sans bg-gray-900">
+    <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] font-open_sans bg-gray-900" data-testid="side-menu">
         <form className="relative">
             <input type="text" className="w-[100%] py-2 px-2 text-md text-white bg-gray-700" placeholder="Search..." />
             <span className="text-white text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></span>

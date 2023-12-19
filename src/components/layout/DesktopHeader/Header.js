@@ -6,7 +6,7 @@ import {navOptions} from "../../arrays/NavOptions"
 export const Header = () => {
 
   const [category,setCategory] = useState(navOptions[0])
-  const [search, setSearch] = useState(true)
+  const [search, setSearch] = useState(false)
 
   const headerObj = {
     navOptions: navOptions,
