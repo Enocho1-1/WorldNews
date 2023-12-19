@@ -6,15 +6,15 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
   const notActive = "bg-gray-900 py-4 pl-6  border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%] hover:border-l-[10px] hover:border-b-[1px]"
   const weatherOption =  { 
     name:"WEATHER",
-    color:"bg-dark_orange",
-    text: "text-dark_orange",
-    border:"border-dark_orange",
-    left: "border-l-dark_orange",
-    bottom: "border-b-dark_orange",
+    color:"bg-light_cyan",
+    text: "text-light_cyan",
+    border:"border-light_cyan",
+    left: "border-l-light_cyan",
+    bottom: "border-b-light_cyan",
     path: "/weather"
   }
   const sideNavOption = [...navOptions, weatherOption]
-  console.log(sideNavOption)
+
   const sideMenuClick = (item) => {
     setIsHidden(false)
     setCategory(item)
