@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         open_sans: ["Open Sans", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"]
       },
       colors:{
         orange_red:"#e63e00",
