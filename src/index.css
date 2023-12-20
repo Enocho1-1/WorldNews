@@ -98,14 +98,19 @@ button:focus {
   width: auto;
 }
 
+#category-page{
+  display: flex;
+  flex-direction: column;
+  max-width: inherit;
+  width: 100%;
+}
 
 #just-in{
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   top: 5.5rem;
-  right: 10rem;
-  width: 25rem;
+  width: auto;
   height: 15.625rem;
   z-index: 5;
 }
@@ -131,6 +136,10 @@ button:focus {
   
   .nav_secondary{
     width: 100%;
+  }
+
+  #just-in{
+    top: 7.2rem;
   }
 }
 

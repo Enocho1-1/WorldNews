@@ -40,7 +40,7 @@ export const Weather = () => {
               <span className="text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></span>
             </form>
             
-            <aside className="mt-8 flex">
+            <aside className="mt-[145px] flex">
               <span className="flex flex-col">
                 <h1 className="font-roboto text-5xl">Current Location Weather</h1>
               </span>

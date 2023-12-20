@@ -9,8 +9,10 @@ export const Main = () => {
   return (
     <div className="relative m-auto max-w-[1600px] font-open_sans">
       { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
-        <AllRoutes/>
-        <JustIn/>
+        <section className="flex">
+          <AllRoutes/>
+          <JustIn/>
+        </section>
     </div>
   )
 }
