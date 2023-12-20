@@ -80,6 +80,7 @@ button:focus {
 .just-in-list > li:nth-child(even){
   background-color: #f3f4f6;
 }
+
 /* ID Selectors */
 #header{
   position: fixed;
@@ -102,12 +103,22 @@ button:focus {
   z-index: 5;
 }
 
+/* Media Query for mobile - tablet*/
+@media (max-width: 769px) {
+  
+  .just-in-list > li{
+    display: flex;
+    justify-content: start;
+    padding-left: 3.125rem;
+  }
+}
+
 
 /* Media Query for Large screens */
 @media (max-width: 1340px) {
   
-.nav_secondary{
-  width: 100%;
-}
+  .nav_secondary{
+    width: 100%;
+  }
 }
 
