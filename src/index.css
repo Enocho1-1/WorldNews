@@ -94,8 +94,7 @@ button:focus {
   color: #111827;
   background-color: #ff4500;
   height: 4.688rem;
-  width: inherit;
-  max-width: inherit;
+  width: auto;
 }
 
 
