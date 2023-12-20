@@ -95,7 +95,7 @@ button:focus {
   color: #111827;
   background-color: #ff4500;
   height: 4.688rem;
-  width: auto;
+  width: auto ;
 }
 
 #category-page,#weather-page{
