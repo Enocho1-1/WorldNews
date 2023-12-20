@@ -1,7 +1,9 @@
 import { useTitle } from "../../hooks"
+import { currentLocationWeather } from "../../utility"
 
 export const Weather = () => {
   useTitle("WEATHER")
+  const date = new Date()
 
   const options = {
     enableHighAccuracy: true,
@@ -11,11 +13,8 @@ export const Weather = () => {
   
   function success(pos) {
     const crd = pos.coords;
-  
-    console.log("Your current position is:");
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
+    
+    currentLocationWeather(crd.longitude,crd.latitude)
   }
   
   function error(err) {
