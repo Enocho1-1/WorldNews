@@ -6,7 +6,7 @@ export  const navOptions = [
       border:"border-dark_orange",
       left: "border-l-dark_orange",
       bottom: "border-b-dark_orange",
-      path: "/news"
+      path: "/"
     },
     { 
       name:"BUSINESS",

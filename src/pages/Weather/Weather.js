@@ -1,32 +1,11 @@
 import { useState } from "react"
 import { useTitle } from "../../hooks"
-import { currentLocationWeather } from "../../utility"
+import { CurrentLocation } from "./components/CurrentLocation"
 
 export const Weather = () => {
   useTitle("WEATHER")
 
-  const date = new Date()
-
-  const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0,
-  };
-  
-  function success(pos) {
-    const crd = pos.coords;
-
-    // get current location weather
-    currentLocationWeather(crd.longitude,crd.latitude)
-  }
-  
-  function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
-  
-  // navigator.geolocation.getCurrentPosition(success, error, options);
-  
-
+ 
   return (
     <div className="flex font-open_sans">
         <section className="w-[1200px] max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px] flex flex-col">
@@ -40,11 +19,7 @@ export const Weather = () => {
               <span className="text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></span>
             </form>
             
-            <aside className="mt-[145px] flex">
-              <span className="flex flex-col">
-                <h1 className="font-roboto text-5xl">Current Location Weather</h1>
-              </span>
-            </aside>
+            <CurrentLocation/>
         </section>
     </div>
    

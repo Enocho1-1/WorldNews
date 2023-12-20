@@ -15,7 +15,7 @@ export const HeaderBottom = ({headerObject}) => {
     border:"border-light_cyan",
     left: "border-l-light_cyan",
     bottom: "border-b-light_cyan",
-    path: "/weather"
+    path: "/weather/current-location"
   }
 
   return (
@@ -35,7 +35,7 @@ export const HeaderBottom = ({headerObject}) => {
         </div>
 
          <div className="nav_secondary_item">
-          <NavLink to="/weather"><span className="bi bi-cloud-sun" onClick={() => setCategory(weatherOption)}></span></NavLink>
+          <NavLink to="/weather/current-location"><span className="bi bi-cloud-sun" onClick={() => setCategory(weatherOption)}></span></NavLink>
         </div>
 
         {/* Search Input */}

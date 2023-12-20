@@ -10,7 +10,7 @@ export const AllRoutes = () => {
       { navOptions.map((item,index) => (
         <Route key={index} path={item.path} element={<CategoryPage option={item} />}/>
       ))}
-      <Route  path="/weather" element={<Weather />}/>
+      <Route  path="/weather/current-location" element={<Weather />}/>
     </Routes>
    </>
   )

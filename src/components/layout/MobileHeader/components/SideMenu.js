@@ -11,7 +11,7 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
     border:"border-light_cyan",
     left: "border-l-light_cyan",
     bottom: "border-b-light_cyan",
-    path: "/weather"
+    path: "/weather/current-location"
   }
   const sideNavOption = [...navOptions, weatherOption]
 
