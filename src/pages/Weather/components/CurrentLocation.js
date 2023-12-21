@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../../../utility";
+import { CurrentWeatherDescr } from "./CurrentWeatherDescr";
 import { GifLoader } from "../../../components";
 
 export const CurrentLocation = () => {
@@ -30,11 +31,13 @@ export const CurrentLocation = () => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }
       
-      // useEffect(() => {
-      //   navigator.geolocation.getCurrentPosition(success, error,options);
-      // },[])
+      useEffect(() => {
+        navigator.geolocation.getCurrentPosition(success, error,options);
+      },[])
   
-      // console.log(current)
+      console.log(current.weather)
+      // console.log(current.current.weather[0].main)
+      // const condition = current.current.weather[0].main
 
   return (
    <>
@@ -45,7 +48,18 @@ export const CurrentLocation = () => {
         </aside>
 
         {/* Weather Description */}
-        { current.length ? (   <aside className="mt-8  h-[250px] flex justify-evenly bg-red-500"></aside>) : <GifLoader height="300px" />}
+        { current 
+          ? 
+          (
+            <aside className="mt-8  h-[250px] flex justify-evenly">
+              <span className="flex justify-center">
+                  {/* <h1 className="text-xl text-orange-400 font-light ">{condition}</h1> */}
+              </span>
+            </aside>
+          ) 
+          : 
+          <GifLoader height="300px" />
+        }
      
    </>
   )

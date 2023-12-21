@@ -6,7 +6,7 @@ export const currentLocationWeather = async (lon,lat,setCurrent) => {
             throw new Error(response.statusText);
         } else{
             const data = await response.json()
-            setCurrent(data)
+            setCurrent(data.current)
         }
    
 }
