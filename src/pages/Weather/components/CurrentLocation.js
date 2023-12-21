@@ -3,8 +3,7 @@ import { currentLocationWeather } from "../../../utility";
 
 export const CurrentLocation = () => {
     
-    // const [longitude,setLongitude] = useState(null)
-    // const [latitude,setLatitude] = useState(null)
+    const [current,setCurrent] = useState([])
     const date = new Date()
     const dateWithoutSecond = new Date();
     const formatted = dateWithoutSecond.toLocaleTimeString([], {
@@ -23,14 +22,18 @@ export const CurrentLocation = () => {
       
       function success(pos) {
         const crd = pos.coords;
-        currentLocationWeather(crd.longitude,crd.latitude)
+        currentLocationWeather(crd.longitude,crd.latitude,setCurrent)
       }
       
       function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }
       
-      navigator.geolocation.getCurrentPosition(success, error, options);
+      useEffect(() => {
+        navigator.geolocation.getCurrentPosition(success, error,options);
+      },[])
+  
+      console.log(current)
 
   return (
    <>
