@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../../../utility";
+import { CurrentWeatherInfo } from "./CurrentWeatherInfo";
 import { GifLoader } from "../../../components";
 
 export const CurrentLocation = () => {
@@ -62,13 +63,14 @@ export const CurrentLocation = () => {
         {/* Weather Description */}
         { fulfilled 
           ? 
-          (
-            <aside className="mt-8  h-[250px] flex justify-evenly">
-              <span className="flex justify-center">
-                  <h1 className="text-xl text-orange-400 font-light ">{condition}</h1>
-              </span>
-            </aside>
-          ) 
+          (<CurrentWeatherInfo 
+            condition={condition} 
+            description={description}
+            wind={wind}
+            temp={temp}
+            feels={feels}
+            /> 
+            ) 
           : 
           <GifLoader height="300px" />
         }

@@ -9,8 +9,8 @@ export const currentLocationWeather = async (obj) => {
             setCondition(data.current.weather[0].main)
             setDescription(data.current.weather[0].description)
             setWind(data.current.wind_speed)
-            setTemp(data.current.temp)
-            setFeels(data.current.feels_like)
+            setTemp(Math.ceil(data.current.temp))
+            setFeels(Math.ceil(data.current.feels_like))
             setFulfilled(true)
         }
    
