@@ -1,6 +1,5 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../../../utility";
-import { CurrentWeatherDescr } from "./CurrentWeatherDescr";
 import { GifLoader } from "../../../components";
 
 export const CurrentLocation = () => {
