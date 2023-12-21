@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../../../utility";
+import { GifLoader } from "../../../components";
 
 export const CurrentLocation = () => {
     
@@ -29,11 +30,11 @@ export const CurrentLocation = () => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }
       
-      useEffect(() => {
-        navigator.geolocation.getCurrentPosition(success, error,options);
-      },[])
+      // useEffect(() => {
+      //   navigator.geolocation.getCurrentPosition(success, error,options);
+      // },[])
   
-      console.log(current)
+      // console.log(current)
 
   return (
    <>
@@ -42,6 +43,10 @@ export const CurrentLocation = () => {
             <p className="text-xl font-semibold self-center mx-4">{todayDate}</p>
             <p className="text-2xl font-semibold self-center mx-4">{formatted}</p>
         </aside>
+
+        {/* Weather Description */}
+        { current.length ? (   <aside className="mt-8  h-[250px] flex justify-evenly bg-red-500"></aside>) : <GifLoader height="300px" />}
+     
    </>
   )
 }

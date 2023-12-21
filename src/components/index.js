@@ -4,3 +4,5 @@ export { Footer } from "./layout/Footer"
 
 export {JustIn} from "./elements/JustIn/JustIn"
 export {MobileJustIn} from "./elements/JustIn/MobileJustIn"
+
+export {GifLoader} from "./elements/GifLoader"
