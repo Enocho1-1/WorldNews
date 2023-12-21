@@ -7,7 +7,9 @@ export const CurrentLocation = () => {
     
     const [condition,setCondition] = useState("")
     const [description,setDescription] = useState("")
+    const [sun,setSun] = useState("")
     const [wind,setWind] = useState("")
+    const [rain,setRain] = useState("")
     const [temp,setTemp] = useState("")
     const [feels,setFeels] = useState("")
     const [fulfilled,setFulfilled] = useState(false)
@@ -30,12 +32,15 @@ export const CurrentLocation = () => {
       
       function success(pos) {
         const crd = pos.coords;
+
         const weather = {
           lat : crd.latitude,
           lon : crd.longitude,
           setCondition:setCondition,
           setDescription:setDescription,
+          setSun:setSun,
           setWind:setWind,
+          setRain:setRain,
           setTemp:setTemp,
           setFeels:setFeels,
           setFulfilled:setFulfilled
@@ -66,7 +71,10 @@ export const CurrentLocation = () => {
           (<CurrentWeatherInfo 
             condition={condition} 
             description={description}
+            date={todayDate}
+            sunrise={sun}
             wind={wind}
+            rain={rain}
             temp={temp}
             feels={feels}
             /> 
