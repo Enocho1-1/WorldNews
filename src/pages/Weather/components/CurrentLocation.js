@@ -4,7 +4,13 @@ import { GifLoader } from "../../../components";
 
 export const CurrentLocation = () => {
     
-    const [current,setCurrent] = useState([])
+    const [condition,setCondition] = useState("")
+    const [description,setDescription] = useState("")
+    const [wind,setWind] = useState("")
+    const [temp,setTemp] = useState("")
+    const [feels,setFeels] = useState("")
+    const [fulfilled,setFulfilled] = useState(false)
+
     const date = new Date()
     const dateWithoutSecond = new Date();
     const formatted = dateWithoutSecond.toLocaleTimeString([], {
@@ -23,7 +29,17 @@ export const CurrentLocation = () => {
       
       function success(pos) {
         const crd = pos.coords;
-        currentLocationWeather(crd.longitude,crd.latitude,setCurrent)
+        const weather = {
+          lat : crd.latitude,
+          lon : crd.longitude,
+          setCondition:setCondition,
+          setDescription:setDescription,
+          setWind:setWind,
+          setTemp:setTemp,
+          setFeels:setFeels,
+          setFulfilled:setFulfilled
+        }
+        currentLocationWeather(weather)
       }
       
       function error(err) {
@@ -34,9 +50,6 @@ export const CurrentLocation = () => {
         navigator.geolocation.getCurrentPosition(success, error,options);
       },[])
   
-      console.log(current.weather)
-      // console.log(current.current.weather[0].main)
-      // const condition = current.current.weather[0].main
 
   return (
    <>
@@ -47,12 +60,12 @@ export const CurrentLocation = () => {
         </aside>
 
         {/* Weather Description */}
-        { current 
+        { fulfilled 
           ? 
           (
             <aside className="mt-8  h-[250px] flex justify-evenly">
               <span className="flex justify-center">
-                  {/* <h1 className="text-xl text-orange-400 font-light ">{condition}</h1> */}
+                  <h1 className="text-xl text-orange-400 font-light ">{condition}</h1>
               </span>
             </aside>
           ) 
