@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export  const navOptions = [
     { 
       name:"NEWS",
