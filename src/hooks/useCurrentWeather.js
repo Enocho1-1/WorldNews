@@ -44,7 +44,7 @@ export const useCurrentWeather = () => {
       
       useEffect(() => {
         navigator.geolocation.getCurrentPosition(success, error,options);
-      },[condition,hourly,description,sun,wind,rain,temp,feels,fulfilled])
+      },[condition,description,sun,wind,rain,temp,feels,fulfilled])
   
   return {condition,hourly,description,sun,wind,rain,temp,feels,fulfilled}
 }

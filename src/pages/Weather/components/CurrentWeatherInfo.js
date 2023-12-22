@@ -11,7 +11,11 @@ export const CurrentWeatherInfo = () => {
     const seconds = "0" + date.getSeconds();
     const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
-    // console.log(hourly)
+   
+    const hourlyChart = hourly.slice(0,8)
+
+    console.log(hourlyChart)
+
     const obj = [
         {
             info:`Sunrise - ${formattedTime}`,
