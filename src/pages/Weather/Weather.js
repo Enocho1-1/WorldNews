@@ -1,5 +1,5 @@
 import { useTitle } from "../../hooks"
-import { CurrentLocation } from "./components/CurrentLocation"
+import { CurrentLocation } from "./components"
 
 export const Weather = () => {
   useTitle("WEATHER")
