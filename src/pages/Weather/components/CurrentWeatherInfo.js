@@ -31,7 +31,6 @@ export const CurrentWeatherInfo = () => {
     ]
    
     const hourlyChart = hourly.slice(0,8)
-    console.log(hourlyChart)
 
   return (
     <aside className=" mt-5 ml-4 flex flex-col">
@@ -60,7 +59,7 @@ export const CurrentWeatherInfo = () => {
         </div>
 
         {/* Hourly Chart Display */}
-        <ul className="mt-10 mx-8 grid grid-cols-eightcols">
+        <ul className="mt-10 mr-8 grid grid-cols-eightcols">
             {hourlyChart.map((item,index) => (
                 <HourlyListItem key={index} item={item}/>
             ))}
