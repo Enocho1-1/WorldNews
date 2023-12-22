@@ -1,4 +1,5 @@
 import { useCurrentWeather } from "../../../hooks"
+import { HourlyListItem } from "./HourlyListItem"
 
 export const CurrentWeatherInfo = () => {
     const {condition,hourly,description,sun,wind,rain,temp,feels} = useCurrentWeather()
@@ -32,7 +33,6 @@ export const CurrentWeatherInfo = () => {
     const hourlyChart = hourly.slice(0,8)
 
 
-
   return (
     <aside className=" mt-5 ml-4 flex flex-col">
         <div className="flex">
@@ -60,18 +60,10 @@ export const CurrentWeatherInfo = () => {
         </div>
 
         {/* Hourly Chart Display */}
-        <ul className="mt-6 grid grid-cols-eightcols">
-            <li className="border-x-[1px] border-gray-200 flex flex-col items-center">
-                <span className=" flex flex-col text-gray-400 ">
-                    <p className="text-xl bi bi-cloud-fill"></p>
-                    <p className="text-lg">50°F</p>
-                </span>
-                <span className=" mt-6 flex flex-col text-gray-400 ">
-                    <p className="text-xl bi bi-dot"></p>
-                    <p className="text-lg">1700</p>
-                </span>
-            </li>
-            
+        <ul className="mt-10 mx-8 grid grid-cols-eightcols">
+            {hourlyChart.map((item,index) => (
+                <HourlyListItem key={index} item={item}/>
+            ))}
         </ul>
     </aside>
   )
