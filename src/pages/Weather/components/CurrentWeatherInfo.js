@@ -2,9 +2,19 @@ import { useCurrentWeather } from "../../../hooks"
 
 export const CurrentWeatherInfo = () => {
     const {condition,description,sun,wind,rain,temp,feels} = useCurrentWeather()
+    
+    // Unix TimeStamp Conversion
+    const unix_timestamp = sun
+    const date = new Date(unix_timestamp * 1000)
+    const hours = date.getHours();
+    const minutes = "0" + date.getMinutes();
+    const seconds = "0" + date.getSeconds();
+    const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+
     const obj = [
         {
-            info:`Sunrise - ${sun}`,
+            info:`Sunrise - ${formattedTime}`,
             icon: "bi bi-brightness-alt-high",
             metric:""
         },

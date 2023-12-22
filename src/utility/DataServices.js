@@ -17,3 +17,4 @@ export const currentLocationWeather = async (obj) => {
         }
    
 }
+
