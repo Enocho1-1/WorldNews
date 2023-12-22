@@ -31,7 +31,7 @@ export const CurrentWeatherInfo = () => {
     ]
    
     const hourlyChart = hourly.slice(0,8)
-
+    console.log(hourlyChart)
 
   return (
     <aside className=" mt-5 ml-4 flex flex-col">

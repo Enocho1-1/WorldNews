@@ -12,12 +12,12 @@ export const HourlyListItem = ({item}) => {
     <>
         <li className="border-x-[1px] border-gray-200 flex flex-col items-center">
                 <span className=" flex flex-col text-gray-400 ">
-                    <p className="text-xl bi bi-cloud-fill"></p>
-                    <p className="text-lg">{Temp}°F</p>
+                    <p className="text-xl bi bi-cloud-fill self-center"></p>
+                    <p className="text-lg self-center">{Temp}°F</p>
                 </span>
                 <span className=" mt-6 flex flex-col text-gray-400 ">
-                    <p className="text-xl bi bi-dot"></p>
-                    <p className="text-lg">{formattedTime}</p>
+                    <p className="text-xl bi bi-dot self-center"></p>
+                    <p className="text-lg text-gray-800 font-semibold self-center">{formattedTime}</p>
                 </span>
         </li>
     </>
