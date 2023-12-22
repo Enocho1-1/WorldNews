@@ -1,7 +1,7 @@
 import { useCurrentWeather } from "../../../hooks"
 
 export const CurrentWeatherInfo = () => {
-    const {condition,description,sun,wind,rain,temp,feels} = useCurrentWeather()
+    const {condition,hourly,description,sun,wind,rain,temp,feels} = useCurrentWeather()
     
     // Unix TimeStamp Conversion
     const unix_timestamp = sun
@@ -11,7 +11,7 @@ export const CurrentWeatherInfo = () => {
     const seconds = "0" + date.getSeconds();
     const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
-
+    // console.log(hourly)
     const obj = [
         {
             info:`Sunrise - ${formattedTime}`,

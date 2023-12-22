@@ -4,6 +4,7 @@ import { currentLocationWeather } from "../utility";
 
 export const useCurrentWeather = () => {
     const [condition,setCondition] = useState("")
+    const [hourly,setHourly] = useState([])
     const [description,setDescription] = useState("")
     const [sun,setSun] = useState("")
     const [wind,setWind] = useState("")
@@ -25,6 +26,7 @@ export const useCurrentWeather = () => {
           lat : crd.latitude,
           lon : crd.longitude,
           setCondition:setCondition,
+          setHourly:setHourly,
           setDescription:setDescription,
           setSun:setSun,
           setWind:setWind,
@@ -42,7 +44,7 @@ export const useCurrentWeather = () => {
       
       useEffect(() => {
         navigator.geolocation.getCurrentPosition(success, error,options);
-      },[condition,description,sun,wind,rain,temp,feels,fulfilled])
+      },[condition,hourly,description,sun,wind,rain,temp,feels,fulfilled])
   
-  return {condition,description,sun,wind,rain,temp,feels,fulfilled}
+  return {condition,hourly,description,sun,wind,rain,temp,feels,fulfilled}
 }
