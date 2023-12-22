@@ -1,9 +1,10 @@
+import { useCurrentWeather } from "../../../hooks"
 
-
-export const CurrentWeatherInfo = ({condition,date,description,sunrise,wind,rain,temp,feels}) => {
+export const CurrentWeatherInfo = () => {
+    const {condition,description,sun,wind,rain,temp,feels} = useCurrentWeather()
     const obj = [
         {
-            info:`Sunrise- ${date} - ${sunrise}`,
+            info:`Sunrise - ${sun}`,
             icon: "bi bi-brightness-alt-high",
             metric:""
         },

@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useTitle } from "../../hooks"
 import { CurrentLocation } from "./components/CurrentLocation"
 
