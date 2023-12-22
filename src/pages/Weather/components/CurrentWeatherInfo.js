@@ -11,12 +11,7 @@ export const CurrentWeatherInfo = () => {
     const seconds = "0" + date.getSeconds();
     const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
-   
-    const hourlyChart = hourly.slice(0,8)
-
-    console.log(hourlyChart)
-
-    const obj = [
+    const metrics = [
         {
             info:`Sunrise - ${formattedTime}`,
             icon: "bi bi-brightness-alt-high",
@@ -33,6 +28,11 @@ export const CurrentWeatherInfo = () => {
             metric: "%"
         }
     ]
+   
+    const hourlyChart = hourly.slice(0,8)
+
+
+
   return (
     <aside className=" mt-5 ml-4 flex flex-col">
         <div className="flex">
@@ -49,15 +49,30 @@ export const CurrentWeatherInfo = () => {
             </span>
         </div>
        
-
+        {/* Metrics */}
         <div className="mt-8 flex">
-            { obj.map((item,index) => (
+            { metrics.map((item,index) => (
                 <span key={index} className="flex text-gray-700 text-xl" data-testid = "metrics">
                     <p className={`mx-4 ${item.icon}`}></p>
                     <p className="mx-4 font-semibold">{item.info} {item.metric}</p>
                 </span>
             ))}
         </div>
+
+        {/* Hourly Chart Display */}
+        <ul className="mt-6 grid grid-cols-eightcols">
+            <li className="border-x-[1px] border-gray-200 flex flex-col items-center">
+                <span className=" flex flex-col text-gray-400 ">
+                    <p className="text-xl bi bi-cloud-fill"></p>
+                    <p className="text-lg">50°F</p>
+                </span>
+                <span className=" mt-6 flex flex-col text-gray-400 ">
+                    <p className="text-xl bi bi-dot"></p>
+                    <p className="text-lg">1700</p>
+                </span>
+            </li>
+            
+        </ul>
     </aside>
   )
 }

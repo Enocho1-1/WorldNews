@@ -17,6 +17,10 @@ module.exports = {
         pure_yellow: "#e6e600",
         pure_gray: "#a9a9a9",
         moderate_violet: "#5b2eb7"
+      },
+      gridTemplateColumns:{
+        // Simple 8 column grid
+        'eightcols': 'repeat(8, minmax(0, 200px))',
       }
     },
   },
