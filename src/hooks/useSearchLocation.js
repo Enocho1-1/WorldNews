@@ -2,8 +2,10 @@ import { useState,useEffect } from "react"
 import { userSearchLocation } from "../utility"
 
 export const useSearchLocation = (location) => {
+    const [data,setData] = useState([])
     useEffect(() => { 
-        userSearchLocation(location)
+        userSearchLocation(location,setData)
     },[location])
-  return null
+
+  return {data}
 }
