@@ -1,5 +1,5 @@
 import { Route,Routes } from "react-router-dom"
-import { CategoryPage,Weather } from "../pages"
+import { CategoryPage,Weather,SearchWeather } from "../pages"
 import { navOptions } from "../components/arrays/NavOptions"
 
 export const AllRoutes = () => {
@@ -11,7 +11,7 @@ export const AllRoutes = () => {
         <Route key={index} path={item.path} element={<CategoryPage option={item} />}/>
       ))}
       <Route  path="/weather/current-location" element={<Weather />}/>
-      {/* <Route  path="/weather/:city" element={<SearchWeather />}/> */}
+      <Route  path="search-location" element={<SearchWeather />}/>
     </Routes>
    </>
   )

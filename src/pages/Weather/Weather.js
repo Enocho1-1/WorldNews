@@ -1,18 +1,28 @@
 import { useRef,useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useTitle } from "../../hooks"
 import { CurrentLocation } from "./components"
 import { SearchWeather } from "./SearchWeather"
 
 export const Weather = () => {
   useTitle("WEATHER")
-  const [search,setSearch] = useState(false)
+  // const [search,setSearch] = useState(false)
+  const navigate = useNavigate()
   const userSearch = useRef()
   const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
 
   const handleSearch = (e) => {
     e.preventDefault()
-    console.log(`${userSearch.current.value} is this`)
-    setSearch(true)
+    let userInput = userSearch.current.value
+    switch(userInput){
+      case '':
+        alert('Please enter a city name')
+        break;
+      default:
+          navigate(`/search-location?q=${userInput}`)
+    }
+   
+    userSearch.current.value = ""
   }
 
   
@@ -29,7 +39,7 @@ export const Weather = () => {
               <button type="submit" className="text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></button>
             </form>
             
-            {search  ? <SearchWeather /> :  <CurrentLocation/> }
+            <CurrentLocation/> 
           
         </section>
     </div>
