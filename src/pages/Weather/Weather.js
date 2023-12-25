@@ -1,16 +1,18 @@
-import { useRef } from "react"
+import { useRef,useState } from "react"
 import { useTitle } from "../../hooks"
 import { CurrentLocation } from "./components"
 import { SearchWeather } from "./SearchWeather"
 
 export const Weather = () => {
   useTitle("WEATHER")
+  const [search,setSearch] = useState(false)
   const userSearch = useRef()
   const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
-  
+
   const handleSearch = (e) => {
     e.preventDefault()
     console.log(`${userSearch.current.value} is this`)
+    setSearch(true)
   }
 
   
@@ -27,7 +29,8 @@ export const Weather = () => {
               <button type="submit" className="text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></button>
             </form>
             
-            <CurrentLocation/>
+            {search  ? <SearchWeather /> :  <CurrentLocation/> }
+          
         </section>
     </div>
    
