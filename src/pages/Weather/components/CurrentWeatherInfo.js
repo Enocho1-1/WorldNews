@@ -29,14 +29,14 @@ export const CurrentWeatherInfo = () => {
     <aside className=" mt-5 ml-4 flex flex-col">
         <div className="flex">
              {/* Conditon + Description */}
-            <span className="px-2 flex flex-col">
-                <h1 className="text-6xl text-orange-400 font-light " data-testid = "weather-condition">{condition}</h1>
+            <span className="flex flex-col">
+                <h1 className="text-5xl text-orange-400 font-light " data-testid = "weather-condition">{condition}</h1>
                 <p className="mt-2 text-2xl text-gray-700" data-testid = "weather-descr">{description}</p>
             </span>
 
             {/* Temp + Feels Like */}
-            <span className=" ml-[100px] w-[250px] flex items-center">
-                <h1 className="text-[45px] text-orange-400 font-bold" data-testid = "temp">{temp}°F</h1>
+            <span className=" ml-[6.25rem] w-[15.625rem] flex items-center">
+                <h1 className="text-[2.813rem] text-orange-400 font-bold" data-testid = "temp">{temp}°F</h1>
                 <p className="text-[35px] ml-4 text-gray-700 font-bold " data-testid = "real-feel">| {feels}°F</p>
             </span>
         </div>

@@ -11,6 +11,7 @@ export const AllRoutes = () => {
         <Route key={index} path={item.path} element={<CategoryPage option={item} />}/>
       ))}
       <Route  path="/weather/current-location" element={<Weather />}/>
+      {/* <Route  path="/weather/:city" element={<SearchWeather />}/> */}
     </Routes>
    </>
   )
