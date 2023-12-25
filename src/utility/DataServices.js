@@ -19,3 +19,15 @@ export const currentLocationWeather = async (obj) => {
    
 }
 
+// Unix Time Convertor
+export const unixTimeConvertor = (time) => {
+    const date = new Date(time * 1000)
+    const hours = date.getHours();
+    const minutes = "0" + date.getMinutes();
+    const seconds = "0" + date.getSeconds();
+    const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+    return formattedTime
+}
+
+

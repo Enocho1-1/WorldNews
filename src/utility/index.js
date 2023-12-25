@@ -1,1 +1,1 @@
-export {currentLocationWeather} from "./DataServices"
+export {currentLocationWeather,unixTimeConvertor} from "./DataServices"

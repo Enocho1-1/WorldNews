@@ -1,20 +1,13 @@
 import { useCurrentWeather } from "../../../hooks"
+import { unixTimeConvertor } from "../../../utility"
 import { HourlyListItem } from "./HourlyListItem"
 
 export const CurrentWeatherInfo = () => {
     const {condition,hourly,description,sun,wind,rain,temp,feels} = useCurrentWeather()
-    
-    // Unix TimeStamp Conversion
-    const unix_timestamp = sun
-    const date = new Date(unix_timestamp * 1000)
-    const hours = date.getHours();
-    const minutes = "0" + date.getMinutes();
-    const seconds = "0" + date.getSeconds();
-    const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
     const metrics = [
         {
-            info:`Sunrise - ${formattedTime}`,
+            info:`Sunrise - ${unixTimeConvertor(sun)}`,
             icon: "bi bi-brightness-alt-high",
             metric:""
         },
