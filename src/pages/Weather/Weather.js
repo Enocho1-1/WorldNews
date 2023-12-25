@@ -1,12 +1,10 @@
-import { useRef,useState } from "react"
+import { useRef} from "react"
 import { useNavigate } from "react-router-dom"
 import { useTitle } from "../../hooks"
 import { CurrentLocation } from "./components"
-import { SearchWeather } from "./SearchWeather"
 
 export const Weather = () => {
   useTitle("WEATHER")
-  // const [search,setSearch] = useState(false)
   const navigate = useNavigate()
   const userSearch = useRef()
   const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"

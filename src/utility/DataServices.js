@@ -19,6 +19,16 @@ export const currentLocationWeather = async (obj) => {
    
 }
 
+// Find User Search Location
+export const userSearchLocation = async (location) => {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc`)
+    if(!response.ok){
+        return alert('City not found!')
+    }else {
+        const result = await response.json();
+        console.log(result)
+    }
+}
 // Unix Time Convertor
 export const unixTimeConvertor = (time) => {
     const date = new Date(time * 1000)
