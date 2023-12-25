@@ -7,11 +7,15 @@ export const SearchWeather = () => {
     let location = params.get("q")
     useTitle(`${location}`)
     const {data:userLocation} = useSearchLocation(location)
-    console.log(userLocation)
+    const { main,sys,weather,wind,} = userLocation
+    console.log(weather)
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">
         <section className="mt-[100px]">
-            {location}
+            <header>
+                <h1 className="font-roboto text-gray-800 text-4xl mx-4">{location}</h1>
+            </header>
+        
         </section>
     </div>
   )
