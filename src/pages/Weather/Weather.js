@@ -12,9 +12,9 @@ export const Weather = () => {
               <span className= "bg-light_cyan h-[2.5rem] w-[1.875rem]"></span>
               <h1 className="font-semibold text-xl ml-4 self-center">Weather</h1>
             </header>
-          
+
             <LocationWeatherForm/>
-            
+        
             <CurrentLocation/> 
           
         </section>
