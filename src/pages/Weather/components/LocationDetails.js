@@ -45,6 +45,19 @@ export const LocationDetails = ({location}) => {
                     </span>
                 ))}
             </div> 
+
+            <div className="mt-5 h-[250px] w-[85%] flex" id="location-overview">
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                {/* <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
+                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span> */}
+            </div>
     </>
   )
 }
