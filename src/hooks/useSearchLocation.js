@@ -7,6 +7,7 @@ export const useSearchLocation = (location) => {
     const [sys,setSys] = useState("")
     const [weather,setWeather] = useState([])
     const [wind,setWind] = useState("")
+    const [visibility,setVisibility] = useState("")
     const [fulfilled,setFulfilled] = useState(false)
 
     const locationObj = {
@@ -15,6 +16,7 @@ export const useSearchLocation = (location) => {
       setSys:setSys,
       setWeather:setWeather,
       setWind:setWind,
+      setVisibility:setVisibility,
       setFulfilled:setFulfilled
     }
     
@@ -22,5 +24,5 @@ export const useSearchLocation = (location) => {
         userSearchLocation(locationObj)
     },[location])
 
-  return {main,sys,weather,wind,fulfilled}
+  return {main,sys,weather,wind,visibility,fulfilled}
 }

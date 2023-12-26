@@ -2,11 +2,11 @@ import { useSearchLocation } from "../../../hooks"
 import { unixTimeConvertor } from "../../../utility"
 
 export const LocationDetails = ({location}) => {
-    const {main,sys,weather,wind} = useSearchLocation(location)
+    const {main,sys,weather,wind,visibility} = useSearchLocation(location)
     const { feels_like,humidity,pressure,temp} = main
     const { country,sunrise} = sys
     const {main: weather_main,description} = weather
-    const {speed,deg,gust} = wind
+    const {speed,deg} = wind
     const metrics = [
         {
             info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
@@ -17,6 +17,21 @@ export const LocationDetails = ({location}) => {
             info: Math.ceil(speed),
             icon:"bi bi-wind",
             metric: "km"
+        }
+    ]
+
+    const overviewObj = [
+        {
+            name:"Humidity",
+            value: humidity
+        },
+        {
+            name: "Pressure",
+            value: pressure
+        },
+        {
+            name: "Wind Direction",
+            value: deg
         }
     ]
   
@@ -47,16 +62,13 @@ export const LocationDetails = ({location}) => {
             </div> 
 
             <div className="mt-5 h-[250px] w-[85%] flex" id="location-overview">
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                {/* <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span>
-                <span className="mx-4 h-[150px] w-[175px] flex flex-col"></span> */}
+                { overviewObj.map((item,index) => (
+                    <span key={index} className="mx-4 py-4 h-[150px] w-[175px] flex flex-col items-center">
+                        <h1 className="font-semibold text-lg">{item.name}</h1>
+                        <p className="text-md mt-4 ">{item.value}</p>
+                    </span>
+                ))}
+                
             </div>
     </>
   )

@@ -21,7 +21,7 @@ export const currentLocationWeather = async (obj) => {
 
 // Find User Search Location
 export const userSearchLocation = async (obj) => {
-    const {location,setMain,setSys,setWeather,setWind,setFulfilled} = obj
+    const {location,setMain,setSys,setWeather,setWind,setVisibility,setFulfilled} = obj
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc`)
     if(!response.ok){
         return alert('City not found!')
@@ -31,6 +31,7 @@ export const userSearchLocation = async (obj) => {
         setSys(result.sys)
         setWeather(result.weather[0])
         setWind(result.wind)
+        setVisibility(result.visibility)
         setFulfilled(true)
     }
 }
