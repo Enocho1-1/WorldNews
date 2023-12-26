@@ -8,7 +8,7 @@ export const SearchWeather = () => {
     useTitle(`${location}`)
     const {data:userLocation} = useSearchLocation(location)
     const { main,sys,weather,wind,} = userLocation
-    console.log(weather)
+    console.log(sys)
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">
         <section className="mt-[100px]">

@@ -1,12 +1,13 @@
 /* eslint-disable */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import twitter from "../../../../assets/social_media/twitter.png"
 import youtube from "../../../../assets/social_media/youtube.png"
 import instagram from "../../../../assets/social_media/instagram.png"
 import linkedin from "../../../../assets/social_media/linkedin.png"
 import facebook from "../../../../assets/social_media/facebook.png"
 
-export const HeaderTop = ({category}) => {
+export const HeaderTop = ({category,setCategory}) => {
     const [language, setLanguage] = useState("EN")
     const [hidden, setHidden] = useState(false)
     const socials = [
@@ -32,12 +33,25 @@ export const HeaderTop = ({category}) => {
       }
   
     ]
+
+    const HomeObj = {
+      name:"",
+      color:"bg-dark_orange",
+      text: "text-dark_orange",
+      border:"border-dark_orange",
+      left: "border-l-dark_orange",
+      bottom: "border-b-dark_orange",
+      path: "/"
+    }
   return (
     <div className="bg-gray-900  h-inherit flex justify-between">
         <aside className="flex font-open_sans"> 
         <div className="bg-orange_red text-gray-900 px-4 h-inherit text-[2.2rem] flex items-center">
+          <Link to="/" onClick={() => setCategory(HomeObj)} className="flex" >
             <h1 className="font-light">World</h1>
             <p className="font-semibold">News.</p>
+          </Link>
+         
 
             {/* Language Dropdown Menu*/}
             <div className="relative">

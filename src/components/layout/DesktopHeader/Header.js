@@ -18,7 +18,7 @@ export const Header = () => {
   
   return (
     <header id="header">
-        <HeaderTop category={category}/>
+        <HeaderTop category={category} setCategory={setCategory}/>
         <HeaderBottom headerObject={headerObj}/>
     </header>
    
