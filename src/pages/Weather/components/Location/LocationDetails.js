@@ -6,7 +6,7 @@ export const LocationDetails = ({location}) => {
     const { feels_like,humidity,pressure,temp} = main
     const { country,sunrise} = sys
     const {main: weather_main,description} = weather
-    const {speed,deg} = wind
+    const {speed} = wind
     const metrics = [
         {
             info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
@@ -30,11 +30,12 @@ export const LocationDetails = ({location}) => {
             value: pressure
         },
         {
-            name: "Wind Direction",
-            value: deg
+            name: "Visibility",
+            value: visibility
         }
     ]
   
+    console.log(visibility)
   return (
     <>
          <header className="mt-8 flex">
@@ -65,7 +66,7 @@ export const LocationDetails = ({location}) => {
                 { overviewObj.map((item,index) => (
                     <span key={index} className="mx-4 py-4 h-[150px] w-[175px] flex flex-col items-center">
                         <h1 className="font-semibold text-lg">{item.name}</h1>
-                        <p className="text-md mt-4 ">{item.value}</p>
+                        <p className="text-xl font-semibold mt-4 ">{item.value}</p>
                     </span>
                 ))}
             </div>
