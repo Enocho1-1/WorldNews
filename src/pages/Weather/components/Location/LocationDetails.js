@@ -35,7 +35,7 @@ export const LocationDetails = ({location}) => {
         }
     ]
   
-    console.log(visibility)
+
   return (
     <>
          <header className="mt-8 flex">
