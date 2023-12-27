@@ -20,7 +20,9 @@ module.exports = {
       },
       gridTemplateColumns:{
         // Simple 8 column grid
-        'eightcols': 'repeat(8, minmax(0, 200px))',
+        'eightcols': 'repeat(8, minmax(0, auto))',
+        // Simple 4 column grid
+        'fourcols': 'repeat(4, minmax(0, auto))',
       }
     },
   },

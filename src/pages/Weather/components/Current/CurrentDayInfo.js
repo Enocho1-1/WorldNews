@@ -11,7 +11,7 @@ export const CurrentDayInfo = () => {
     const day = weekdays[date.getUTCDay()]
     const todayDate = date.toLocaleDateString()
   return (
-    <aside className="w-[100%] mt-[15px] flex justify-start">
+    <aside className="w-[100%] mt-[15px] flex justify-start max-[1150px]:justify-center">
         <h1 className="font-roboto text-4xl mx-4">{day}</h1>
         <p className="text-xl font-semibold self-center mx-4">{todayDate}</p>
         <p className="text-2xl font-semibold self-center mx-4">{formatted}</p>

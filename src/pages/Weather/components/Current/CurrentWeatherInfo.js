@@ -29,9 +29,9 @@ export const CurrentWeatherInfo = () => {
   return (
 
     <>
-        <span className={`absolute top-[25%] right-[15%] ${weatherIcon(condition)} text-[150px] text-gray-400`}></span>
-        <aside className="relative  mt-5 ml-4 flex flex-col">
-            <div className="flex">
+        <span className={`absolute top-[25%] right-[15%] ${weatherIcon(condition)} text-[150px] text-gray-400 max-[1150px]:hidden`}></span>
+        <aside className=" mt-5 ml-4 flex flex-col">
+            <div className="flex max-[1150px]:justify-center">
                 {/* Conditon + Description */}
                 <span className="flex flex-col">
                     <h1 className="text-5xl text-orange-400 font-light " data-testid = "weather-condition">{condition}</h1>
@@ -46,7 +46,7 @@ export const CurrentWeatherInfo = () => {
             </div>
         
             {/* Metrics */}
-            <div className="mt-8 flex">
+            <div className="mt-8 flex max-[1150px]:justify-center">
                 { metrics.map((item,index) => (
                     <span key={index} className="flex text-gray-700 text-xl" data-testid = "metrics">
                         <p className={`mx-4 ${item.icon}`}></p>
@@ -56,7 +56,7 @@ export const CurrentWeatherInfo = () => {
             </div>
 
             {/* Hourly Chart Display */}
-            <ul className="mt-10 mr-8 grid grid-cols-eightcols">
+            <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
                 {hourlyChart.map((item,index) => (
                     <HourlyListItem key={index} item={item}/>
                 ))}
