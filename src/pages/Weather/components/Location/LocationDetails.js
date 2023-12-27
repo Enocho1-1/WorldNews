@@ -1,5 +1,5 @@
 import { useSearchLocation } from "../../../../hooks"
-import { unixTimeConvertor } from "../../../../utility"
+import { unixTimeConvertor,weatherIcon } from "../../../../utility"
 
 export const LocationDetails = ({location}) => {
     const {main,sys,weather,wind,visibility} = useSearchLocation(location)
@@ -68,8 +68,9 @@ export const LocationDetails = ({location}) => {
                         <p className="text-md mt-4 ">{item.value}</p>
                     </span>
                 ))}
-                
             </div>
+
+            <span className={`absolute top-5 right-[15%] ${weatherIcon(weather_main)} text-[150px] text-gray-400`}></span>
     </>
   )
 }

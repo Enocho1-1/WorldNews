@@ -13,7 +13,7 @@ export const SearchWeather = () => {
   
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">
-        <section className="mt-[100px] max-w-inherit w-[100%]">
+        <section className="relative mt-[100px] max-w-inherit w-[100%]">
             <LocationWeatherForm/>
             { fulfilled ? <LocationDetails location={location}/>: <GifLoader height="300px" />}
         </section>

@@ -12,7 +12,6 @@ export const HourlyListItem = ({item}) => {
     <>
         <li className="border-x-[1px] border-gray-200 flex flex-col items-center">
                 <span className=" flex flex-col text-gray-400 ">
-
                     <p className={`text-xl ${weatherIcon(weather[0].main)} self-center`}></p>
                     <p className="text-lg self-center">{Temp}°F</p>
                 </span>
