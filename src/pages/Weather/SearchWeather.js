@@ -10,10 +10,10 @@ export const SearchWeather = () => {
     let location = params.get("q")
     useTitle(`${location}`)
     const {fulfilled} = useSearchLocation(location)
-  
+    const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">
-        <section className="relative mt-[100px] max-w-inherit w-[100%]">
+        <section className={`relative max-w-inherit w-[100%] ${responsiveCSS}`}>
             <LocationWeatherForm/>
             { fulfilled ? <LocationDetails location={location}/>: <GifLoader height="300px" />}
         </section>
