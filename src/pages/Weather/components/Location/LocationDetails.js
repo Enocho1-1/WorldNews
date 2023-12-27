@@ -1,5 +1,5 @@
-import { useSearchLocation } from "../../../hooks"
-import { unixTimeConvertor } from "../../../utility"
+import { useSearchLocation } from "../../../../hooks"
+import { unixTimeConvertor } from "../../../../utility"
 
 export const LocationDetails = ({location}) => {
     const {main,sys,weather,wind,visibility} = useSearchLocation(location)

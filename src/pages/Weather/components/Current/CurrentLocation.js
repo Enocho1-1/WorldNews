@@ -1,7 +1,7 @@
-import { useCurrentWeather } from "../../../hooks";
+import { useCurrentWeather } from "../../../../hooks";
 import { CurrentWeatherInfo } from "./CurrentWeatherInfo";
 import { CurrentDayInfo } from "./CurrentDayInfo";
-import { GifLoader } from "../../../components";
+import { GifLoader } from "../../../../components";
 
 export const CurrentLocation = () => {
 

@@ -1,6 +1,6 @@
-import { useCurrentWeather } from "../../../hooks"
-import { unixTimeConvertor } from "../../../utility"
-import { HourlyListItem } from "./HourlyListItem"
+import { useCurrentWeather } from "../../../../hooks"
+import { unixTimeConvertor } from "../../../../utility"
+import { HourlyListItem } from "../HourlyListItem"
 
 export const CurrentWeatherInfo = () => {
     const {condition,hourly,description,sun,wind,rain,temp,feels} = useCurrentWeather()
@@ -24,6 +24,7 @@ export const CurrentWeatherInfo = () => {
     ]
    
     const hourlyChart = hourly.slice(0,8)
+   
 
   return (
     <aside className=" mt-5 ml-4 flex flex-col">
