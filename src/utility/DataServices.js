@@ -35,6 +35,7 @@ export const userSearchLocation = async (obj) => {
         setFulfilled(true)
     }
 }
+
 // Unix Time Convertor
 export const unixTimeConvertor = (time) => {
     const date = new Date(time * 1000)
@@ -45,5 +46,25 @@ export const unixTimeConvertor = (time) => {
 
     return formattedTime
 }
+
+// Weather Icons 
+export const weatherIcon = (condition) => {
+    switch(condition){
+      case 'Thunderstorm': 
+        return "bi bi-cloud-lightning-rain-fill"
+      case 'Drizzle':
+        return "bi bi-cloud-drizzle-fill"
+      case 'Rain':
+        return "bi bi-cloud-drizzle-fill"
+      case 'Snow':
+        return "bi bi-cloud-snow-fill"
+      case 'Clouds':
+        return "bi bi-cloudy-fill"
+      case 'Clear':
+        return "bi bi-brightness-low-fill"
+      default:
+        return "bi bi-cloud-haze-fill"
+    }
+  }
 
 
