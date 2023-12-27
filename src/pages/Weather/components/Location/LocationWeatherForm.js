@@ -10,8 +10,7 @@ export const LocationWeatherForm = () => {
         let userInput = userSearch.current.value
         switch(userInput){
           case '':
-            alert('Please enter a city name')
-            break;
+            return null
           default:
               navigate(`/search-location?q=${userInput}`)
         }
