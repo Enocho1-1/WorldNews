@@ -39,7 +39,7 @@ export const LocationDetails = ({location}) => {
     <>
          <header className="mt-8 flex">
               <span className="flex flex-col mx-4">
-                <h1 className="font-roboto text-gray-800 text-5xl">{location.toUpperCase()},{country}</h1>
+                <h1 className="font-roboto text-gray-800 text-5xl flex">{location.toUpperCase()},{country} <img src={`https://flagsapi.com/${country}/shiny/64.png`} className="h-10 w-10 ml-2 self-end" /></h1>
                 <p className="text-3xl text-orange-400 font-light">{weather_main}</p>
                 <p className="mt-2 text-2xl text-gray-700">{description}</p>
               </span>

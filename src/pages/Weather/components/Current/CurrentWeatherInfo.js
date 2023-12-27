@@ -27,7 +27,7 @@ export const CurrentWeatherInfo = () => {
    
 
   return (
-    <aside className=" mt-5 ml-4 flex flex-col">
+    <aside className="relative  mt-5 ml-4 flex flex-col">
         <div className="flex">
              {/* Conditon + Description */}
             <span className="flex flex-col">
