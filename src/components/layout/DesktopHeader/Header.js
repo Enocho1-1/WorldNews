@@ -1,25 +1,13 @@
 /* eslint-disable */
-import { useState } from "react"
 import { HeaderTop,HeaderBottom } from "./components"
-import {navOptions} from "../../arrays/NavOptions"
 
-export const Header = () => {
+export const Header = ({headerObject}) => {
+  const {category,setCategory,} = headerObject
 
-  const [category,setCategory] = useState(navOptions[0])
-  const [search, setSearch] = useState(false)
-
-  const headerObj = {
-    navOptions: navOptions,
-    category:category,
-    search:search,
-    setCategory:setCategory,
-    setSearch:setSearch
-  }
-  
   return (
     <header id="header">
         <HeaderTop category={category} setCategory={setCategory}/>
-        <HeaderBottom headerObject={headerObj}/>
+        <HeaderBottom headerObject={headerObject}/>
     </header>
    
   )
