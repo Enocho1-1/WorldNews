@@ -1,4 +1,2 @@
- https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=15ba8c0ae9064145a3aa6eebccf162fd
-
-https://api.openweathermap.org/data/2.5/weather?q=dallas,texas&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc
+https://newsapi.org/v2/everything?q=general&apiKey=15ba8c0ae9064145a3aa6eebccf162fd
  

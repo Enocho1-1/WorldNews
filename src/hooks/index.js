@@ -1,4 +1,5 @@
 export {useMatchMedia} from "./useMatchMedia"
 export {useCurrentWeather} from "./useCurrentWeather"
 export {useSearchLocation} from "./useSearchLocation"
+export {useJustInNews} from "./useJustInNews"
 export {useTitle} from "./useTitle"

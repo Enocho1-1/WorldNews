@@ -1,6 +1,8 @@
-
+import { useJustInNews } from "../../../../hooks/useJustInNews"
 
 export const JustInNews = () => {
+  const {data} = useJustInNews()
+  console.log(data)
   return (
     <>
         <ul className="just-in-list">

@@ -1,3 +1,8 @@
+
+// Weather Async & Regular Functions
+
+
+
 // Get User Current Location Weather
 export const currentLocationWeather = async (obj) => {
         const { lat, lon, setCondition,setHourly,setSun,setWind,setRain,setTemp,setFeels,setFulfilled} = obj
@@ -66,5 +71,18 @@ export const weatherIcon = (condition) => {
         return "https://cdn-icons-png.flaticon.com/128/4005/4005817.png"
     }
   }
+
+// News Async & Regular Functions
+
+// Just In News
+export const JustInNews = async (setData) => {
+  const response = await fetch(`https://newsapi.org/v2/everything?q=general&apiKey=15ba8c0ae9064145a3aa6eebccf162fd`)
+  if(!response.ok){
+    throw new Error(response.message)
+  } else{
+    const data = await response.json()
+    setData(data)
+  }
+}
 
 
