@@ -10,12 +10,12 @@ export const JustInNews = () => {
     <>
         <ul className="just-in-list">
           { news.map((item,index) => (
-                  <li key={index} className="text-black text-sm py-3 px-2 flex items-center line-clamp-2">
-                    <Link className="line-clamp-2">{item.title}</Link>
+                  <li key={index} className="text-black py-3 px-2 flex items-center">
+                    <Link className="flex"><span className="text-yellow-500 mr-2 self-center bi bi-clock-fill"></span> <p className="text-[14px] line-clamp-2" title={item.title}>{item.title}</p> </Link>
                   </li>
           ))}
         </ul>
-        <button className="mt-10 border-[1px] border-black rounded-3xl text-bold text-lg self-center px-2 py-3 max-w-[12.5rem]">View More</button>
+        <button  onClick={() => { setArticles(prevState => prevState += 10)}} className="mt-10 border-[1px] border-black rounded-3xl text-bold text-lg self-center px-2 py-3 max-w-[12.5rem]">View More</button>
     </>
   )
 }
