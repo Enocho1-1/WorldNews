@@ -9,6 +9,7 @@ export const useSearchLocation = (location) => {
     const [wind,setWind] = useState("")
     const [visibility,setVisibility] = useState("")
     const [fulfilled,setFulfilled] = useState(false)
+    const [response,setResponse] = useState({})
 
     const locationObj = {
       location:location,
@@ -17,12 +18,13 @@ export const useSearchLocation = (location) => {
       setWeather:setWeather,
       setWind:setWind,
       setVisibility:setVisibility,
-      setFulfilled:setFulfilled
+      setFulfilled:setFulfilled,
+      setResponse:setResponse
     }
     
     useEffect(() => { 
         userSearchLocation(locationObj)
     },[location])
 
-  return {main,sys,weather,wind,visibility,fulfilled}
+  return {main,sys,weather,wind,visibility,fulfilled,response}
 }

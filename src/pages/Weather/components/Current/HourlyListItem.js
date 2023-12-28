@@ -1,4 +1,4 @@
-import { weatherIcon } from "../../../utility"
+import { weatherIcon } from "../../../../utility"
 
 export const HourlyListItem = ({item}) => {
     const {dt,temp,weather} = item

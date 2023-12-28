@@ -1,6 +1,6 @@
 import { useCurrentWeather } from "../../../../hooks"
 import { unixTimeConvertor,weatherIcon } from "../../../../utility"
-import { HourlyListItem } from "../HourlyListItem"
+import { HourlyListItem } from "./HourlyListItem"
 
 export const CurrentWeatherInfo = () => {
     const {condition,hourly,sun,wind,rain,temp,feels} = useCurrentWeather()
