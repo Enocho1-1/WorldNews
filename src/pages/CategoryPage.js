@@ -13,6 +13,7 @@ export const CategoryPage = ({option}) => {
               <h1 className="font-semibold text-xl ml-4 self-center">Latest</h1>
             </header>
             
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus minus qui necessitatibus quaerat ad tenetur deleniti ducimus et numquam repellat?</div>
         </section>
         
     </div>

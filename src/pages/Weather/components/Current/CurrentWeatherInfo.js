@@ -29,7 +29,7 @@ export const CurrentWeatherInfo = () => {
   return (
 
     <>
-        <span className={`absolute top-[25%] right-[15%] ${weatherIcon(condition)} text-[150px] text-gray-400 max-[1150px]:hidden`}></span>
+        <img src={weatherIcon(condition)} className="absolute top-[40%] right-[15%]  text-[150px] text-gray-400 max-[1150px]:hidden" />
         <aside className=" mt-5 ml-4 flex flex-col">
             <div className="flex max-[1150px]:justify-center">
                 {/* Conditon + Description */}

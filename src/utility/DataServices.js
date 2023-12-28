@@ -50,19 +50,19 @@ export const unixTimeConvertor = (time) => {
 export const weatherIcon = (condition) => {
     switch(condition){
       case 'Thunderstorm': 
-        return "bi bi-cloud-lightning-rain-fill"
+        return "https://cdn-icons-png.flaticon.com/128/9755/9755210.png"
       case 'Drizzle':
-        return "bi bi-cloud-drizzle-fill"
+        return "https://cdn-icons-png.flaticon.com/128/2059/2059322.png"
       case 'Rain':
-        return "bi bi-cloud-drizzle-fill"
+        return "https://cdn-icons-png.flaticon.com/128/2059/2059322.png"
       case 'Snow':
-        return "bi bi-cloud-snow-fill"
+        return "https://cdn-icons-png.flaticon.com/128/2315/2315309.png"
       case 'Clouds':
-        return "bi bi-cloudy-fill"
+        return "https://cdn-icons-png.flaticon.com/128/414/414927.png"
       case 'Clear':
-        return "bi bi-brightness-low-fill"
+        return "https://cdn-icons-png.flaticon.com/128/6974/6974833.png"
       default:
-        return "bi bi-cloud-haze-fill"
+        return "https://cdn-icons-png.flaticon.com/128/4005/4005817.png"
     }
   }
 

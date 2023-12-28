@@ -71,7 +71,7 @@ export const LocationDetails = ({location}) => {
                 ))}
             </div>
 
-            <span className={`absolute top-5 right-[15%] ${weatherIcon(weather_main)} text-[150px] text-gray-400 max-[1150px]:hidden`}></span>
+            <img src={weatherIcon(weather_main)} className="absolute top-[15%] right-[15%] text-[150px] text-gray-400 max-[1150px]:hidden"/>
     </>
   )
 }
