@@ -14,7 +14,7 @@
 main{
   position: relative;
   overflow-x: hidden;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 input:focus,
@@ -74,6 +74,10 @@ button:focus {
 }
 
 /* Just In Elements */
+.just-in-list > li{
+  max-width: 31.25rem;
+
+}
 .just-in-list > li:nth-child(odd){
   background-color: #d1d5db;
 }

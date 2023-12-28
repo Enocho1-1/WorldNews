@@ -81,7 +81,7 @@ export const JustInNews = async (setData) => {
     throw new Error(response.message)
   } else{
     const data = await response.json()
-    setData(data)
+    setData(data.articles)
   }
 }
 
