@@ -8,6 +8,7 @@ export const JustInNews = ({headerObject}) => {
   const [articles,setArticles] = useState(10)
   const navigate = useNavigate()
   const {data} = useJustInNews()
+
   const news = data.slice(0,articles) 
   const News =  { 
     name:"NEWS",
