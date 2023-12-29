@@ -13,7 +13,7 @@
 
 main{
   position: relative;
-  overflow-x: hidden;
+  /* overflow-y: hidden; */
   min-height: 100vh;
 }
 
@@ -85,6 +85,7 @@ button:focus {
 .just-in-list > li:nth-child(even){
   background-color: #f3f4f6;
 }
+
 
 /* ID Selectors */
 #header{
