@@ -1,14 +1,16 @@
-import { useLocation } from "react-router-dom"
+import {useLocation} from "react-router-dom"
 import {useTitle} from "../../hooks"
-import { BannerImage,SocialIcons,NewsContent } from "./components"
-
+import {BannerImage,SocialIcons,NewsContent} from "./components"
+import worldnews from "../../assets/images/world_news_2017.jpg"
 
 export const IndividualNewsPage = () => {
     const {state} = useLocation()
-    const {title,image_url,pubDate,description,content,link,keywords,category,country,creator} = state.data
+    const {title,image_url,pubDate,description,content,keywords,country,creator} = state.data
     useTitle(title)
     const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
-    const contentArr = [pubDate,description,content,link,keywords,category,country,creator]
+    const contentArr = [pubDate,description,content,keywords,creator]
+    const posterImage = image_url 
+
   return (
     <div className="relative max-w-[1200px] w-[100%] flex font-open_sans">
         <section className={responsiveCSS}>
@@ -19,7 +21,7 @@ export const IndividualNewsPage = () => {
 
             {/* News Sections */}
             <aside className="mt-4 flex flex-col">
-              <BannerImage image={image_url} country={country}/>
+              <BannerImage image={image_url ? posterImage : worldnews} country={country}/>
              
               <div className="relative flex">
                 <SocialIcons/>

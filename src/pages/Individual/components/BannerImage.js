@@ -1,6 +1,7 @@
 
 
 export const BannerImage = ({image,country}) => {
+ 
   return (
     <div className="relative flex flex-col">
         <span className="absolute top-0 border-l-4 flex justify-center items-center  text-sm border-dark_orange bg-white h-[50px] w-[180px]">{country}</span>
