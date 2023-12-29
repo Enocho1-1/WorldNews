@@ -21,7 +21,7 @@ export const SocialIcons = () => {
       ]
   
   return (
-    <div className="h-[200px] w-auto px-4 flex flex-col items-center">
+    <div className="h-[200px] w-auto px-4 flex flex-col">
         {socials.map((item,index) => (
         <span key={index}  className={`${item.icon} my-2 p-2 text-xl text-gray-500 hover:bg-dark_orange hover:cursor-pointer`}/>
         ))}
