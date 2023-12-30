@@ -12,7 +12,8 @@ export const NewsContent = ({data}) => {
 
         <aside className="mt-6 p-2 text-md">
             <h1 className="font-semibold font-roboto ">{description}</h1>
-            <p className="mt-4  leading-loose text-sm">{content}</p>
+            {content !== null ? (<p className="mt-4  leading-loose text-sm">{content}</p>) : (<p className="mt-4  leading-loose text-sm font-semibold">Content Is Not Availible</p>) }
+            
         </aside>
 
          <div className="my-4 flex flex-wrap"> 
