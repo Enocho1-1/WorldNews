@@ -1,7 +1,8 @@
-
+import { MobileIcons } from "./MobileIcons"
 
 export const NewsContent = ({data}) => {
     const [pubDate,description,content,keywords,creator] = data
+    
   return (
     
     <div className="mt-8 ml-6 flex flex-col font-open_sans">
@@ -20,6 +21,7 @@ export const NewsContent = ({data}) => {
                     <span key={index} className="border-2 border-gray-500 rounded-lg text-gray-500 text-md mx-2 px-2 flex justify-center items-center">{item}</span>
                 )): ""}
         </div> 
+        <MobileIcons />
     </div>
   )
 }
