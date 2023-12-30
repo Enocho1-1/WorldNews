@@ -3,7 +3,7 @@ import { SideMenu } from "./SideMenu"
 import { navOptions } from "../../../arrays/NavOptions"
 import { MobileJustIn } from "../../../elements/JustIn/MobileJustIn"
 
-export const HeaderBottom = ({isHidden,setIsHidden}) => {
+export const HeaderBottom = ({isHidden,setIsHidden,headerObject}) => {
   const [category,setCategory] = useState(navOptions[0])
   const [hide,setHide] = useState(false)
   return (
@@ -28,7 +28,7 @@ export const HeaderBottom = ({isHidden,setIsHidden}) => {
       </section>
 
       {/* Mobile Just In News */}
-      { hide && <MobileJustIn />}
+      { hide && <MobileJustIn headerObject={headerObject} />}
     </div>
   
   )
