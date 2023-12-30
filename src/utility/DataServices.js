@@ -66,7 +66,7 @@ export const weatherIcon = (condition) => {
       case 'Clouds':
         return "https://cdn-icons-png.flaticon.com/128/414/414927.png"
       case 'Clear':
-        return "https://cdn-icons-png.flaticon.com/128/6974/6974833.png"
+        return "https://cdn-icons-png.flaticon.com/128/4676/4676960.png"
       default:
         return "https://cdn-icons-png.flaticon.com/128/4005/4005817.png"
     }
