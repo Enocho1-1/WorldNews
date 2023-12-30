@@ -145,6 +145,7 @@ button:focus {
   .just-in-list > li{
     display: flex;
     justify-content: start;
+    min-width: 100%;
     padding-left: 3.125rem;
   }
 
