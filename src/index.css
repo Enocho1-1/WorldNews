@@ -88,7 +88,8 @@ button:focus {
 .individual-img{
   position: relative;
   height: 37.5rem;
-  width: inherit;
+  max-width: inherit;
+  width: 100%;
 }
 
 
@@ -134,6 +135,7 @@ button:focus {
 
 
 /* Media Query for mobile - tablet*/
+
 @media (max-width: 769px) {
   
   #just-in{
@@ -144,6 +146,10 @@ button:focus {
     display: flex;
     justify-content: start;
     padding-left: 3.125rem;
+  }
+
+  .individual-img{
+    height: 400px;
   }
 }
 
