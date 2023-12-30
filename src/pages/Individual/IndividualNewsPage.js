@@ -21,7 +21,7 @@ export const IndividualNewsPage = () => {
 
             {/* News Sections */}
             <aside className="mt-4 flex flex-col">
-              <BannerImage image={image_url ? posterImage : worldnews} country={country}/>
+              <BannerImage image={image_url ? posterImage : worldnews} topic={keywords}/>
              
               <div className="relative flex">
                 <SocialIcons/>
