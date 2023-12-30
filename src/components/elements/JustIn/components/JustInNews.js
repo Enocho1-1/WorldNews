@@ -20,7 +20,7 @@ export const JustInNews = ({headerObject}) => {
   }
 
   const handleNavigate = (news) => {
-    navigate(`/individual/${news.title}`,{state: {data:news}})
+    navigate(`/News/${news.title}`,{state: {data:news}})
     setCategory(News)
   }
   return (

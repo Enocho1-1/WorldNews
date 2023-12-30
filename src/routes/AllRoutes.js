@@ -10,7 +10,7 @@ export const AllRoutes = () => {
       { navOptions.map((item,index) => (
         <Route key={index} path={item.path} element={<CategoryPage option={item} />}/>
       ))}
-      <Route  path="/individual/:title" element={<IndividualNewsPage />}/>
+      <Route  path="/News/:title" element={<IndividualNewsPage />}/>
       <Route  path="/weather/current-location" element={<Weather />}/>
       <Route  path="search-location" element={<SearchWeather />}/>
     </Routes>

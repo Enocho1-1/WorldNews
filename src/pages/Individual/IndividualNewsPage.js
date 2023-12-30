@@ -5,7 +5,7 @@ import worldnews from "../../assets/images/world_news_2017.jpg"
 
 export const IndividualNewsPage = () => {
     const {state} = useLocation()
-    const {title,image_url,pubDate,description,content,keywords,country,creator} = state.data
+    const {title,image_url,pubDate,description,content,keywords,creator} = state.data
     useTitle(title)
     const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
     const contentArr = [pubDate,description,content,keywords,creator]
