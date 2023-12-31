@@ -8,7 +8,7 @@ import { navOptions } from "./components/arrays/NavOptions"
 export const Main = () => {
   const [category,setCategory] = useState(navOptions[0])
   const [search, setSearch] = useState(false)
-  const { myQuery } = useMatchMedia(720)
+  const { myQuery } = useMatchMedia(769)
 
   const headerObj = {
     navOptions: navOptions,
