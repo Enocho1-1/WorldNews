@@ -1,10 +1,11 @@
-import { useMemo } from "react"
+import { useMoreStories } from "../../../hooks/useMoreStories"
 import { MoreStoriesCard } from "./MoreStoriesCard"
-import { MoreStoriesFetch } from "../../../utility"
 
-export const MoreStories = ({keywords}) => {
-    const stories = useMemo(() => {MoreStoriesFetch(keywords)},[keywords])
 
+export const MoreStories = ({array}) => {
+ 
+    const {data} =  useMoreStories(array)
+    console.log(data)
   return (
     <div className="my-6">
         <span className="more_stories border-l-8 border-b-[1px] border-dark_orange py-2 flex">
@@ -12,7 +13,7 @@ export const MoreStories = ({keywords}) => {
         </span>
 
         <span className="mt-4 flex">
-            <MoreStoriesCard />
+            <MoreStoriesCard  />
         </span>
     </div>
   )

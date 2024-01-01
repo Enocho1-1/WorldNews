@@ -1,7 +1,9 @@
+import { useState,useEffect} from "react"
+import { MoreStoriesFetch } from "../utility"
 
+export const useMoreStories = (array) => {
+    const [data,setData] = useState([])
+    useEffect(() => { MoreStoriesFetch(setData,array)},[array])
 
-export const useMoreStories = () => {
-  return (
-    <div>useMoreStories</div>
-  )
+  return {data}
 }

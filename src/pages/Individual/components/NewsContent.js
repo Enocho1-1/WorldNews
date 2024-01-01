@@ -2,8 +2,10 @@ import { MobileIcons } from "./MobileIcons"
 import { MoreStories } from "./MoreStories"
 
 export const NewsContent = ({data}) => {
-    const [pubDate,description,content,keywords,creator] = data
- 
+    const [pubDate,description,content,keywords,creator,article_id] = data
+    // const [keywordOne,keywordTwo] = keywords
+    // const kewordsArr = [keywordOne,keywordTwo]
+
   return (
     
     <div className="mt-8 ml-6 flex flex-col font-open_sans">
@@ -27,7 +29,7 @@ export const NewsContent = ({data}) => {
         <MobileIcons />
 
         {/* More Stories Section */}
-        {keywords.length && <MoreStories keywords={keywords} />}
+         {keywords != null && <MoreStories array={keywords} />}
         
     </div>
   )

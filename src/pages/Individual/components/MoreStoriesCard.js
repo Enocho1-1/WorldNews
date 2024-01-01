@@ -1,6 +1,7 @@
 import news from "../../../assets/news.png"
 
 export const MoreStoriesCard = () => {
+  // const { title,image_url,pubDate} = filteredArticles
   return (
     <div className="relative px-2 py-4 hover:cursor-pointer" id="morestories_card">
         {/* Image */}
