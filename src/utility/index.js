@@ -1,1 +1,1 @@
-export {currentLocationWeather,userSearchLocation,unixTimeConvertor,weatherIcon,JustInNews} from "./DataServices"
+export {currentLocationWeather,userSearchLocation,unixTimeConvertor,weatherIcon,JustInNews,MoreStoriesFetch} from "./DataServices"
