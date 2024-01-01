@@ -94,6 +94,8 @@ button:focus {
 
 /* More Stories Elements */
 .more_stories{
+  max-width: inherit;
+  width: 100%;
   box-shadow: 2px -1px 5px 0px rgba(33,32,33,1);
 }
 
