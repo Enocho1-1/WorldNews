@@ -86,7 +86,7 @@ export const JustInNews = async (setData) => {
 }
 
 // More Stories 
-export const MoreStoriesFetch = async (setData,array) => {
+export const MoreStoriesFetch = async (setData,array,id) => {
   const [keywordOne,keywordTwo] = array
   const response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&country=us&language=en&category=world`)
   if(!response.ok){
@@ -94,7 +94,7 @@ export const MoreStoriesFetch = async (setData,array) => {
   } else{
     const data = await response.json()
     const filterData = data.results.filter(item => item.keywords != null)
-    const filteredArticles = filterData.filter(item => item.keywords.includes(keywordOne || keywordTwo))
+    const filteredArticles = filterData.filter(item => item.article_id != id && item.keywords.includes(keywordOne || keywordTwo))
     setData(filteredArticles)
   }
 }

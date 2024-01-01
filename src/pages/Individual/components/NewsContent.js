@@ -3,8 +3,7 @@ import { MoreStories } from "./MoreStories"
 
 export const NewsContent = ({data}) => {
     const [pubDate,description,content,keywords,creator,article_id] = data
-    // const [keywordOne,keywordTwo] = keywords
-    // const kewordsArr = [keywordOne,keywordTwo]
+   
 
   return (
     
@@ -29,7 +28,7 @@ export const NewsContent = ({data}) => {
         <MobileIcons />
 
         {/* More Stories Section */}
-         {keywords != null && <MoreStories array={keywords} />}
+         {keywords != null && <MoreStories array={keywords} id={article_id} />}
         
     </div>
   )
