@@ -3,7 +3,7 @@ import { MoreStories } from "./MoreStories"
 
 export const NewsContent = ({data}) => {
     const [pubDate,description,content,keywords,creator] = data
-    
+ 
   return (
     
     <div className="mt-8 ml-6 flex flex-col font-open_sans">
@@ -27,7 +27,8 @@ export const NewsContent = ({data}) => {
         <MobileIcons />
 
         {/* More Stories Section */}
-        <MoreStories />
+        {keywords.length && <MoreStories keywords={keywords} />}
+        
     </div>
   )
 }

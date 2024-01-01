@@ -138,6 +138,20 @@ button:focus {
 }
 
 
+#morestories_card{
+  display: flex;
+  flex-direction: column;
+  max-width: 275px;
+  box-shadow: 2px 4px 5px 0px rgba(33,32,33,1);
+  overflow: hidden;
+}
+
+#morestories_card > div:nth-child(1):hover{
+  transform: scale(1.2);
+  transition: all .8s ease-out;
+}
+
+
 /* Media Query for mobile - tablet*/
 
 @media (max-width: 769px) {
