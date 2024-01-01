@@ -92,6 +92,10 @@ button:focus {
   width: 100%;
 }
 
+/* More Stories Elements */
+.more_stories{
+  box-shadow: 2px -1px 5px 0px rgba(33,32,33,1);
+}
 
 /* ID Selectors */
 #header{
