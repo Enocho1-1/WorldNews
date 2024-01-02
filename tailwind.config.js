@@ -23,6 +23,8 @@ module.exports = {
         'eightcols': 'repeat(8, minmax(0, auto))',
         // Simple 4 column grid
         'fourcols': 'repeat(4, minmax(0, auto))',
+        // Simple 3 column grid
+        'threecols': 'repeat(3, minmax(0, auto))'
       }
     },
   },
