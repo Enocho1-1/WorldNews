@@ -1,5 +1,6 @@
 /* eslint-disable */
-import { NavLink,Link } from "react-router-dom"
+import { useRef } from "react"
+import { NavLink, useNavigate} from "react-router-dom"
 
 export const HeaderBottom = ({headerObject}) => {
 
@@ -17,6 +18,14 @@ export const HeaderBottom = ({headerObject}) => {
     bottom: "border-b-light_cyan",
     path: "/weather/current-location"
   }
+  const userSearch = useRef()
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(userSearch.current.value)
+    userSearch.current.value = ""
+    setSearch(false)
+  }
+  
 
   return (
     <div className="relative desktop-second-layer flex w-inherit min-h-[2rem] max-[1340px]:flex-col">
@@ -43,8 +52,8 @@ export const HeaderBottom = ({headerObject}) => {
           <span onClick={() => setSearch(!search)} className="bi bi-search"></span>
           { search && 
             (
-              <form>
-                <input type="text" className=" ml-4 text-md bg-transparent" placeholder="Search..." />
+              <form onSubmit={handleSearch}>
+                <input ref={userSearch} type="text" className=" ml-4 text-md bg-transparent" placeholder="Search..." />
               </form>
             )
           }
