@@ -93,8 +93,8 @@ export const MoreStoriesFetch = async (setData,array,id) => {
     throw new Error(response.message)
   } else{
     const data = await response.json()
-    const filterData = data.results.filter(item => item.keywords != null)
-    const filteredArticles = filterData.filter(item => item.article_id != id && item.keywords.includes(keywordOne || keywordTwo || keywordThree || keywordFour))
+    const filterData = data.results.filter(item => item.keywords !== null)
+    const filteredArticles = filterData.filter(item => item.article_id !== id && item.keywords.includes(keywordOne || keywordTwo || keywordThree || keywordFour))
     setData(filteredArticles)
   }
 }
