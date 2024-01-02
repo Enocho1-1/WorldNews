@@ -19,9 +19,10 @@ export const HeaderBottom = ({headerObject}) => {
     path: "/weather/current-location"
   }
   const userSearch = useRef()
+  const navigate = useNavigate()
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(userSearch.current.value)
+    navigate(`/search?q=${userSearch.current.value}`)
     userSearch.current.value = ""
     setSearch(false)
   }
