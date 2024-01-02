@@ -5,7 +5,6 @@ import { MoreStoriesCard } from "./MoreStoriesCard"
 export const MoreStories = ({array,id}) => {
  
     const {data:filteredArticles} =  useMoreStories(array,id)
-    console.log(filteredArticles.length)
   return (
     <>
       { 
@@ -19,7 +18,7 @@ export const MoreStories = ({array,id}) => {
                 <h1 className="ml-2 font-semibold text-md">More Stories</h1>
             </span>
             
-              <span className="mt-4 grid grid-cols-threecols gap-x-6">
+              <span className="mt-4 grid grid-cols-threecols max-[769px]:grid-cols-twocols gap-x-6">
                 {filteredArticles.map((item,index) => (
                     <MoreStoriesCard key={index} item={item} />
                 ))}

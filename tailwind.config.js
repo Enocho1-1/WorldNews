@@ -24,7 +24,9 @@ module.exports = {
         // Simple 4 column grid
         'fourcols': 'repeat(4, minmax(0, auto))',
         // Simple 3 column grid
-        'threecols': 'repeat(3, minmax(0, auto))'
+        'threecols': 'repeat(3, minmax(0, auto))',
+        // Simple 2 column grid
+        'twocols': 'repeat(2, minmax(0, auto))'
       }
     },
   },
