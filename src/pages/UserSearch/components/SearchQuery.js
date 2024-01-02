@@ -1,7 +1,9 @@
-
+import { SearchQueryCard } from "./SearchQueryCard"
 
 export const SearchQuery = () => {
   return (
-    <div>SearchQuery</div>
+    <div className="mt-8 flex flex-col font-open_sans">
+      <SearchQueryCard/>
+    </div>
   )
 }

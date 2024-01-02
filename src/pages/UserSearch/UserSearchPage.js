@@ -1,5 +1,6 @@
 import {useTitle} from "../../hooks"
 import { useSearchParams } from "react-router-dom"
+import { SearchQuery } from "./components/SearchQuery"
 
 export const UserSearchPage = () => {
   const [params] = useSearchParams()
@@ -14,7 +15,7 @@ export const UserSearchPage = () => {
                 <h1 className="font-semibold text-xl ml-4 self-center">Search Results</h1>
         </header>
 
-        
+        <SearchQuery/>
       </section>
     </div>
   )
