@@ -1,5 +1,6 @@
 /* eslint-disable */
-import { NavLink } from "react-router-dom"
+import { useRef } from "react"
+import { NavLink,useNavigate } from "react-router-dom"
 import {navOptions} from "../../../arrays/NavOptions"
 
 export const SideMenu = ({setIsHidden,setCategory}) => {
@@ -14,15 +15,25 @@ export const SideMenu = ({setIsHidden,setCategory}) => {
     path: "/weather/current-location"
   }
   const sideNavOption = [...navOptions, weatherOption]
-
+  const userSearch = useRef()
+  const navigate = useNavigate()
   const sideMenuClick = (item) => {
     setIsHidden(false)
     setCategory(item)
   }
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?q=${userSearch.current.value}`)
+    userSearch.current.value = ""
+    setIsHidden(false)
+  }
+
+
   return (
     <div className="absolute top-0 left-0 flex flex-col z-10 w-[100%] min-h-[100vh] font-open_sans bg-gray-900" data-testid="side-menu">
-        <form className="relative">
-            <input type="text" className="w-[100%] py-2 px-2 text-md text-white bg-gray-700" placeholder="Search..." />
+        <form onSubmit={handleSearch} className="relative">
+            <input ref={userSearch} type="text" className="w-[100%] py-2 px-2 text-md text-white bg-gray-700" placeholder="Search..." />
             <span className="text-white text-lg absolute top-2 right-3.5 bottom-2.5 bi bi-search"></span>
         </form>
 

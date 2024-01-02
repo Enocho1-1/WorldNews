@@ -7,8 +7,11 @@ export const UserSearchPage = () => {
   console.log(queryWord)
   return (
     <div className="relative max-w-[1200px] w-[100%] flex font-open_sans">
-      <section className={responsiveCSS}>
-        user Search
+      <section className={responsiveCSS} id="user-search">
+        <header className="w-inherit flex border-b-2 border-b-dark_orange">
+                <span className= "bg-dark_orange h-[2.5rem] w-[1.875rem]"></span>
+                <h1 className="font-semibold text-xl ml-4 self-center">Search Results</h1>
+        </header>
       </section>
     </div>
   )

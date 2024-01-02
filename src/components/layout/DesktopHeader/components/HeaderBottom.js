@@ -20,6 +20,7 @@ export const HeaderBottom = ({headerObject}) => {
   }
   const userSearch = useRef()
   const navigate = useNavigate()
+  
   const handleSearch = (e) => {
     e.preventDefault();
     navigate(`/search?q=${userSearch.current.value}`)
