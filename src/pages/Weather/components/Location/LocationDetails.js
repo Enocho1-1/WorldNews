@@ -40,7 +40,7 @@ export const LocationDetails = ({location}) => {
     <>
          <header className="mt-8 flex">
               <span className="flex flex-col mx-4">
-                <h1 className="font-roboto text-gray-800 text-5xl flex max-[1150px]:text-3xl">{location.toUpperCase()},{country} <img src={`https://flagsapi.com/${country}/shiny/64.png`} className="h-10 w-10 ml-2 self-end" /></h1>
+                <h1 className="font-roboto text-gray-800 text-5xl flex max-[1150px]:text-3xl">{location.toUpperCase()},{country} <img src={`https://flagsapi.com/${country}/shiny/64.png`} alt={country} className="h-10 w-10 ml-2 self-end" /></h1>
                 <p className="text-3xl text-orange-400 font-light max-[1150px]:text-lg">{weather_main}</p>
                 <p className="mt-2 text-2xl text-gray-700 max-[1150px]:text-lg">{description}</p>
               </span>
@@ -71,7 +71,7 @@ export const LocationDetails = ({location}) => {
                 ))}
             </div>
 
-            <img src={weatherIcon(weather_main)} className="absolute top-[15%] right-[15%] text-[150px] text-gray-400 max-[1150px]:hidden"/>
+            <img src={weatherIcon(weather_main)} alt={weather_main} className="absolute top-[15%] right-[15%] text-[150px] text-gray-400 max-[1150px]:hidden"/>
     </>
   )
 }
