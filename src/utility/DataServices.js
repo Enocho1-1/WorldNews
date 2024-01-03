@@ -1,7 +1,4 @@
 
-// Weather Async & Regular Functions
-
-
 
 // Get User Current Location Weather
 export const currentLocationWeather = async (obj) => {
@@ -99,4 +96,13 @@ export const MoreStoriesFetch = async (setData,array,id) => {
   }
 }
 
+// User News Search 
+export const UserNewsSearch = async (query) => {
+  const response = await fetch(`https://newsdata.io/api/1/archive?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&q=${query}&language=en`)
+  if(!response.ok){
+    throw new Error(response.statusText)
+  } else{
+    const data = await response.json()
+  }
+}
 
