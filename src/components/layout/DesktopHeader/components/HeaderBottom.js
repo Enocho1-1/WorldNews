@@ -18,6 +18,15 @@ export const HeaderBottom = ({headerObject}) => {
     bottom: "border-b-light_cyan",
     path: "/weather/current-location"
   }
+  const SearchObj = { 
+    name: null,
+    color:"bg-dark_orange",
+    text: "text-dark_orange",
+    border:"border-dark_orange",
+    left: "border-l-dark_orange",
+    bottom: "border-b-dark_orange",
+    path: null
+  }
   const userSearch = useRef()
   const navigate = useNavigate()
   
@@ -26,6 +35,7 @@ export const HeaderBottom = ({headerObject}) => {
     navigate(`/search?q=${userSearch.current.value}`)
     userSearch.current.value = ""
     setSearch(false)
+    setCategory(SearchObj)
   }
   
 
