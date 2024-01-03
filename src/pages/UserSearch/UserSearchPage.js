@@ -15,7 +15,7 @@ export const UserSearchPage = () => {
                 <h1 className="font-semibold text-xl ml-4 self-center">Search Results</h1>
         </header>
 
-        <SearchQuery/>
+        <SearchQuery query={queryWord}/>
       </section>
     </div>
   )

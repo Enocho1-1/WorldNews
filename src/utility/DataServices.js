@@ -97,12 +97,13 @@ export const MoreStoriesFetch = async (setData,array,id) => {
 }
 
 // User News Search 
-export const UserNewsSearch = async (query) => {
+export const UserNewsSearch = async (query,setData) => {
   const response = await fetch(`https://newsdata.io/api/1/archive?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&q=${query}&language=en`)
   if(!response.ok){
     throw new Error(response.statusText)
   } else{
     const data = await response.json()
+    setData(data.results)
   }
 }
 
