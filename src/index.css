@@ -115,7 +115,7 @@ button:focus {
   width: auto ;
 }
 
-#category-page,#weather-page,#user-search{
+#category-page,#weather-page,#user-search,#not-found{
   display: flex;
   flex-direction: column;
   max-width: inherit;
