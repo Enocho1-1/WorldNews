@@ -99,6 +99,15 @@ button:focus {
   box-shadow: 2px -1px 5px 0px rgba(209,213,219,1);
 }
 
+/* Category Page Elements */
+.category-box{
+  box-shadow: 7px 6px 5px 0px rgba(209,213,219,1);
+} 
+.category-img:hover{
+  transform: scale(1.1);
+  transition: all .8s ease-out;
+}
+
 /* ID Selectors */
 #header{
   position: fixed;

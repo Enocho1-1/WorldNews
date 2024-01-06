@@ -1,10 +1,13 @@
 import { useTitle } from "../../hooks"
 import { useCategoryNews } from "../../hooks"
+import { Primary } from "./components/Primary"
+import {GifLoader} from "../../components"
 
 export const CategoryPage = ({option}) => {
   const { name,color,border,api} = option
+  const colorObj = {color:color,border:border}
   useTitle(name)
-  useCategoryNews(api)
+  const {data:news} = useCategoryNews(api)
   const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">
@@ -14,7 +17,7 @@ export const CategoryPage = ({option}) => {
               <h1 className="font-semibold text-xl ml-4 self-center">Latest</h1>
             </header>
             
-            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus minus qui necessitatibus quaerat ad tenetur deleniti ducimus et numquam repellat?</div>
+            {news.length === 0 ? <GifLoader height="300px"/> : <Primary news={news} colors={colorObj}/>}
         </section>
         
     </div>

@@ -5,6 +5,6 @@ export const useCategoryNews = (api) => {
     const [data,setData] = useState([])
 
     useEffect(() => {CategoryNews(api,setData)},[api])
-    console.log(data)
-  return null
+
+  return {data}
 }
