@@ -96,7 +96,7 @@ button:focus {
 .more_stories{
   max-width: inherit;
   width: 100%;
-  box-shadow: 2px -1px 5px 0px rgba(33,32,33,1);
+  box-shadow: 2px -1px 5px 0px rgba(209,213,219,1);
 }
 
 /* ID Selectors */
@@ -144,7 +144,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   max-width: 275px;
-  box-shadow: 2px 4px 5px 0px rgba(33,32,33,1);
+  box-shadow: 2px 4px 5px 0px rgba(209,213,219,1);
   overflow: hidden;
 }
 
@@ -154,7 +154,7 @@ button:focus {
 }
 
 .search-box{
-  box-shadow: 7px 4px 5px 0px rgba(33,32,33,1);
+  box-shadow: 7px 4px 5px 0px rgba(209,213,219,1);
 }
 .searchquery-img:hover{
   transform: scale(1.2);
