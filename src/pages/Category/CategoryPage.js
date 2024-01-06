@@ -4,8 +4,8 @@ import { Primary } from "./components/Primary"
 import {GifLoader} from "../../components"
 
 export const CategoryPage = ({option}) => {
-  const { name,color,border,api} = option
-  const colorObj = {color:color,border:border}
+  const { name,color,border,api,left} = option
+  const colorObj = {color:color,border:border,left:left}
   useTitle(name)
   const {data:news} = useCategoryNews(api)
   const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
