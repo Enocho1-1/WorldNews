@@ -8,7 +8,8 @@ export  const navOptions = [
       border:"border-dark_orange",
       left: "border-l-dark_orange",
       bottom: "border-b-dark_orange",
-      path: "/"
+      path: "/",
+      api:"top"
     },
     { 
       name:"BUSINESS",
@@ -17,7 +18,8 @@ export  const navOptions = [
       border:"border-vivid_cyan",
       left: "border-l-vivid_cyan",
       bottom: "border-b-vivid_cyan",
-      path: "/business"
+      path: "/business",
+      api:"business"
     },
     { 
       name:"SPORTS",
@@ -26,7 +28,8 @@ export  const navOptions = [
       border:"border-pure_green",
       left: "border-l-pure_green",
       bottom: "border-b-pure_green",
-      path: "/sports"
+      path: "/sports",
+      api:"sports"
     },
     { 
       name:"ENTERTAINMENT",
@@ -35,7 +38,8 @@ export  const navOptions = [
       border:"border-bright_blue",
       left: "border-l-bright_blue",
       bottom: "border-b-bright_blue",
-      path: "/entertainment"
+      path: "/entertainment",
+      api:"entertainment"
     },
     { 
       name:"HEALTH",
@@ -44,7 +48,8 @@ export  const navOptions = [
       border:"border-pure_yellow",
       left: "border-l-pure_yellow",
       bottom: "border-b-pure_yellow",
-      path: "/health"
+      path: "/health",
+      api:"health"
     },
     { 
       name:"SCIENCE",
@@ -53,7 +58,8 @@ export  const navOptions = [
       border:"border-pure_gray",
       left: "border-l-pure_gray",
       bottom: "border-b-pure_gray",
-      path: "/science"
+      path: "/science",
+      api:"science"
     },
     { 
       name:"TECHNOLOGY",
@@ -62,7 +68,8 @@ export  const navOptions = [
       border:"border-moderate_violet",
       left: "border-l-moderate_violet",
       bottom: "border-b-moderate_violet",
-      path: "/tech"
+      path: "/tech",
+      api:"technology"
     }
   ]
 
