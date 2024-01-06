@@ -4,7 +4,6 @@ export const MoreStoriesCard = ({item}) => {
   const { title,image_url,pubDate} = item
   const posterImage = image_url
   const navigate = useNavigate()
-
   const handleNavigate = () => {
     navigate(`/News/${title}`,{state: {data:item}})
   }

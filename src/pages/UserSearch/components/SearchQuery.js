@@ -17,7 +17,7 @@ export const SearchQuery = ({query}) => {
   }
   return (
     <div className="my-8 flex flex-col font-open_sans">
-      {data.length === 0 ?<NotFound /> :queryData .map((item,index) => (
+      {data.length === 0 ?<NotFound /> :queryData.map((item,index) => (
          <SearchQueryCard key={index} data={item}/>
       ))}
       <Pagination data={data} postperPage={postperPage} pageChange={pageChange}/>
