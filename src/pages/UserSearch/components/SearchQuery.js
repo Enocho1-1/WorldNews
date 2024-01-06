@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { useNewsSearch } from "../../../hooks/useNewsSearch"
 import { SearchQueryCard } from "./SearchQueryCard"
-import { NotFound } from "./NotFound"
 import { Pagination } from "./Pagination"
+import {GifLoader} from "../../../components"
 
 export const SearchQuery = ({query}) => {
   const {data} = useNewsSearch(query)
@@ -17,9 +17,9 @@ export const SearchQuery = ({query}) => {
   }
   return (
     <div className="my-8 flex flex-col font-open_sans">
-      {data.length === 0 ?<NotFound /> :queryData.map((item,index) => (
+      {data.length === 0 ? <GifLoader height="500px" /> : queryData.map((item,index) => (
          <SearchQueryCard key={index} data={item}/>
-      ))}
+      )) }
       <Pagination data={data} postperPage={postperPage} pageChange={pageChange}/>
     </div>
   )
