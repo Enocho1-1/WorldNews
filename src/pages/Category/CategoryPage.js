@@ -1,9 +1,10 @@
-import { useTitle } from "../hooks"
+import { useTitle } from "../../hooks"
+import { useCategoryNews } from "../../hooks"
 
 export const CategoryPage = ({option}) => {
-  const { name,color,border} = option
+  const { name,color,border,api} = option
   useTitle(name)
-
+  useCategoryNews(api)
   const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
   return (
     <div className="max-w-[1200px] w-[100%] flex font-open_sans">

@@ -1,5 +1,5 @@
 // News Pages
-export {CategoryPage} from "./CategoryPage"
+export {CategoryPage} from "./Category/CategoryPage"
 export {IndividualNewsPage} from "./Individual/IndividualNewsPage"
 
 // User Search
