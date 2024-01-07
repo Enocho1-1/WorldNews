@@ -14,36 +14,37 @@ export const useCurrentWeather = () => {
 
     const options = {
         enableHighAccuracy: true,
-        timeout: 2000,
         maximumAge: 0,
       };
       
       function success(pos) {
         const crd = pos.coords;
         sessionStorage.setItem("latitude",JSON.stringify(crd.latitude))
-        sessionStorage.setItem("longitude",JSON.stringify(crd.longitude))   
+        sessionStorage.setItem("longitude",JSON.stringify(crd.longitude)) 
+
+        const weather = {
+          latitude:sessionStorage.getItem("latitude"),
+          longitude:sessionStorage.getItem("longitude"),
+          setCondition:setCondition,
+          setHourly:setHourly,
+          setSun:setSun,
+          setWind:setWind,
+          setRain:setRain,
+          setTemp:setTemp,
+          setFeels:setFeels,
+          setFulfilled:setFulfilled
+        }
+        
+        currentLocationWeather(weather);
       }
       
       function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }
 
-      const weather = {
-        setCondition:setCondition,
-        setHourly:setHourly,
-        setSun:setSun,
-        setWind:setWind,
-        setRain:setRain,
-        setTemp:setTemp,
-        setFeels:setFeels,
-        setFulfilled:setFulfilled
-      }
+    
 
-      useEffect(() => {navigator.geolocation.getCurrentPosition(success, error,options)},[])
+      useEffect(() => {navigator.geolocation.getCurrentPosition(success, error,options)},[condition])
       
-      useEffect(() => {
-        currentLocationWeather(weather);
-      },[condition])
-  
   return {condition,hourly,sun,wind,rain,temp,feels,fulfilled}
 }

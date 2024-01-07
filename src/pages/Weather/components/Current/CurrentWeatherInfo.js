@@ -16,11 +16,11 @@ export const CurrentWeatherInfo = () => {
             icon:"bi bi-wind",
             metric: "km"
         },
-        {
-            info: rain,
-            icon:"bi bi-cloud-drizzle",
-            metric: "%"
-        }
+        // {
+        //     info: rain,
+        //     icon:"bi bi-cloud-drizzle",
+        //     metric: "%"
+        // }
     ]
    
     const hourlyChart = hourly.slice(0,8)

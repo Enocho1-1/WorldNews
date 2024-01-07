@@ -2,9 +2,9 @@
 
 // Get User Current Location Weather
 export const currentLocationWeather = async (obj) => {
-        const {setCondition,setHourly,setSun,setWind,setRain,setTemp,setFeels,setFulfilled} = obj
-        const latitude = sessionStorage.getItem("latitude")
-        const longitude = sessionStorage.getItem("longitude")
+        const {latitude,longitude,setCondition,setHourly,setSun,setWind,setRain,setTemp,setFeels,setFulfilled} = obj
+        console.log(latitude)
+        console.log(longitude)
         const response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=imperial&appid=a9426195c75a3d82140eabc394b3649e`)
         if(!response.ok){
             throw new Error(response.statusText);
@@ -14,7 +14,7 @@ export const currentLocationWeather = async (obj) => {
             setCondition(data.current.weather[0].main)
             setSun(data.current.sunrise)
             setWind(Math.ceil(data.current.wind_speed))
-            setRain(Math.ceil(data.minutely[0].precipitation))
+            // setRain(Math.ceil(data.minutely[0].precipitation))
             setTemp(Math.ceil(data.current.temp))
             setFeels(Math.ceil(data.current.feels_like))
             setFulfilled(true)
