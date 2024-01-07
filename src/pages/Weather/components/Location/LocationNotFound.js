@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const LocationNotFound = ({value}) => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="h-[500px] flex justify-center items-center">
         <section className="mt-10 flex flex-col">
             <h1 className='text-4xl font-roboto font-bold'><i>{value}</i> was not found 😰</h1>
             <p className="text-lg font-open_sans">Please checking spelling and try again !</p>

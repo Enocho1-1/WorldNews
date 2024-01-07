@@ -3,7 +3,7 @@ import { unixTimeConvertor,weatherIcon } from "../../../../utility"
 import { HourlyListItem } from "./HourlyListItem"
 
 export const CurrentWeatherInfo = () => {
-    const {condition,hourly,sun,wind,rain,temp,feels} = useCurrentWeather()
+    const {condition,hourly,sun,wind,temp,feels} = useCurrentWeather()
 
     const metrics = [
         {
@@ -15,12 +15,7 @@ export const CurrentWeatherInfo = () => {
             info: wind,
             icon:"bi bi-wind",
             metric: "km"
-        },
-        // {
-        //     info: rain,
-        //     icon:"bi bi-cloud-drizzle",
-        //     metric: "%"
-        // }
+        }
     ]
    
     const hourlyChart = hourly.slice(0,8)
