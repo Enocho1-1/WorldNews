@@ -8,7 +8,7 @@ export const CurrentLocation = () => {
     const {fulfilled} = useCurrentWeather()
  
   return (
-   <div className="mt-[100px]">
+   <div className="mt-[100px] ">
         {/* Current Day,Date,Time */}
         <CurrentDayInfo/>
 

@@ -21,7 +21,8 @@ export const Primary = ({news,colors}) => {
                     backgroundImage: `url(${image_url ? posterImage : generic})`,
                     backgroundSize:"cover",
                     backgroundRepeat: "no-repeat",
-                    backgroundPositionY: "50%"
+                    backgroundPositionY: "50%",
+                    backgroundPositionX:"70%"
             }}>
             </div>
             {/* Details */}
@@ -32,7 +33,7 @@ export const Primary = ({news,colors}) => {
             </div>
         </aside>
 
-        <aside className="ml-4 flex flex-col  items-center h-[200] w-[500px]">
+        <aside className="ml-4 flex flex-col  items-center h-[200] max-w-[500px]">
             {primaryNews.map((item,index) => (
                 <CategoryCard key={index} data={item} borderColor={border} left={left}/>
             ))}

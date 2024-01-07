@@ -11,7 +11,7 @@ export const SearchWeather = () => {
     const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
 
   return (
-    <div className="max-w-[1200px] w-[100%] flex font-open_sans">
+    <div className="max-w-[1200px] box-shadow w-[100%] flex font-open_sans">
         <section className={`relative max-w-inherit w-[100%] ${responsiveCSS}`}>
             <LocationWeatherForm/>
             { fulfilled && response.status === 200 ? <LocationDetails location={location}/>: <LocationNotFound value={location} />}
