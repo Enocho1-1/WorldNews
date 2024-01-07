@@ -64,8 +64,8 @@ export const HeaderBottom = ({headerObject}) => {
           <span onClick={() => setSearch(!search)} className="bi bi-search"></span>
           { search && 
             (
-              <form onSubmit={handleSearch} className="relative">
-                <input ref={userSearch} type="text" className=" top-0 left-0 text-md bg-transparent" placeholder="Search..." />
+              <form onSubmit={handleSearch} className="flex">
+                <input ref={userSearch} type="text" className="text-md ml-2 bg-transparent" placeholder="Search..." />
               </form>
             )
           }

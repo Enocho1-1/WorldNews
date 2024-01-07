@@ -12,14 +12,14 @@ export const SearchQueryCard = ({data}) => {
   }
   return (
     <>
-        <span className="mt-8 w-[90%] flex flex-col">
+        <span className="mt-8 max-w-inherit w-[100%] flex flex-col">
             <header className="w-inherit flex border-l-[5px] border-l-dark_orange">
               <span className= "bg-dark_orange h-[1.5rem]"></span>
               <h1 className="font-semibold text-xl ml-4 self-center">{country[0]}</h1>
             </header>
 
             <div className="search-box flex overflow-hidden">
-                <img src={image_url ? posterImage : news } onClick={() => handleNavigate(data)}  className="searchquery-img h-[200px] w-[310px] max-[700px]:w-[250px] hover:cursor-pointer" alt="news" />
+                <img src={image_url ? posterImage : news } onClick={() => handleNavigate(data)}  className="searchquery-img h-[200px] min-w-[300px] max-[700px]:w-[250px] hover:cursor-pointer" alt="news" />
                 <aside onClick={() => handleNavigate(data)} className="ml-10 text-md  flex flex-col hover:cursor-pointer">
                     <h1 className="font-semibold">{title}</h1>
                     <p className="mt-4 px-2 line-clamp-3 max-[700px]:hidden ">{description}</p>
