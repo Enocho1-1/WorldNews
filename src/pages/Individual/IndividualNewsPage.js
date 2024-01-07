@@ -16,7 +16,7 @@ export const IndividualNewsPage = () => {
         <section className={responsiveCSS}>
 
             <header className="mt-4 px-2">
-             <h1 className="font-semibold text-3xl">{title}</h1>
+             <h1 className="font-semibold text-2xl max-[1069px]:text-3xl">{title}</h1>
             </header>
 
             {/* News Sections */}

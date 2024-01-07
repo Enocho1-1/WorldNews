@@ -20,7 +20,7 @@ export const NewsContent = ({data}) => {
 
          <div className="my-4 flex flex-wrap gap-y-2"> 
                 {keywords? keywords.map((item,index) => (
-                    <span key={index} className="border-l-4 border-dark_orange text-gray-500 text-md mx-2 px-2 flex justify-center items-center">{item}</span>
+                    <span key={index} className="border-l-4 border-dark_orange text-gray-500 max-w-[250px] text-md truncate... mx-2 px-2 flex justify-center items-center">{item}</span>
                 )): ""}
         </div> 
         

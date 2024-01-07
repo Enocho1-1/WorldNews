@@ -27,8 +27,8 @@ export const JustInNews = ({headerObject}) => {
     <>
         <ul className="just-in-list">
           { news.map((item,index) => (
-                  <li key={index} onClick={() => handleNavigate(item)} className="text-black py-3 px-2 flex items-center hover:cursor-pointer">
-                    <span className="text-yellow-500 mr-2 self-center bi bi-clock-fill"></span> <p className="text-[14px] line-clamp-2" title={item.title}>{item.title}</p>
+                  <li key={index} onClick={() => handleNavigate(item)} className="text-black py-3 px-4 flex items-center hover:cursor-pointer">
+                    <span className="text-yellow-500 mr-2 self-center bi bi-clock-fill"></span> <p className="text-sm max-[1069px]:text-md line-clamp-2" title={item.title}>{item.title}</p>
                   </li>
           ))}
         </ul>
