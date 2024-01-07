@@ -11,7 +11,7 @@ export const Primary = ({news,colors}) => {
     const navigate = useNavigate()
     const handleNavigate = () => {
         navigate(`/News/${title}`,{state: {data:news[0]}})
-      }
+    }
     
   return (
     <section className="flex w-inherit px-4">

@@ -8,7 +8,8 @@ export const BannerImage = ({image}) => {
                 backgroundImage: `url(${image})`,
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat",
-                backgroundPositionY: "50%"
+                backgroundPositionY: "50%",
+                backgroundPositionX:"50%"
         }}>
         </div>
         <span className="mt-1 px-4 flex justify-end">
