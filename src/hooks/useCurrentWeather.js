@@ -20,10 +20,15 @@ export const useCurrentWeather = () => {
       
       function success(pos) {
         const crd = pos.coords;
-        console.log(crd)
+        sessionStorage.setItem("latitude",JSON.stringify(crd.latitude))
+        sessionStorage.setItem("longitude",JSON.stringify(crd.longitude))
+        const latitude = sessionStorage.getItem("latitude")
+        const longitude = sessionStorage.getItem("longitude")
+
+        console.log(latitude)
         const weather = {
-          lat : crd.latitude,
-          lon : crd.longitude,
+          lat : latitude,
+          lon :  longitude,
           setCondition:setCondition,
           setHourly:setHourly,
           setSun:setSun,
