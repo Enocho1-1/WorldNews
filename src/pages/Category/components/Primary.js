@@ -16,7 +16,7 @@ export const Primary = ({news,colors}) => {
   return (
     <section className="flex w-inherit">
         {/* First News Article */}
-        <aside className="category-box flex flex-col max-w-[650px] overflow-hidden hover:cursor-pointer">
+        <aside className="category-box flex flex-col max-w-[450px] max-[1069px]:max-w-[650px] overflow-hidden hover:cursor-pointer">
             <div onClick={() => handleNavigate()} className="relative category-img h-[350px] w-inherit" style={ {
                     backgroundImage: `url(${image_url ? posterImage : generic})`,
                     backgroundSize:"cover",

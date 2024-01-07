@@ -16,7 +16,7 @@ export const SearchQuery = ({query}) => {
     setPage(number)
   }
   return (
-    <div className="my-8 flex flex-col max-[769px]:items-center font-open_sans">
+    <div className="my-8 px-8 flex flex-col max-[769px]:items-center font-open_sans">
       {data.length === 0 ? <GifLoader height="500px" /> : queryData.map((item,index) => (
          <SearchQueryCard key={index} data={item}/>
       )) }

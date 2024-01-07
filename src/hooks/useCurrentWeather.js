@@ -20,7 +20,7 @@ export const useCurrentWeather = () => {
       
       function success(pos) {
         const crd = pos.coords;
-
+        console.log(crd)
         const weather = {
           lat : crd.latitude,
           lon : crd.longitude,

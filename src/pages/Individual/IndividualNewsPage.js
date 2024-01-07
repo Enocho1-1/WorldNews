@@ -12,7 +12,7 @@ export const IndividualNewsPage = () => {
     const posterImage = image_url 
 
   return (
-    <div className="relative max-w-[1200px] w-[100%] flex font-open_sans">
+    <div className="relative box-shadow max-w-[1200px] w-[100%] flex font-open_sans">
         <section className={responsiveCSS}>
 
             <header className="mt-4 px-2">

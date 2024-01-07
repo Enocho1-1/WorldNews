@@ -8,7 +8,7 @@ export const UserSearchPage = () => {
   useTitle(`${queryWord}`)
   const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
   return (
-    <div className="relative max-w-[1200px] w-[100%] flex font-open_sans">
+    <div className="relative box-shadow max-w-[1200px] w-[100%] flex font-open_sans">
       <section className={responsiveCSS} id="user-search">
         <header className="w-inherit flex border-b-2 border-b-dark_orange">
                 <span className= "bg-dark_orange h-[2.5rem] w-[1.875rem]"></span>
