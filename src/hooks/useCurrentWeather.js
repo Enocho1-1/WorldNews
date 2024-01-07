@@ -28,12 +28,7 @@ export const useCurrentWeather = () => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }
 
-      const latitude = sessionStorage.getItem("latitude")
-      const longitude = sessionStorage.getItem("longitude")
-
       const weather = {
-        lat : latitude,
-        lon :  longitude,
         setCondition:setCondition,
         setHourly:setHourly,
         setSun:setSun,

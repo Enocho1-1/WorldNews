@@ -75,7 +75,7 @@ export const HeaderTop = ({category,setCategory}) => {
 
         {/* Category Name*/}
         <div className=" mx-2 flex justify-center items-center h-inherit bg-gray-900">
-          <h1 className={`${category.text} text-[2.2rem]`}>{category.name}</h1>
+          <h1 className={`${category.text} text-[1.7rem]`}>{category.name}</h1>
         </div>
         
         </aside>

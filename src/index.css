@@ -31,8 +31,8 @@ button:focus {
 
 .nav_secondary{
   background-color: #374151;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
 }
 
 .nav_secondary,.nav_secondary_item{
@@ -40,38 +40,26 @@ button:focus {
 }
 
 .nav_secondary_item{
-  width: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  width: auto;
   color: #e5e7eb;
+  font-size: 1.2rem;
 }
 
 .nav_secondary_extended{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15.625rem;
+  width: 13.5rem;
   color: #e5e7eb;
 }
-
-
-.nav_secondary_item:nth-child(2),.nav_secondary_item:nth-child(3){
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-}
-
 
 .nav_secondary_item:nth-child(1):hover,.nav_secondary_item:nth-child(2):hover,.nav_secondary_item:nth-child(3):hover{
   cursor: pointer;
 }
-
-.nav_secondary_item:nth-child(1):hover{
-  background-color: #cc3700;
-}
-
-.nav_secondary_item:nth-child(2):hover{
-  background-color: #1fcae5;
-}
-
 /* Just In Elements */
 .just-in-list > li{
   max-width: 31.25rem;
