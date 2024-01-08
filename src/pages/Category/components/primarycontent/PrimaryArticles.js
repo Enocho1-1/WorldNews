@@ -1,8 +1,13 @@
-import { useNavigate } from "react-router-dom"
-import { navigateToArticlePage } from "../../../../utility"
 
-export const PrimaryArticles = () => {
+import { CategoryCard } from "../CategoryCard"
+
+export const PrimaryArticles = ({news,colors}) => {
+    const {border,left} = colors
   return (
-    <div>PrimaryArticles</div>
+    <aside className="ml-4 flex flex-col py-6  items-center  max-[1281px]:w-[90%] min-[1281px]:max-w-[500px] ">
+        {news.map((item,index) => (
+            <CategoryCard key={index} data={item} borderColor={border} left={left}/>
+        ))}
+    </aside>
   )
 }
