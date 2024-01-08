@@ -118,3 +118,7 @@ export const CategoryNews = async (api,setData) => {
   }
 }
 
+// Navagation to Individual Article Page
+export const navigateToArticlePage = (navigate,title,article) => {
+  navigate(`/News/${title}`,{state: {data:article}})
+}

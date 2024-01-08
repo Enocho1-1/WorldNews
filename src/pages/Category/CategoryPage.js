@@ -1,6 +1,6 @@
 import { useTitle } from "../../hooks"
 import { useCategoryNews } from "../../hooks"
-import { Primary } from "./components/Primary"
+import { Primary } from "./components/primarycontent/Primary"
 import {GifLoader} from "../../components"
 
 export const CategoryPage = ({option}) => {
