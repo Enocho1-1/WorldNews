@@ -23,6 +23,19 @@ button:focus {
     outline: none;
 }
 
+.content-div{
+  position: relative;
+  display: flex;
+  height: 850px;
+  max-width: 1200px;
+  width: 100%;
+   z-index: 1;
+  box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.75)
+}
+
+.box-shadow{
+    box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.75)
+}
 /* Header Elements */
 
 .desktop-second-layer{
@@ -80,10 +93,9 @@ button:focus {
   width: 100%;
 }
 
-.box-shadow{
-  z-index: 1;
-  box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.75)
-}
+
+
+
 
 /* More Stories Elements */
 .more_stories{

@@ -10,7 +10,7 @@ export const CategoryPage = ({option}) => {
   const {data:news} = useCategoryNews(api)
   const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
   return (
-    <div className="max-w-[1200px] w-[100%] box-shadow flex font-open_sans">
+    <div className=" content-div font-open_sans">
         <section className={responsiveCSS} id="category-page" >
             <header className={`w-inherit flex border-b-2 ${border}`}>
               <span className={`${color} h-[40px] w-[30px]`}></span>

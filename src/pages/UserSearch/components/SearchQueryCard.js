@@ -19,7 +19,7 @@ export const SearchQueryCard = ({data}) => {
             </header>
 
             <div className="search-box flex overflow-hidden">
-                <img src={image_url ? posterImage : news } onClick={() => handleNavigate(data)}  className="searchquery-img h-[200px] min-w-[300px] max-[700px]:w-[250px] hover:cursor-pointer" alt="news" />
+                <img src={image_url ? posterImage : news } onClick={() => handleNavigate(data)}  className="searchquery-img h-[200px] min-w-[400px] hover:cursor-pointer" alt="news" />
                 <aside onClick={() => handleNavigate(data)} className="ml-10 text-md  flex flex-col hover:cursor-pointer">
                     <h1 className="font-semibold">{title}</h1>
                     <p className="mt-4 px-2 line-clamp-3 max-[700px]:hidden ">{description}</p>
