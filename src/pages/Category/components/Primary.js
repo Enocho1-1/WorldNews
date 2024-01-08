@@ -4,7 +4,7 @@ import generic from "../../../assets/images/world_news_2017.jpg"
 
 export const Primary = ({news,colors}) => {
     const {border,left} = colors
-    const { image_url,title,pubDate,description,country} = news[0]
+    const { image_url,title,pubDate,description} = news[0]
     const primaryNews = news.slice(1,4)
 
     const posterImage = image_url
@@ -16,7 +16,7 @@ export const Primary = ({news,colors}) => {
   return (
     <section className="flex w-inherit px-4">
         {/* First News Article */}
-        <aside className="category-box flex flex-col  max-w-[500px] overflow-hidden hover:cursor-pointer">
+        <aside className="category-box flex flex-col  max-[1280px]:max-w-[500px]  overflow-hidden hover:cursor-pointer">
             <div onClick={() => handleNavigate()} className="relative category-img h-[350px] w-inherit" style={ {
                     backgroundImage: `url(${image_url ? posterImage : generic})`,
                     backgroundSize:"cover",
@@ -33,7 +33,7 @@ export const Primary = ({news,colors}) => {
             </div>
         </aside>
 
-        <aside className="ml-4 flex flex-col  items-center h-[200] max-w-[500px]">
+        <aside className="ml-4 flex flex-col py-6  items-center h-[200] max-w-[500px]">
             {primaryNews.map((item,index) => (
                 <CategoryCard key={index} data={item} borderColor={border} left={left}/>
             ))}

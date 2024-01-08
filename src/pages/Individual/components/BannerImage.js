@@ -7,9 +7,7 @@ export const BannerImage = ({image}) => {
         <div className="individual-img" style={ {
                 backgroundImage: `url(${image})`,
                 backgroundSize:"cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPositionY: "50%",
-                backgroundPositionX:"50%"
+                backgroundRepeat: "no-repeat"
         }}>
         </div>
         <span className="mt-1 px-4 flex justify-end">

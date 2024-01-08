@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useNavigate } from "react-router-dom"
 import generic from "../../../assets/images/world_news_2017.jpg"
 
