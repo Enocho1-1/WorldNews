@@ -5,15 +5,15 @@ import generic from "../../../assets/images/world_news_2017.jpg"
 
 export const CategoryCard = ({data,border,left}) => {
     const navigate = useNavigate()
-    const {title,pubDate,image_url} = data
+    const {title,pubDate,image_url,keywords} = data
     const posterImage = image_url
-
+  
   return (
     <>
         <span className="mt-2 flex flex-col max-w-inherit w-[100%]">
             <header className={`w-inherit flex border-l-[5px] ${left}`}>
-            <span className= {`${border} h-[1.5rem]`}>
-                <h1>Top News</h1>
+            <span className= {`${border} h-[1.5rem] px-2`}>
+                <h1 className="text-sm">{keywords != null ? keywords[0] : "Top News"}</h1>
             </span>
             </header>
 

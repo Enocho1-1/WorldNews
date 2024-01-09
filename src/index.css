@@ -30,11 +30,11 @@ button:focus {
   max-width: 1200px;
   width: 100%;
    z-index: 1;
-  box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.75)
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.5)
 }
 
 .box-shadow{
-    box-shadow: 6px 4px 5px 0px rgba(0,0,0,0.75)
+    box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.5)
 }
 /* Header Elements */
 
@@ -142,7 +142,7 @@ button:focus {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 5.5rem;
+  top: 5rem;
   width: auto;
   height: 15.625rem;
   z-index: 0;
@@ -207,7 +207,7 @@ button:focus {
   }
 
   #just-in{
-    top: 7.2rem;
+    top: 6.5rem;
   }
 }
 
