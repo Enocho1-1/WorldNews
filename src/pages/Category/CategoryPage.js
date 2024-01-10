@@ -1,6 +1,6 @@
 import { useTitle } from "../../hooks"
 import { useCategoryNews } from "../../hooks"
-import { Primary } from "./components/primarycontent/Primary"
+import { Primary,Secondary } from "./components"
 import {GifLoader} from "../../components"
 
 export const CategoryPage = ({option}) => {
@@ -17,7 +17,16 @@ export const CategoryPage = ({option}) => {
               <h1 className="font-semibold text-xl ml-4 self-center">Latest</h1>
             </header>
             
-            {news.length === 0 ? <GifLoader height="300px"/> : <Primary news={news} colors={colorObj}/>}
+            {news.length === 0 
+            ? 
+            <GifLoader height="300px"/> 
+            : 
+            <>
+              <Primary news={news} colors={colorObj}/>
+              <Secondary/>
+            </>
+        
+            }
         </section>
         
     </div>
