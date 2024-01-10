@@ -103,9 +103,13 @@ button:focus {
 
 /* Category Page Elements */
 .category-box{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   box-shadow: 7px 6px 5px 0px rgba(209,213,219,1);
 } 
 .category-img:hover,.firstArticle-img:hover{
+  cursor: pointer;
   transform: scale(1.1);
   transition: all .8s ease-out;
 }
