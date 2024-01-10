@@ -7,7 +7,7 @@ export const FirstArticle = ({data}) => {
   const posterImage = image_url
   const navigate = useNavigate()
   return (
-    <aside className="category-box flex flex-col    min-[1340px]:max-w-[37.5rem]    overflow-hidden hover:cursor-pointer">
+    <aside className="category-box flex flex-col    min-[1180px]:max-[1340px]:max-w-[32rem] min-[1340px]:max-w-[37.5rem]    overflow-hidden hover:cursor-pointer">
         {/* Article Image */}
         <img onClick={() => navigateToArticlePage(navigate,title,data)} src={image_url ? posterImage : generic} className="firstArticle-img " alt="new-img" />
         {/* Details */}
