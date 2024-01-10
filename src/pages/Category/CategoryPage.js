@@ -23,7 +23,7 @@ export const CategoryPage = ({option}) => {
             : 
             <>
               <Primary news={news} colors={colorObj}/>
-              <Secondary/>
+              <Secondary news={news} colors={colorObj}/>
             </>
         
             }
