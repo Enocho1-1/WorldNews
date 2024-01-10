@@ -7,14 +7,15 @@ export const FirstArticle = ({data}) => {
   const posterImage = image_url
   const navigate = useNavigate()
   return (
-    <aside className="category-box flex flex-col    min-[1281px]:max-w-[600px]   overflow-hidden hover:cursor-pointer">
-        <div onClick={() => navigateToArticlePage(navigate,title,data)} className="relative category-img h-[350px] max-[1281px]:w-[100%]  min-[1281px]:w-[600px]" style={ {
+    <aside className="category-box flex flex-col    min-[1340px]:max-w-[37.5rem]    overflow-hidden hover:cursor-pointer">
+        <img src={image_url ? posterImage : generic} className="firstArticle-img " alt="" />
+        {/* <div onClick={() => navigateToArticlePage(navigate,title,data)} className="relative category-img h-[350px] max-[1281px]:w-[100%]  min-[1281px]:w-[600px]" style={ {
                 backgroundImage: `url(${image_url ? posterImage : generic})`,
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPositionY: "50%"
         }}>
-        </div>
+        </div> */}
         {/* Details */}
         <div onClick={() => navigateToArticlePage(navigate,title,data)} className="mt-4 px-3 py-4">
             <h1 className="font-roboto  max-[1281px]:text-md min-[1281px]:text-lg">{title}</h1>

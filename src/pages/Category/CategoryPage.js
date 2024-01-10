@@ -8,7 +8,7 @@ export const CategoryPage = ({option}) => {
   const colorObj = {color:color,border:border,left:left}
   useTitle(name)
   const {data:news} = useCategoryNews(api)
-  const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
+  const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[100px] min-[1340px]:mt-[90px]"
   return (
     <div className=" relative box-shadow max-w-[1200px] w-[100%] z-[1] font-open_sans">
         <section className={responsiveCSS} id="category-page" >

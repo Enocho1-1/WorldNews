@@ -87,13 +87,10 @@ button:focus {
 }
 
 .individual-img{
-  position: relative;
   height: 37.5rem;
   max-width: inherit;
   width: 100%;
 }
-
-
 
 
 
@@ -108,9 +105,14 @@ button:focus {
 .category-box{
   box-shadow: 7px 6px 5px 0px rgba(209,213,219,1);
 } 
-.category-img:hover{
+.category-img:hover,.firstArticle-img:hover{
   transform: scale(1.1);
   transition: all .8s ease-out;
+}
+
+.firstArticle-img{
+  height: 21.875rem;
+  width: inherit;
 }
 
 /* ID Selectors */
@@ -196,8 +198,15 @@ button:focus {
   .individual-img{
     height: 400px;
   }
+
+  .firstArticle-img{
+    width: 100%;
+  }
 }
 
+@media (min-width: 769px) and (max-width: 1340px)  {
+ 
+}
 
 
 
@@ -216,10 +225,8 @@ button:focus {
 @media (min-width: 1340px) and (max-width: 1600px) {
   
   .individual-img{
-    position: relative;
     height: 34.063rem;
-    max-width: inherit;
-    width: 100%;
   }
+
 }
 
