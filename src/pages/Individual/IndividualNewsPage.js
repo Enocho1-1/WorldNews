@@ -7,7 +7,7 @@ export const IndividualNewsPage = () => {
     const {state} = useLocation()
     const {title,image_url,pubDate,description,content,keywords,creator,article_id,country} = state.data
     useTitle(title)
-    const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
+    const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
     const contentArr = [pubDate,description,content,keywords,creator,article_id]
     const posterImage = image_url 
 
