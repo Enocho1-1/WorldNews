@@ -9,6 +9,7 @@ function App() {
         <Scrolltop/>
         <Main/>
       </BrowserRouter>
+      <h1>Footer</h1>
     </main>
   );
 }
