@@ -19,7 +19,7 @@ export const Main = () => {
   }
 
   return (
-    <div className="relative m-auto pb-[31.25rem] max-w-[1600px] font-open_sans">
+    <div className="relative m-auto pb-[8rem] max-w-[1600px] font-open_sans">
       { myQuery && !myQuery.matches ? <Header headerObject={headerObj}/> : <MobileHeader headerObject={headerObj} />}
         <section className="flex">
           <AllRoutes/>

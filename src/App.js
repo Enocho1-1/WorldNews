@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Scrolltop/>
         <Main/>
-        <Footer />
+        <Footer/>
       </BrowserRouter>
      </main>
     </>
