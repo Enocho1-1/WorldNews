@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { useMatchMedia } from "./hooks"
 import { AllRoutes } from "./routes/AllRoutes"
-import { Header,MobileHeader ,Footer,JustIn } from "./components"
+import { Header,MobileHeader ,JustIn } from "./components"
 import { navOptions } from "./components/arrays/NavOptions"
 
 export const Main = () => {
@@ -19,7 +19,7 @@ export const Main = () => {
   }
 
   return (
-    <div className="relative m-auto max-w-[1600px] font-open_sans">
+    <div className="relative m-auto pb-[31.25rem] max-w-[1600px] font-open_sans">
       { myQuery && !myQuery.matches ? <Header headerObject={headerObj}/> : <MobileHeader headerObject={headerObj} />}
         <section className="flex">
           <AllRoutes/>

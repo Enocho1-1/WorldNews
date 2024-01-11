@@ -32,7 +32,7 @@ export const JustInNews = ({headerObject}) => {
                   </li>
           ))}
         </ul>
-        {news.length < 50 &&  <button  onClick={() => { setArticles(prevState => prevState += 10)}} className="mt-10 border-[1px] border-black rounded-3xl font-bold text-lg self-center px-2 py-3 max-w-[12.5rem]">View More</button>}
+        {news.length < 50 &&  <button  onClick={() => { setArticles(prevState => prevState += 5)}} className="mt-10 border-[1px] border-black rounded-3xl font-bold text-lg self-center px-2 py-3 max-w-[12.5rem]">View More</button>}
        
     </>
   )

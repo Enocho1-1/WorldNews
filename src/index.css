@@ -26,7 +26,7 @@ button:focus {
 .content-div{
   position: relative;
   display: flex;
-  height: 850px;
+  height: 100vh;
   max-width: 1200px;
   width: 100%;
    z-index: 1;
@@ -92,7 +92,14 @@ button:focus {
   width: 100%;
 }
 
-
+/* Search Query Elements */
+.search-box{
+  box-shadow: 7px 4px 5px 0px rgba(209,213,219,1);
+}
+.searchquery-img:hover{
+  transform: scale(1.2);
+  transition: all 2s ease-out;
+}
 
 /* More Stories Elements */
 .more_stories{
@@ -150,7 +157,7 @@ button:focus {
   flex-direction: column;
   top: 5rem;
   width: auto;
-  height: 15.625rem;
+  min-height: 15.625rem;
   z-index: 0;
 }
 
@@ -175,13 +182,10 @@ button:focus {
   transition: all .8s ease-out;
 }
 
-.search-box{
-  box-shadow: 7px 4px 5px 0px rgba(209,213,219,1);
-}
-.searchquery-img:hover{
-  transform: scale(1.2);
-  transition: all 2s ease-out;
-}
+/* #footer{
+  margin-top: clamp(200px,50%,300px) ;
+} */
+
 
 
 /* Media Query for mobile - tablet*/

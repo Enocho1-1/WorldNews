@@ -1,16 +1,19 @@
 import { Main } from "./Main";
-import { Scrolltop } from "./components"
+import { Scrolltop,Footer } from "./components"
 import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
-    <main>
+    <>
+      <main>
       <BrowserRouter>
         <Scrolltop/>
         <Main/>
+        <Footer />
       </BrowserRouter>
-      <h1>Footer</h1>
-    </main>
+     </main>
+    </>
+    
   );
 }
 
