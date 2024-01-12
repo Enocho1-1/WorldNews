@@ -13,7 +13,7 @@ export const CategoryCard = ({data,border,left}) => {
         <span className="mt-2 flex flex-col max-w-inherit w-[100%]">
             <header className={`w-inherit flex border-l-[5px] ${left}`}>
                 <span className= {`${border} h-[1.5rem] px-2`}>
-                    <h1 className="text-md max-w-[250px] truncate ...">{keywords != null ? keywords[0].toUpperCase() : "Top News"}</h1>
+                    <h1 className="text-sm max-w-[15.625rem] truncate ...">{keywords != null ? keywords[0].toUpperCase() : "Top News"}</h1>
                 </span>
             </header>
 

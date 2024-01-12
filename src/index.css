@@ -73,18 +73,7 @@ button:focus {
 .nav_secondary_item:nth-child(1):hover,.nav_secondary_item:nth-child(2):hover,.nav_secondary_item:nth-child(3):hover{
   cursor: pointer;
 }
-/* Just In Elements */
-.just-in-list > li{
-  max-width: 31.25rem;
 
-}
-.just-in-list > li:nth-child(odd){
-  background-color: #d1d5db;
-}
-
-.just-in-list > li:nth-child(even){
-  background-color: #f3f4f6;
-}
 
 .individual-img{
   height: 37.5rem;
@@ -142,7 +131,7 @@ button:focus {
   width: auto ;
 }
 
-#category-page,#weather-page,#user-search,#not-found{
+#category-page,#user-search,#not-found{
   display: flex;
   flex-direction: column;
   max-width: inherit;
@@ -151,15 +140,6 @@ button:focus {
 
 
 
-#just-in{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  top: 5rem;
-  width: auto;
-  min-height: 15.625rem;
-  z-index: 0;
-}
 
 #location-overview > span{
   border-radius: 20px;
@@ -181,11 +161,6 @@ button:focus {
   transform: scale(1.2);
   transition: all .8s ease-out;
 }
-
-/* #footer{
-  margin-top: clamp(200px,50%,300px) ;
-} */
-
 
 
 /* Media Query for mobile - tablet*/
@@ -223,10 +198,6 @@ button:focus {
   
   .nav_secondary{
     width: 100%;
-  }
-
-  #just-in{
-    top: 6.5rem;
   }
 }
 

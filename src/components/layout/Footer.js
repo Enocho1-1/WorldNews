@@ -8,6 +8,7 @@ export const Footer = () => {
   const todayDate = date.toLocaleDateString()
   const socials = ["bi bi-youtube","bi bi-twitter-x","bi bi-linkedin","bi bi-facebook","bi bi-instagram"]
   const footertext = ["About WorldNews","Terms and Conditions","Contacts","Cookie Policy","Distribution","Advertising","Jobs"]
+  
   return (
     <footer className="text-gray-200">
        <Link to="/"  className="flex text-4xl" >

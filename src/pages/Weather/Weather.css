@@ -1,0 +1,6 @@
+#weather-page{
+    display: flex;
+    flex-direction: column;
+    max-width: inherit;
+    width: 100%;
+  }

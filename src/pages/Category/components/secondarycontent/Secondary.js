@@ -16,7 +16,7 @@ export const Secondary = ({news,colors}) => {
   return (
     <section className="my-8 py-4 flex flex-col">
         < SecondaryArticles  news={secondaryNews} colors={colors}/>
-        {secondaryNews.length === 30 ? null : (<button onClick={() => setLastIndex(prevState => prevState += 10)} className={`${colors.color} rounded-md p-2 self-end mr-8 font-semibold text-[15px] hover:text-gray-200`}>View More <span className="bi bi-plus text-[15px] font-bold"></span></button>)}
+        {secondaryNews.length === 30 ? null : (<button onClick={() => setLastIndex(prevState => prevState += 10)} className={`${colors.color} rounded-md p-2 self-end mt-4 mr-8 font-semibold text-[15px] hover:text-gray-200`}>View More <span className="bi bi-plus text-[15px] font-bold"></span></button>)}
     </section>
   )
 }

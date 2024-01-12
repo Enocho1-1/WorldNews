@@ -1,4 +1,5 @@
 import { JustInNews } from "./components/JustInNews"
+import "./JustIn.css"
 
 export const JustIn = ({headerObject}) => {
     const date = new Date()

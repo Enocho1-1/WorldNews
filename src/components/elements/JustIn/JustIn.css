@@ -1,0 +1,47 @@
+/* Just In Elements */
+.just-in-list > li{
+    max-width: 31.25rem;
+  
+  }
+  .just-in-list > li:nth-child(odd){
+    background-color: #d1d5db;
+  }
+  
+  .just-in-list > li:nth-child(even){
+    background-color: #f3f4f6;
+  }
+
+#just-in{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 5rem;
+    width: auto;
+    min-height: 15.625rem;
+    z-index: 0;
+  }
+
+
+  /* Media Query for mobile - tablet*/
+
+@media (max-width: 769px) {
+  
+    #just-in{
+      display: none;
+    }
+  
+    .just-in-list > li{
+      display: flex;
+      justify-content:flex-start;
+      min-width: 100%;
+      padding-left: 3.125rem;
+    }
+  
+  }
+
+  /* Media Query for Large screens */
+@media (max-width: 1340px) {
+    #just-in{
+      top: 6.5rem;
+    }
+  }

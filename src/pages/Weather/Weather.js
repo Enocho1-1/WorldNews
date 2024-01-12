@@ -1,5 +1,6 @@
 import { useTitle } from "../../hooks"
 import { CurrentLocation,LocationWeatherForm } from "./components"
+import "./Weather.css"
 
 export const Weather = () => {
   useTitle("WEATHER")
