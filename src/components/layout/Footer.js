@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 import "./Footer.css"
 
 export const Footer = () => {
+  const date = new Date()
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  const day = weekdays[date.getUTCDay()]
+  const todayDate = date.toLocaleDateString()
   const socials = ["bi bi-youtube","bi bi-twitter-x","bi bi-linkedin","bi bi-facebook","bi bi-instagram"]
   const footertext = ["About WorldNews","Terms and Conditions","Contacts","Cookie Policy","Distribution","Advertising","Jobs"]
   return (
@@ -21,6 +25,12 @@ export const Footer = () => {
 
         <div className="mt-2 flex flex-wrap ">
           {footertext.map((text,index) => (<p key={index} className="text-md mx-2">{text}</p>))}
+        </div>
+
+        <div className="mt-2 text-gray-400 flex text-xs max-[380px]:hidden">
+          <p className="mr-2">{day}</p>
+          <p className="mr-2">{todayDate}</p>
+          <p>Englis</p>
         </div>
     </footer>
   )
