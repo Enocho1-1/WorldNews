@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState,useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import { SecondaryArticles } from "./SecondaryArticles"

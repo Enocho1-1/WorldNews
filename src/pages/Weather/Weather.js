@@ -7,7 +7,7 @@ export const Weather = () => {
   const responsiveCSS = "max-[720px]:mt-0 min-[720px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
 
   return (
-    <div className="content-div font-open_sans">
+    <div className="relative flex h-screen max-w-[1200px] w-[100%] box-shadow z-[1] font-open_sans">
         <section className={responsiveCSS} id="weather-page">
           <header className="w-inherit flex border-b-2 border-b-light_cyan">
               <span className= "bg-light_cyan h-[2.5rem] w-[1.875rem]"></span>
