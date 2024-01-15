@@ -1,11 +1,12 @@
 import { useCurrentWeather } from "../../../../hooks";
 import { CurrentWeatherInfo } from "./CurrentWeatherInfo";
 import { CurrentDayInfo } from "./CurrentDayInfo";
-import { GifLoader } from "../../../../components";
+import { DeniedAccess } from "../Denied/DeniedAccess";
+
 
 export const CurrentLocation = () => {
 
-    const {fulfilled} = useCurrentWeather()
+    const {fulfilled,deniedAccess} = useCurrentWeather()
  
   return (
    <div className="mt-[4.688rem]">
@@ -13,7 +14,10 @@ export const CurrentLocation = () => {
         <CurrentDayInfo/>
 
         {/* Weather Description */}
-        { fulfilled ? (<CurrentWeatherInfo /> ) : <GifLoader height="300px" />}
+        { fulfilled && <CurrentWeatherInfo />}
+
+        {/* User Denies Geo Location Prompt */}
+        {deniedAccess && <DeniedAccess/>}
      
    </div>
   )

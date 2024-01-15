@@ -10,6 +10,7 @@ export const useCurrentWeather = () => {
     const [temp,setTemp] = useState("")
     const [feels,setFeels] = useState("")
     const [fulfilled,setFulfilled] = useState(false)
+    const [deniedAccess,setDeniedAccess] = useState(false)
 
     const options = {
         enableHighAccuracy: true,
@@ -38,11 +39,12 @@ export const useCurrentWeather = () => {
       
       function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
+        setDeniedAccess(true)
       }
 
     
 
       useEffect(() => {navigator.geolocation.getCurrentPosition(success, error,options)},[condition])
       
-  return {condition,hourly,sun,wind,temp,feels,fulfilled}
+  return {condition,hourly,sun,wind,temp,feels,fulfilled,deniedAccess}
 }
