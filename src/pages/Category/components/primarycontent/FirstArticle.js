@@ -6,7 +6,7 @@ export const FirstArticle = ({data}) => {
   const { image_url,title,pubDate,description} = data
   const posterImage = image_url
   const navigate = useNavigate()
-  console.log(posterImage)
+
   return (
     <aside className="category-box max-[1180px]:w-[100%] min-[1180px]:max-[1340px]:max-w-[32rem] min-[1340px]:max-w-[35rem]">
         {/* Article Image */}
