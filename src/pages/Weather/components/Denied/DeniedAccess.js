@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState,useEffect } from "react"
 import { useSearchLocation } from "../../../../hooks"
 import { LocationDetails } from "../Location/LocationDetails"
