@@ -5,11 +5,12 @@ import generic from "../../../../assets/images/world_news_2017.jpg"
 export const FirstArticle = ({data}) => {
   const { image_url,title,pubDate,description} = data
   const posterImage = image_url
+
   const navigate = useNavigate()
   return (
     <aside className="category-box max-[1180px]:w-[100%] min-[1180px]:max-[1340px]:max-w-[32rem] min-[1340px]:max-w-[35rem]">
         {/* Article Image */}
-        <img onClick={() => navigateToArticlePage(navigate,title,data)} src={image_url ? posterImage : generic} className="firstArticle-img " alt="new-img" />
+        <img onClick={() => navigateToArticlePage(navigate,title,data)} src={image_url === null || image_url.includes("gif") ? generic : posterImage} className="firstArticle-img " alt="new-img" />
         {/* Details */}
         <div onClick={() => navigateToArticlePage(navigate,title,data)} className="mt-4 px-3 py-4">
             <h1 className="font-roboto text-[20px] max-[1281px]:text-md">{title}</h1>
