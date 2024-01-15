@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom"
 import {useTitle} from "../../hooks"
 import {BannerImage,SocialIcons,NewsContent} from "./components"
 import worldnews from "../../assets/images/world_news_2017.jpg"
+import "./Individual.css"
 
 export const IndividualNewsPage = () => {
     const {state} = useLocation()

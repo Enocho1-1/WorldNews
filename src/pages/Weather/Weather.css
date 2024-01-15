@@ -4,3 +4,10 @@
     max-width: inherit;
     width: 100%;
   }
+
+  #location-overview > span{
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  12px 12px 24px #d9d9d9,
+               -12px -12px 24px #ffffff;
+  }

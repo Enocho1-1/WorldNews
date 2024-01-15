@@ -1,6 +1,7 @@
 import {useTitle} from "../../hooks"
 import { useSearchParams } from "react-router-dom"
 import { SearchQuery } from "./components/SearchQuery"
+import "./Search.css"
 
 export const UserSearchPage = () => {
   const [params] = useSearchParams()

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { HeaderTop,HeaderBottom } from "./components"
+import "../Header.css"
 
 export const Header = ({headerObject}) => {
   const {category,setCategory,} = headerObject

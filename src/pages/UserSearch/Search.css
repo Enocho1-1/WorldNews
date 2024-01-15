@@ -1,0 +1,15 @@
+/* Search Query Elements */
+.search-box{
+    box-shadow: 7px 4px 5px 0px rgba(209,213,219,1);
+  }
+  .searchquery-img:hover{
+    transform: scale(1.2);
+    transition: all 2s ease-out;
+  }
+
+  #user-search,#not-found{
+    display: flex;
+    flex-direction: column;
+    max-width: inherit;
+    width: 100%;
+  }

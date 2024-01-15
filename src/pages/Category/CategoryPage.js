@@ -2,6 +2,7 @@ import { useTitle } from "../../hooks"
 import { useCategoryNews } from "../../hooks"
 import { Primary,Secondary } from "./components"
 import {GifLoader} from "../../components"
+import "./Category.css"
 
 export const CategoryPage = ({option}) => {
   const { name,color,border,api,left} = option
