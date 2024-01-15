@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
 import { useSearchLocation } from "../../../../hooks"
+import { LocationDetails } from "../Location/LocationDetails"
 
 export const DeniedAccess = () => {
     const [location,setLocation] = useState(null)
@@ -16,13 +17,11 @@ export const DeniedAccess = () => {
     const value = location != null && location.name
 
 
-    const {main,sys,weather,wind,visibility,fulfilled,response} = useSearchLocation(value)
-    console.log(main)
+    const {fulfilled,response} = useSearchLocation(value)
 
   return (
-    <div>
-
-   { fulfilled &&   <img src={`https://flagsapi.com/${location.code}/shiny/64.png`} alt={location} className="h-[150px] w-[150px] ml-2 self-end" />}
+    <div className="relative max-w-inherit w-[100%]">
+    { fulfilled && response.status === 200 && <LocationDetails location={value}/>   }
     </div>
   )
 }
