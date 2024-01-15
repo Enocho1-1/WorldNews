@@ -1,7 +1,7 @@
 import {useLocation} from "react-router-dom"
 import {useTitle} from "../../hooks"
 import {BannerImage,SocialIcons,NewsContent} from "./components"
-import worldnews from "../../assets/images/world_news_2017.jpg"
+import generic from "../../assets/images/world_news_2017.jpg"
 import "./Individual.css"
 
 export const IndividualNewsPage = () => {
@@ -22,7 +22,7 @@ export const IndividualNewsPage = () => {
 
             {/* News Sections */}
             <aside className="mt-4 flex flex-col">
-              <BannerImage image={image_url ? posterImage : worldnews} country={country}/>
+              <BannerImage image={image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : posterImage} country={country}/>
              
               <div className="relative flex">
                 <SocialIcons/>

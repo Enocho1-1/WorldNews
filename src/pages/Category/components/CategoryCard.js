@@ -7,7 +7,7 @@ export const CategoryCard = ({data,border,left}) => {
     const navigate = useNavigate()
     const {title,pubDate,image_url,keywords} = data
     const posterImage = image_url
-    console.log(posterImage)
+
   return (
     <>
         <span className="mt-2 flex flex-col max-w-inherit w-[100%]">

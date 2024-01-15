@@ -13,7 +13,7 @@
   
   .firstArticle-img{
     height: 21.875rem;
-    width: inherit;
+    width: 100%;
   }
   
 
@@ -23,6 +23,7 @@
     max-width: inherit;
     width: 100%;
   }
+
 
   /* Media Query for mobile - tablet*/
   @media (max-width: 769px) {
