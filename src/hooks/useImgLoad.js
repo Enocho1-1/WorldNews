@@ -9,6 +9,6 @@ export const useImgLoad = (src) => {
             setImgLoad(true)
         }
         img.src = src;
-    },[])
+    },[src])
   return {imgLoad}
 }

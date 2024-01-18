@@ -12,9 +12,7 @@ export const FirstArticle = ({data}) => {
   return (
     <aside className="category-box max-[1180px]:w-[100%] min-[1180px]:max-[1340px]:max-w-[32rem] min-[1340px]:max-w-[35rem]">
         {/* Article Image */}
-        {!imgLoad ? <BlurEffect height="h-[350px]" width="w-[100%]"/> :  ( <img  onClick={() => navigateToArticlePage(navigate,title,data)} src={posterImage} className="firstArticle-img " alt="new-img"  loading="lazy" />)}
-        
-   
+        {!imgLoad ? <BlurEffect height="h-[21.875rem]" width="w-[100%]"/> :  ( <img  onClick={() => navigateToArticlePage(navigate,title,data)} src={posterImage} className="firstArticle-img " alt="new-img"  loading="lazy" />)}
         
         {/* Details */}
         <div onClick={() => navigateToArticlePage(navigate,title,data)} className="mt-4 px-3 py-4">

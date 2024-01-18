@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom"
+import { useImgLoad } from "../../../hooks"
+import { BlurEffect } from "../../../components"
 import news from "../../../assets/images/world_news_2017.jpg"
 
 export const SearchQueryCard = ({data}) => {
   const {country,image_url,title,description,pubDate} = data
   const navigate = useNavigate()
-  const posterImage = image_url
-
+  const posterImage = image_url ? image_url : news
+  const {imgLoad} = useImgLoad(posterImage)
   
   const handleNavigate = (data) => {
     navigate(`/News/${title}`,{state: {data:data}})
@@ -19,7 +21,8 @@ export const SearchQueryCard = ({data}) => {
             </header>
 
             <div className="search-box flex overflow-hidden">
-                <img src={image_url ? posterImage : news } onClick={() => handleNavigate(data)}  className="searchquery-img h-[200px] min-w-[400px] hover:cursor-pointer" alt="news" />
+                {!imgLoad ? <BlurEffect height="h-[12.5rem]" width="w-[100%]" maxWidth="max-w-[15.625rem]"/> :  (<img src={posterImage} onClick={() => handleNavigate(data)}  className="searchquery-img h-[12.5rem] w-[100%] max-w-[15.625rem] hover:cursor-pointer" alt="news" />)}
+
                 <aside onClick={() => handleNavigate(data)} className="ml-10 text-md  flex flex-col hover:cursor-pointer">
                     <h1 className="font-semibold">{title}</h1>
                     <p className="mt-4 px-2 line-clamp-3 max-[700px]:hidden ">{description}</p>

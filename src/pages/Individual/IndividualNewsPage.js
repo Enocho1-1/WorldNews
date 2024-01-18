@@ -10,7 +10,8 @@ export const IndividualNewsPage = () => {
     useTitle(title)
     const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
     const contentArr = [pubDate,description,content,keywords,creator,article_id]
-    const posterImage = image_url 
+    const posterImage = image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : image_url
+
 
   return (
     <div className="relative box-shadow max-w-[1200px] z-[1] w-[100%] flex font-open_sans">
@@ -22,7 +23,7 @@ export const IndividualNewsPage = () => {
 
             {/* News Sections */}
             <aside className="mt-4 flex flex-col">
-              <BannerImage image={image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : posterImage} country={country}/>
+              <BannerImage image={posterImage} country={country}/>
              
               <div className="relative flex">
                 <SocialIcons/>
