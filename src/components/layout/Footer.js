@@ -24,7 +24,7 @@ export const Footer = ({object}) => {
   
   return (
     <footer className="text-gray-200">
-       <Link to="/" onClick={() => setCategory(HomeObj)} className="flex"  className="flex text-4xl" >
+       <Link to="/" onClick={() => setCategory(HomeObj)}   className="flex text-4xl" >
             <h1 className="font-light">World</h1>
             <p className="font-semibold">News.</p>
         </Link>

@@ -1,16 +1,19 @@
 import { useNavigate } from "react-router-dom"
+import { useImgLoad } from "../../../../hooks/useImgLoad"
+import { BlurEffect } from "../../../../components"
 import { navigateToArticlePage } from "../../../../utility"
 import generic from "../../../../assets/images/world_news_2017.jpg"
 
 export const FirstArticle = ({data}) => {
   const { image_url,title,pubDate,description} = data
-  const posterImage = image_url
+  const posterImage = image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : image_url 
   const navigate = useNavigate()
-
+  const {imgLoad} = useImgLoad(posterImage)
   return (
     <aside className="category-box max-[1180px]:w-[100%] min-[1180px]:max-[1340px]:max-w-[32rem] min-[1340px]:max-w-[35rem]">
         {/* Article Image */}
-          <img  onClick={() => navigateToArticlePage(navigate,title,data)} src={image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : posterImage} className="firstArticle-img " alt="new-img"  loading="lazy" />
+        {!imgLoad ? <BlurEffect height="h-[350px]" width="w-[100%]"/> :  ( <img  onClick={() => navigateToArticlePage(navigate,title,data)} src={posterImage} className="firstArticle-img " alt="new-img"  loading="lazy" />)}
+        
    
         
         {/* Details */}

@@ -1,5 +1,6 @@
 export {useTitle} from "./useTitle"
 export {useMatchMedia} from "./useMatchMedia"
+export {useImgLoad} from "./useImgLoad"
 
 
 export {useCurrentWeather} from "./useCurrentWeather"
