@@ -4,7 +4,7 @@ import { BlurEffect } from "../../../components"
 import news from "../../../assets/images/world_news_2017.jpg"
 
 export const SearchQueryCard = ({data}) => {
-  const {country,image_url,title,description,pubDate} = data
+  const {country,image_url,title,description,pubDate,keywords} = data
   const navigate = useNavigate()
   const posterImage = image_url ? image_url : news
   const {imgLoad} = useImgLoad(posterImage)
@@ -17,7 +17,7 @@ export const SearchQueryCard = ({data}) => {
         <span className="mt-8 max-w-inherit w-[100%] flex flex-col">
             <header className="w-inherit flex border-l-[5px] border-l-dark_orange">
               <span className= "bg-dark_orange h-[1.5rem]"></span>
-              <h1 className="font-semibold text-xl ml-4 self-center">{country[0]}</h1>
+              <h1 className="font-semibold text-xl ml-4 self-center">{keywords ? keywords[0] : country[0]}</h1>
             </header>
 
             <div className="search-box flex overflow-hidden">
