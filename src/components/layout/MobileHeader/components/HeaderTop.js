@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { HomeObject } from "../../../DataStructures/Objects/HomeObj"
+import { HomeObject } from "../../../DataStructures/HomeObj"
 
 export const HeaderTop = ({isHidden,setIsHidden,setCategory}) => {
     const [language, setLanguage] = useState("EN")
