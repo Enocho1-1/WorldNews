@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useRef } from "react"
 import { NavLink,useNavigate } from "react-router-dom"
-import {navOptions} from "../../../arrays/NavOptions"
+import {navOptions} from "../../../DataStructures/NavOptions"
 
 export const SideMenu = ({setIsHidden,setCategory}) => {
   const notActive = "bg-gray-900 py-4 pl-6  border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%] hover:border-l-[10px] hover:border-b-[1px]"

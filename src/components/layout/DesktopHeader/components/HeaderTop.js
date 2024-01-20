@@ -35,7 +35,7 @@ export const HeaderTop = ({category,setCategory}) => {
     ]
 
     const HomeObj = {
-      name:"",
+      name:"NEWS",
       color:"bg-dark_orange",
       text: "text-dark_orange",
       border:"border-dark_orange",
@@ -43,6 +43,7 @@ export const HeaderTop = ({category,setCategory}) => {
       bottom: "border-b-dark_orange",
       path: "/"
     }
+    
   return (
     <div className="bg-gray-900  h-inherit flex justify-between">
         <aside className="flex font-open_sans"> 

@@ -1,6 +1,6 @@
 import { Route,Routes } from "react-router-dom"
 import { CategoryPage,IndividualNewsPage,Weather,UserSearchPage,SearchWeather } from "../pages"
-import { navOptions } from "../components/arrays/NavOptions"
+import { navOptions } from "../components/DataStructures/NavOptions"
 
 export const AllRoutes = () => {
 

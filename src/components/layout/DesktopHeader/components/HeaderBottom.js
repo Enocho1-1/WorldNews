@@ -18,6 +18,7 @@ export const HeaderBottom = ({headerObject}) => {
     bottom: "border-b-light_cyan",
     path: "/weather/current-location"
   }
+  
   const SearchObj = { 
     name: null,
     color:"bg-dark_orange",

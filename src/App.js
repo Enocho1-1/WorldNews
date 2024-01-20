@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Main } from "./Main";
 import { Scrolltop,Footer } from "./components"
 import { BrowserRouter } from "react-router-dom"
-import { navOptions } from "./components/arrays/NavOptions";
+import { navOptions } from "./components/DataStructures/NavOptions";
 
 function App() {
   const [category,setCategory] = useState(navOptions[0])
