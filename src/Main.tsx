@@ -1,11 +1,14 @@
 /* eslint-disable */
-
 import { useMatchMedia } from "./hooks"
 import { AllRoutes } from "./routes/AllRoutes"
 import { Header,MobileHeader ,JustIn } from "./components"
+import {Object} from "./App"
 
+interface MainProp{
+  object: Object
+}
 
-export const Main = ({object}) => {
+export const Main = ({object}:MainProp) => {
 
   const { myQuery } = useMatchMedia(769)
   return (
