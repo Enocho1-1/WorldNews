@@ -13,6 +13,7 @@ export const HeaderBottom = ({headerObject}:HeaderProp) => {
   const SearchStyling= "nav_secondary w-[25%]"
   const istActiveClass = "mx-2 text-md text-md  font-bold"
   const isNotActive = "hover:cursor-pointer mx-2 text-md text-md  font-medium"
+  
   const userSearch = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
   

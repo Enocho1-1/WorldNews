@@ -2,8 +2,9 @@ import { useState } from "react"
 import { SideMenu } from "./SideMenu"
 import { navOptions } from "../../../DataStructures/NavOptions"
 import { MobileJustIn } from "../../../elements/JustIn/MobileJustIn"
+import { MobileHeader } from "./HeaderTop"
 
-export const HeaderBottom = ({isHidden,setIsHidden,headerObject}) => {
+export const HeaderBottom = ({isHidden,setIsHidden,headerObject}:MobileHeader) => {
   const [category,setCategory] = useState(navOptions[0])
   const [hide,setHide] = useState(false)
   return (

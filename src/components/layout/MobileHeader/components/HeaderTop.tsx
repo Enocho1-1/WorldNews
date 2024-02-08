@@ -1,9 +1,17 @@
 /* eslint-disable */
 import { useState } from "react"
+import { Object } from "../../../../App"
 import { Link } from "react-router-dom"
 import { HomeObject } from "../../../DataStructures/HomeObj"
 
-export const HeaderTop = ({isHidden,setIsHidden,setCategory}) => {
+export interface MobileHeader {
+    isHidden: boolean;
+    setIsHidden: (value: boolean) => void;
+    headerObject: Object
+  }
+
+export const HeaderTop = ({isHidden,setIsHidden,headerObject}:MobileHeader) => {
+    const {setCategory} = headerObject
     const [language, setLanguage] = useState("EN")
     const [hidden, setHidden] = useState(false)
     
