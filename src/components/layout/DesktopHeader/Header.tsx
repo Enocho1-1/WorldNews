@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { HeaderTop,HeaderBottom } from "./components"
+import { Object } from "../../../App"
 import "../Header.css"
 
-export const Header = ({headerObject}) => {
-  const {category,setCategory,} = headerObject
-
+interface HeaderProp{
+  headerObject:Object;
+}
+export const Header = ({headerObject}: HeaderProp) => {
+  const {setCategory,category} = headerObject
   return (
     <header id="header">
         <HeaderTop category={category} setCategory={setCategory}/>

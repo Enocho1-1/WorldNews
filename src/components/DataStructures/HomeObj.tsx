@@ -5,7 +5,8 @@ export const HomeObject = {
     border:"border-dark_orange",
     left: "border-l-dark_orange",
     bottom: "border-b-dark_orange",
-    path: "/"
+    path: "/",
+    api:"top"
   }
 
   export default{
