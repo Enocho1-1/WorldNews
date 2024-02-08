@@ -5,7 +5,8 @@ export const WeatherObject =  {
     border:"border-light_cyan",
     left: "border-l-light_cyan",
     bottom: "border-b-light_cyan",
-    path: "/weather/current-location"
+    path: "/weather/current-location",
+    api:""
   }
 
   export default {

@@ -3,7 +3,7 @@ import { HeaderTop,HeaderBottom } from "./components"
 import { Object } from "../../../App"
 import "../Header.css"
 
-interface HeaderProp{
+export interface HeaderProp{
   headerObject:Object;
 }
 export const Header = ({headerObject}: HeaderProp) => {

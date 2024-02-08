@@ -1,23 +1,25 @@
 /* eslint-disable */
-import { useRef } from "react"
+import { FormEvent, useRef } from "react"
 import { NavLink, useNavigate} from "react-router-dom"
+import { HeaderProp } from "../Header"
 import { WeatherObject } from "../../../DataStructures/WeatherObj"
 import { SearchObject } from "../../../DataStructures/SearchObj"
 
-export const HeaderBottom = ({headerObject}) => {
+export const HeaderBottom = ({headerObject}:HeaderProp) => {
 
   const { navOptions,category,search,setCategory,setSearch} = headerObject
+
   const hiddenSearchStyling= "nav_secondary w-[15%]"
   const SearchStyling= "nav_secondary w-[25%]"
   const istActiveClass = "mx-2 text-md text-md  font-bold"
   const isNotActive = "hover:cursor-pointer mx-2 text-md text-md  font-medium"
-  const userSearch = useRef()
+  const userSearch = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
   
-  const handleSearch = (e) => {
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate(`/search?q=${userSearch.current.value}`)
-    userSearch.current.value = ""
+    navigate(`/search?q=${userSearch.current!.value}`)
+    userSearch.current!.value = ""
     setSearch(false)
     setCategory(SearchObject)
   }
