@@ -1,7 +1,11 @@
+import { Object } from "../../../App"
 import { JustInNews } from "./components/JustInNews"
 import "./JustIn.css"
 
-export const JustIn = ({headerObject}) => {
+interface JusinProp{
+  headerObject: Object
+}
+export const JustIn = ({headerObject}:JusinProp) => {
     const date = new Date()
   return (
     <div id="just-in">

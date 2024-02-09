@@ -13,7 +13,7 @@ interface HTProp{
 export const HeaderTop = ({category,setCategory}:HTProp) => {
     const [language, setLanguage] = useState("EN")
     const [hidden, setHidden] = useState(false)
- 
+      
   return (
     <div className="bg-gray-900  h-inherit flex justify-between">
         <aside className="flex font-open_sans"> 
@@ -57,7 +57,7 @@ export const HeaderTop = ({category,setCategory}:HTProp) => {
             <h1 className="text-gray-200 text-md font-medium">Join us</h1>
             { socials.map((item,index) => (
             <div key={index}>
-                <img className="h-[20px] w-[20px] mx-2" src={item.img} alt="social_icon" title={item.name} />
+                <img className="h-[20px] w-[20px] mx-2 " src={item.img} alt="social_icon" title={item.name} />
             </div>
             ))}
         </span>

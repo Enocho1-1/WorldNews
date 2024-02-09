@@ -1,25 +1,24 @@
 import { useState } from "react"
 import { useJustInNews } from "../../../../hooks/useJustInNews"
 import { useNavigate } from "react-router-dom"
+import { Object } from "../../../../App"
+import { News } from "../../../DataStructures/NewsObj"
+import { NewsData } from "../../../../hooks/useJustInNews"
 
 
-export const JustInNews = ({headerObject}) => {
+interface  Props {
+  headerObject:Object
+}
+
+export const JustInNews = ({headerObject}:Props) => {
   const {setCategory} = headerObject
   const [articles,setArticles] = useState(10)
   const navigate = useNavigate()
   const {data} = useJustInNews()
   const news = data.slice(0,articles) 
-  const News =  { 
-    name:"NEWS",
-    color:"bg-dark_orange",
-    text: "text-dark_orange",
-    border:"border-dark_orange",
-    left: "border-l-dark_orange",
-    bottom: "border-b-dark_orange",
-    path: ""
-  }
 
-  const handleNavigate = (news) => {
+
+  const handleNavigate = (news: NewsData) => {
     navigate(`/News/${news.title}`,{state: {data:news}})
     setCategory(News)
   }
