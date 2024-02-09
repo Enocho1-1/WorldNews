@@ -1,13 +1,13 @@
-import {useRef} from "react"
+import {FormEvent, useRef} from "react"
 import {useNavigate} from "react-router-dom"
 
 export const LocationWeatherForm = () => {
     const navigate = useNavigate()
-    const userSearch = useRef()
+    const userSearch = useRef<HTMLInputElement>(null)
 
-    const handleSearch = (e) => {
+    const handleSearch = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        let userInput = userSearch.current.value
+        let userInput = userSearch.current!.value
         switch(userInput){
           case '':
             return null
@@ -15,7 +15,7 @@ export const LocationWeatherForm = () => {
               navigate(`/search-location?q=${userInput}`)
         }
        
-        userSearch.current.value = ""
+        userSearch.current!.value = ""
       }
   return (
     <form onSubmit={(e) => handleSearch(e)} className="relative text-gray-900">
