@@ -1,24 +1,30 @@
 /* eslint-disable */
-import { useRef } from "react"
+import { FormEvent, useRef } from "react"
 import { NavLink,useNavigate } from "react-router-dom"
 import {navOptions} from "../../../DataStructures/NavOptions"
 import { WeatherObject } from "../../../DataStructures/WeatherObj"
 import { SearchObject } from "../../../DataStructures/SearchObj"
+import { NavObject } from "../../../../App"
 
-export const SideMenu = ({setIsHidden,setCategory}) => {
+interface MobileProps{
+  setIsHidden: (value:boolean) => void
+  setCategory: (object: NavObject) => void
+}
+export const SideMenu = ({setIsHidden,setCategory}:MobileProps) => {
   const notActive = "bg-gray-900 py-4 pl-6  border-b-[1px] border-gray-500 text-gray-200 text-md font-medium w-[100%] hover:border-l-[10px] hover:border-b-[1px]"
   const sideNavOption = [...navOptions, WeatherObject]
-  const userSearch = useRef()
+  const userSearch = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
-  const sideMenuClick = (item) => {
+
+  const sideMenuClick = (item: NavObject) => {
     setIsHidden(false)
     setCategory(item)
   }
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate(`/search?q=${userSearch.current.value}`)
-    userSearch.current.value = ""
+    navigate(`/search?q=${userSearch.current!.value}`)
+    userSearch.current!.value = ""
     setIsHidden(false)
     setCategory(SearchObject)
   }
