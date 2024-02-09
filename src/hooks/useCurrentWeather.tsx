@@ -17,7 +17,7 @@ export const useCurrentWeather = () => {
         maximumAge: 0,
       };
       
-      function success(pos) {
+      function success(pos: { coords: any; }) {
         const crd = pos.coords;
         sessionStorage.setItem("latitude",JSON.stringify(crd.latitude))
         sessionStorage.setItem("longitude",JSON.stringify(crd.longitude)) 
@@ -37,7 +37,7 @@ export const useCurrentWeather = () => {
         currentLocationWeather(weather);
       }
       
-      function error(err) {
+      function error(err: { code: any; message: any; }) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
         setDeniedAccess(true)
       }
