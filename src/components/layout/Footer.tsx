@@ -1,5 +1,6 @@
 import { Object } from "../../App"
 import { HomeObject } from "../DataStructures/HomeObj"
+import { weekdays,socials,footertext } from "../DataStructures/FooterArrays"
 import { Link } from "react-router-dom"
 import "./Footer.css"
 
@@ -8,16 +9,10 @@ interface FooterProp{
 }
 export const Footer = ({object}:FooterProp) => {
   const {setCategory} = object
-
   const date = new Date()
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   const day = weekdays[date.getUTCDay()]
   const todayDate = date.toLocaleDateString()
-  const socials = ["bi bi-youtube","bi bi-twitter-x","bi bi-linkedin","bi bi-facebook","bi bi-instagram"]
-  const footertext = ["About WorldNews","Terms and Conditions","Contacts","Cookie Policy","Distribution","Advertising","Jobs"]
-  
 
-  
   return (
     <footer className="text-gray-200">
        <Link to="/" onClick={() => setCategory(HomeObject)}   className="flex text-4xl" >
