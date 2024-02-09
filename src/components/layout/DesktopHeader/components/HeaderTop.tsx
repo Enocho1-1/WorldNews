@@ -14,8 +14,6 @@ export const HeaderTop = ({category,setCategory}:HTProp) => {
     const [language, setLanguage] = useState("EN")
     const [hidden, setHidden] = useState(false)
  
-
-    
   return (
     <div className="bg-gray-900  h-inherit flex justify-between">
         <aside className="flex font-open_sans"> 
