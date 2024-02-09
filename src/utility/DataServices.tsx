@@ -3,7 +3,7 @@ import { Updater,NewsData} from "../hooks/useJustInNews";
 
 
 // Get User Current Location Weather
-export const currentLocationWeather = async (obj) => {
+export const currentLocationWeather = async (obj: { latitude: any; longitude: any; setCondition: any; setHourly: any; setSun: any; setWind: any; setTemp: any; setFeels: any; setFulfilled: any; }) => {
         const {latitude,longitude,setCondition,setHourly,setSun,setWind,setTemp,setFeels,setFulfilled} = obj
  
         const response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=imperial&appid=a9426195c75a3d82140eabc394b3649e`)
@@ -41,7 +41,7 @@ export const userSearchLocation = async (obj: { location: any; setMain: any; set
 }
 
 // Unix Time Convertor
-export const unixTimeConvertor = (time) => {
+export const unixTimeConvertor = (time: number) => {
     const date = new Date(time * 1000)
     const hours = date.getHours();
     const minutes = "0" + date.getMinutes();
