@@ -2,12 +2,13 @@ import { FirstArticle } from "./FirstArticle"
 import { PrimaryArticles } from "./PrimaryArticles"
 import { NewsData } from "../../../../hooks/useJustInNews";
 
-interface Color{
+export interface Color{
   color:string;
   border: string;
   left:string
 }
-interface PrimaryProps{
+
+export interface PrimaryProps{
   news: NewsData[];
   colors:Color
 }

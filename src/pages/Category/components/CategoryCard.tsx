@@ -1,11 +1,18 @@
 /* eslint-disable */
 import { useNavigate } from "react-router-dom"
 import { useImgLoad } from "../../../hooks/useImgLoad"
+import { NewsData } from "../../../hooks/useJustInNews"
 import { BlurEffect } from "../../../components"
 import { navigateToArticlePage } from "../../../utility"
 import generic from "../../../assets/images/world_news_2017.jpg"
 
-export const CategoryCard = ({data,border,left}) => {
+interface CategoryCardProps{
+    data: NewsData;
+    borderColor: string;
+    left: string
+}
+
+export const CategoryCard = ({data,borderColor,left}:CategoryCardProps) => {
     const navigate = useNavigate()
     const {title,pubDate,image_url,keywords} = data
     const posterImage = image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic  : image_url
@@ -14,7 +21,7 @@ export const CategoryCard = ({data,border,left}) => {
     <>
         <span className="mt-2 flex flex-col max-w-inherit w-[100%]">
             <header className={`w-inherit flex border-l-[5px] ${left}`}>
-                <span className= {`${border} h-[1.5rem] px-2`}>
+                <span className= {`${borderColor} h-[1.5rem] px-2`}>
                     <h1 className="text-sm max-w-[15.625rem] truncate ...">{keywords != null ? keywords[0].toUpperCase() : "Top News"}</h1>
                 </span>
             </header>
