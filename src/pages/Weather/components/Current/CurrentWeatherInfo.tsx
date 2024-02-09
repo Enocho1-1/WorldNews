@@ -2,6 +2,11 @@ import { useCurrentWeather } from "../../../../hooks"
 import { unixTimeConvertor,weatherIcon } from "../../../../utility"
 import { HourlyListItem } from "./HourlyListItem"
 
+export interface HourObject{
+    dt:number;
+    temp:number;
+    weather:any[];
+}
 export const CurrentWeatherInfo = () => {
     const {condition,hourly,sun,wind,temp,feels} = useCurrentWeather()
 

@@ -1,6 +1,9 @@
 import { weatherIcon } from "../../../../utility"
-
-export const HourlyListItem = ({item}) => {
+import { HourObject } from "./CurrentWeatherInfo"
+interface  Props {
+  item:HourObject
+}
+export const HourlyListItem = ({item}:Props) => {
     const {dt,temp,weather} = item
     const Temp = Math.ceil(temp)
     const date = new Date(dt * 1000)
@@ -8,8 +11,6 @@ export const HourlyListItem = ({item}) => {
     const minutes = "0" + date.getMinutes();
     const formattedTime = hours + ':' + minutes.substr(-2)
 
-    // console.log(weather[0].main)
-  
   return (
     <>
         <li className="border-x-[1px] border-gray-200 flex flex-col items-center">

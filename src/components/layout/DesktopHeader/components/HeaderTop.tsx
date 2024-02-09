@@ -15,7 +15,7 @@ export const HeaderTop = ({category,setCategory}:HTProp) => {
     const [hidden, setHidden] = useState(false)
       
   return (
-    <div className="bg-gray-900  h-inherit flex justify-between">
+    <div className="bg-gray-900  h-inherit flex justify-between ">
         <aside className="flex font-open_sans"> 
         <div className="bg-orange_red text-gray-900 px-4 h-inherit text-[2.2rem] flex items-center">
           <Link to="/" onClick={() => setCategory(HomeObject)} className="flex" >

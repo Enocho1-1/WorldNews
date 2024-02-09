@@ -41,7 +41,7 @@ export const userSearchLocation = async (obj: { location: any; setMain: any; set
 }
 
 // Unix Time Convertor
-export const unixTimeConvertor = (time: number) => {
+export const unixTimeConvertor = (time: any) => {
     const date = new Date(time * 1000)
     const hours = date.getHours();
     const minutes = "0" + date.getMinutes();
