@@ -1,8 +1,12 @@
 import { MobileIcons } from "./MobileIcons"
 import { MoreStories } from "./MoreStories"
+import { StateData } from "../IndividualNewsPage"
+interface NewsContentProp {
+  data:StateData
+}
 
-export const NewsContent = ({data}) => {
-    const [pubDate,description,content,keywords,creator,article_id] = data
+export const NewsContent = ({data}:NewsContentProp) => {
+    const {pubDate,description,content,keywords,creator,id} = data
    
 
   return (
@@ -28,7 +32,7 @@ export const NewsContent = ({data}) => {
         <MobileIcons />
 
         {/* More Stories Section */}
-         {keywords != null && <MoreStories array={keywords} id={article_id} />}
+         {keywords != null && <MoreStories array={keywords} id={id} />}
         
     </div>
   )

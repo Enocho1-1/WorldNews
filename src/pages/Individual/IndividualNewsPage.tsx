@@ -4,12 +4,20 @@ import {BannerImage,SocialIcons,NewsContent} from "./components"
 import generic from "../../assets/images/world_news_2017.jpg"
 import "./Individual.css"
 
+export interface StateData{
+  pubDate:string | null;
+  description: string | null;
+  content: string | null;
+  keywords: string[] | null;
+  creator: string[] | null;
+  id: number
+}
 export const IndividualNewsPage = () => {
     const {state} = useLocation()
-    const {title,image_url,pubDate,description,content,keywords,creator,article_id,country} = state.data
+    const {title,image_url,pubDate,description,content,keywords,creator,article_id} = state.data
     useTitle(title)
     const responsiveCSS = "max-[769px]:mt-0 min-[769px]:max-[1340px]:mt-[120px] min-[1340px]:mt-[90px]"
-    const contentArr = [pubDate,description,content,keywords,creator,article_id]
+    const Content:StateData = {pubDate:pubDate,description:description,content:content,keywords:keywords,creator:creator,id:article_id}
     const posterImage = image_url === null || image_url.includes("gif") || image_url.includes("Linkedin") || image_url.includes("LinkedIn") ? generic : image_url
 
 
@@ -27,7 +35,7 @@ export const IndividualNewsPage = () => {
              
               <div className="relative flex">
                 <SocialIcons/>
-                <NewsContent data={contentArr} />
+                <NewsContent data={Content} />
               </div>
 
             </aside>
