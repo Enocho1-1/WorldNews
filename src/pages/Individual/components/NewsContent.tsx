@@ -1,6 +1,7 @@
 import { MobileIcons } from "./MobileIcons"
 import { MoreStories } from "./MoreStories"
 import { StateData } from "../IndividualNewsPage"
+
 interface NewsContentProp {
   data:StateData
 }

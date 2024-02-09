@@ -1,8 +1,12 @@
 import { useMoreStories } from "../../../hooks/useMoreStories"
 import { MoreStoriesCard } from "./MoreStoriesCard"
 
+interface MoreStoriesProps{
+  array:string[];
+  id:number
+}
 
-export const MoreStories = ({array,id}) => {
+export const MoreStories = ({array,id}:MoreStoriesProps) => {
  
     const {data:filteredArticles} =  useMoreStories(array,id)
   return (

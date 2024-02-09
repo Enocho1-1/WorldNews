@@ -1,6 +1,11 @@
-import news from "../../../assets/images/world_news_2017.jpg"
 import { useNavigate } from "react-router-dom"
-export const MoreStoriesCard = ({item}) => {
+import { NewsData } from "../../../hooks/useJustInNews"
+import news from "../../../assets/images/world_news_2017.jpg"
+
+interface StoryProp{
+  item: NewsData
+}
+export const MoreStoriesCard = ({item}:StoryProp) => {
   const { title,image_url,pubDate} = item
   const posterImage = image_url
   const navigate = useNavigate()

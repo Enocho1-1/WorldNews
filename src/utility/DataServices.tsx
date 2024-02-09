@@ -1,4 +1,5 @@
-import { Updater } from "../hooks/useJustInNews";
+import { Updater} from "../hooks/useJustInNews";
+
 
 // Get User Current Location Weather
 export const currentLocationWeather = async (obj) => {
@@ -83,15 +84,14 @@ export const JustInNews = async (setData:Updater) => {
 }
 
 // More Stories 
-export const MoreStoriesFetch = async (setData,array,id) => {
-  const [keywordOne,keywordTwo,keywordThree,keywordFour] = array
+export const MoreStoriesFetch = async (setData:Updater,array:string[],id:number) => {
   const response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&country=us&language=en&category=world`)
   if(!response.ok){
     throw new Error(response.statusText)
   } else{
     const data = await response.json()
-    const filterData = data.results.filter(item => item.keywords !== null)
-    const filteredArticles = filterData.filter(item => item.article_id !== id && item.keywords.includes(keywordOne || keywordTwo || keywordThree || keywordFour))
+    const filterData = data.results.filter((item:any) => item.keywords !== null)
+    const filteredArticles = filterData.filter((item:any) => item.article_id !== id && item.keywords.includes(array[0]|| array[1] || array[2] || array[3]))
     setData(filteredArticles)
   }
 }
