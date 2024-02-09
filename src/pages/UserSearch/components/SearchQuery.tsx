@@ -4,8 +4,10 @@ import { NotFound } from "./NotFound"
 import { SearchQueryCard } from "./SearchQueryCard"
 import { Pagination } from "./Pagination"
 
-
-export const SearchQuery = ({query}) => {
+interface QueryProp{
+  query:string | null
+}
+export const SearchQuery = ({query}:QueryProp) => {
   const {data} = useNewsSearch(query)
   const [page,setPage] = useState(1)
   const [postperPage] = useState(10)
@@ -13,7 +15,7 @@ export const SearchQuery = ({query}) => {
   const lastIndex = page * postperPage
   const firstIndex = lastIndex - postperPage
   const queryData = data.slice(firstIndex,lastIndex)
-  const pageChange = (number) => {
+  const pageChange = (number:number) => {
     setPage(number)
   }
   return (
