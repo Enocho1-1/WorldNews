@@ -6,7 +6,7 @@ import { News } from "../../../DataStructures/NewsObj"
 import { NewsData } from "../../../../hooks/useJustInNews"
 
 
-interface  Props {
+export interface  Props {
   headerObject:Object
 }
 

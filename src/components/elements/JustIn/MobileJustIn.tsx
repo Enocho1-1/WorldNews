@@ -1,6 +1,7 @@
 import { JustInNews } from "./components/JustInNews"
+import { Props } from "./components/JustInNews"
 
-export const MobileJustIn = ({headerObject}) => {
+export const MobileJustIn = ({headerObject}:Props) => {
     const date = new Date()
   return (
     <div className="w-[100%] flex flex-col" >
