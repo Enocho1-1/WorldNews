@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom"
 import { useImgLoad } from "../../../hooks"
+import { NewsData } from "../../../hooks/useJustInNews"
 import { BlurEffect } from "../../../components"
 import news from "../../../assets/images/world_news_2017.jpg"
 
-export const SearchQueryCard = ({data}) => {
+interface QueryProp{
+  data: NewsData
+}
+export const SearchQueryCard = ({data}:QueryProp) => {
   const {country,image_url,title,description,pubDate,keywords} = data
   const navigate = useNavigate()
   const posterImage = image_url ? image_url : news
   const {imgLoad} = useImgLoad(posterImage)
   
-  const handleNavigate = (data) => {
+  const handleNavigate = (data:NewsData) => {
     navigate(`/News/${title}`,{state: {data:data}})
   }
   return (

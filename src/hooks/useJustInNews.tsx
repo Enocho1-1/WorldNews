@@ -14,7 +14,7 @@ export interface NewsData {
   full_description: string | null;
   image_url: string | null;
   source_id: string | null;
-  country: string[] | null;
+  country: string | null [];
   category: string[] | null;
   language: string | null;
 }
