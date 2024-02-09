@@ -23,7 +23,7 @@ export const currentLocationWeather = async (obj) => {
 }
 
 // Find User Search Location
-export const userSearchLocation = async (obj) => {
+export const userSearchLocation = async (obj: { location: any; setMain: any; setSys: any; setWeather: any; setWind: any; setVisibility: any; setFulfilled: any; setResponse: any; }) => {
     const {location,setMain,setSys,setWeather,setWind,setVisibility,setFulfilled,setResponse} = obj
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc`)
     if(!response.ok){
@@ -52,7 +52,7 @@ export const unixTimeConvertor = (time) => {
 }
 
 // Weather Icons 
-export const weatherIcon = (condition) => {
+export const weatherIcon = (condition:string) => {
     switch(condition){
       case 'Thunderstorm': 
         return "https://cdn-icons-png.flaticon.com/128/9755/9755210.png"
