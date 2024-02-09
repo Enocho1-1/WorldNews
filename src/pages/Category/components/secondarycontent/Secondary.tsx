@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { useState,useEffect } from "react"
 import { useLocation } from "react-router-dom"
+import { PrimaryProps } from "../primarycontent/Primary"
 import { SecondaryArticles } from "./SecondaryArticles"
 
-export const Secondary = ({news,colors}) => {
+
+export const Secondary = ({news,colors}:PrimaryProps) => {
     const [lastIndex,setLastIndex] = useState(15)
     const secondaryNews = news.slice(5,lastIndex)
     const location = useLocation()
