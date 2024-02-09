@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 
-export const useImgLoad = (src) => {
+export const useImgLoad = (src:string) => {
     const [imgLoad,setImgLoad] = useState(false)
 
     useEffect(() => {

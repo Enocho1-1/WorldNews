@@ -108,7 +108,7 @@ export const UserNewsSearch = async (query,setData) => {
 }
 
 // Category News
-export const CategoryNews = async (api,setData) => {
+export const CategoryNews = async (api:string,setData:Updater) => {
   const response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&country=us&language=en&category=${api}`)
   if(!response.ok){
     throw new Error(response.statusText)
