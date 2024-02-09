@@ -24,7 +24,7 @@ export const SearchQuery = ({query}:QueryProp) => {
          <SearchQueryCard key={index} data={item}/>
       )) }
    
-      <Pagination data={data} postperPage={postperPage} pageChange={pageChange}/>
+      <Pagination data={data.length} postperPage={postperPage} pageChange={pageChange}/>
     </div>
   )
 }

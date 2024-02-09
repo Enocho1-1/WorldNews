@@ -1,8 +1,11 @@
-
-
-export const Pagination = ({data,postperPage,pageChange}) => {
+interface PaginationProp{
+    data: number;
+    postperPage: number;
+    pageChange: (page:number) => void
+}
+export const Pagination = ({data,postperPage,pageChange}:PaginationProp) => {
     const array = []
-    for(let i = 1; i <= Math.ceil(data.length/postperPage); i++){
+    for(let i = 1; i <= Math.ceil(data/postperPage); i++){
         array.push(i)
     }
   return (
