@@ -1,6 +1,8 @@
+interface BannerProp{
+  image:string
+}
 
-
-export const BannerImage = ({image}) => {
+export const BannerImage = ({image}:BannerProp) => {
   return (
     <div className="relative flex flex-col">
          <img src={image} className="individual-img" alt="news-img" />

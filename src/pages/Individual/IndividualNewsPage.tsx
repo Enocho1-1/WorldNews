@@ -23,7 +23,7 @@ export const IndividualNewsPage = () => {
 
             {/* News Sections */}
             <aside className="mt-4 flex flex-col">
-              <BannerImage image={posterImage} country={country}/>
+              <BannerImage image={posterImage}/>
              
               <div className="relative flex">
                 <SocialIcons/>
