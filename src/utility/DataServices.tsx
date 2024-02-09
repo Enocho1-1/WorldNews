@@ -1,4 +1,5 @@
-import { Updater} from "../hooks/useJustInNews";
+import { NavigateFunction } from "react-router-dom";
+import { Updater,NewsData} from "../hooks/useJustInNews";
 
 
 // Get User Current Location Weather
@@ -119,6 +120,6 @@ export const CategoryNews = async (api:string,setData:Updater) => {
 }
 
 // Navagation to Individual Article Page
-export const navigateToArticlePage = (navigate,title,article) => {
+export const navigateToArticlePage = (navigate: NavigateFunction,title:string,article:NewsData) => {
   navigate(`/News/${title}`,{state: {data:article}})
 }
