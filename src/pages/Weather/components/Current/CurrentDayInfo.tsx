@@ -1,4 +1,4 @@
-
+import { weekdays } from "../../../../components/DataStructures/FooterArrays";
 
 export const CurrentDayInfo = () => {
     const date = new Date()
@@ -7,7 +7,6 @@ export const CurrentDayInfo = () => {
       timeStyle: 'short'
     });
 
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const day = weekdays[date.getUTCDay()]
     const todayDate = date.toLocaleDateString()
   return (
