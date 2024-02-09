@@ -97,7 +97,7 @@ export const MoreStoriesFetch = async (setData:Updater,array:string[],id:number)
 }
 
 // User News Search 
-export const UserNewsSearch = async (query:string,setData:Updater) => {
+export const UserNewsSearch = async (query:string | null,setData:Updater) => {
   const response = await fetch(`https://newsdata.io/api/1/archive?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&q=${query}&language=en`)
   if(!response.ok){
     throw new Error(response.statusText)
