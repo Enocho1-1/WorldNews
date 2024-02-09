@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useState,useEffect } from "react"
 
-export const useMatchMedia = (size) => {
+export const useMatchMedia = (size:number) => {
     const [myQuery, setMyQuery] = useState({
         matches: window.innerWidth < size ? true : false
       })
