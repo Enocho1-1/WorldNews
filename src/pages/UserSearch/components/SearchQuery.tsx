@@ -5,7 +5,7 @@ import { SearchQueryCard } from "./SearchQueryCard"
 import { Pagination } from "./Pagination"
 
 interface QueryProp{
-  query:string | null
+  query:string
 }
 export const SearchQuery = ({query}:QueryProp) => {
   const {data} = useNewsSearch(query)
