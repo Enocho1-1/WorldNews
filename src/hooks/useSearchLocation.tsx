@@ -2,7 +2,7 @@
 import { useState,useEffect } from "react"
 import { userSearchLocation } from "../utility"
 
-export const useSearchLocation = (location:string | null) => {
+export const useSearchLocation = (location:any) => {
     const [main,setMain] = useState("")
     const [sys,setSys] = useState("")
     const [weather,setWeather] = useState([])

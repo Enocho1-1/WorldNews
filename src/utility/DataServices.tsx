@@ -23,7 +23,7 @@ export const currentLocationWeather = async (obj: { latitude: any; longitude: an
 }
 
 // Find User Search Location
-export const userSearchLocation = async (obj: { location: any; setMain: any; setSys: any; setWeather: any; setWind: any; setVisibility: any; setFulfilled: any; setResponse: any; }) => {
+export const userSearchLocation = async (obj: { location: string; setMain: any; setSys: any; setWeather: any; setWind: any; setVisibility: any; setFulfilled: any; setResponse: any; }) => {
     const {location,setMain,setSys,setWeather,setWind,setVisibility,setFulfilled,setResponse} = obj
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc`)
     if(!response.ok){

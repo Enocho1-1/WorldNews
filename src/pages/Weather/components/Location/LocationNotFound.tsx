@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 
-export const LocationNotFound = ({value}) => {
+interface NotFoundProp{
+  value:string | null
+}
+export const LocationNotFound = ({value}:NotFoundProp) => {
   return (
     <div className="h-[500px] flex justify-center items-center">
         <section className="mt-10 flex flex-col">
