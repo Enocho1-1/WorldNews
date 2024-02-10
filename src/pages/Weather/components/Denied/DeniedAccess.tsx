@@ -25,7 +25,7 @@ export const DeniedAccess = () => {
 
   return (
     <div className="relative max-w-inherit w-[100%]">
-    {fulfilled && <LocationDetails location={location}/>   }
+      {fulfilled && <LocationDetails location={location}/>   }
     </div>
   )
 }
