@@ -1,8 +1,9 @@
 import { NavigateFunction } from "react-router-dom";
 import { Updater,NewsData} from "../hooks/useJustInNews";
+import { UserSearchObj } from "../hooks/useSearchLocation";
 
 interface CurrentLocationObj{latitude: any; longitude: any; setCondition: any; setHourly: any; setSun: any; setWind: any; setTemp: any; setFeels: any; setFulfilled: any;}
-interface SearchLocationObj{location: string; setMain: any; setSys: any; setWeather: any; setWind: any; setVisibility: any; setFulfilled: any; setResponse: any;}
+interface SearchLocationObj{location: string; setMain: (obj:UserSearchObj) => void; setFulfilled: (value:boolean) => void; setResponse: any;}
 
 
 // Get User Current Location Weather
@@ -27,17 +28,13 @@ export const currentLocationWeather = async (obj: CurrentLocationObj ) => {
 
 // Find User Search Location
 export const SearchLocationDetails = async (obj: SearchLocationObj) => {
-    const {location,setMain,setSys,setWeather,setWind,setVisibility,setFulfilled,setResponse} = obj
+    const {location,setMain,setFulfilled,setResponse} = obj
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=38a098307656f7defaf84b8fc7e288bc`)
     if(!response.ok){
         setResponse(response)
     }else {
         const result = await response.json();
-        setMain(result.main)
-        setSys(result.sys)
-        setWeather(result.weather[0])
-        setWind(result.wind)
-        setVisibility(result.visibility)
+        setMain(result)
         setFulfilled(true)
         setResponse(response)
     }

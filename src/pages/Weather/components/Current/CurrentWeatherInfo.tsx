@@ -34,20 +34,20 @@ export const CurrentWeatherInfo = () => {
             <div className="flex max-[1150px]:justify-center">
                 {/* Conditon + Description */}
                 <span className="flex flex-col">
-                    <h1 className="text-5xl text-orange-400 font-light max-[1150px]:text-3xl" data-testid = "weather-condition">{condition}</h1>
+                    <h1 className="text-5xl text-orange-400 font-light max-[1150px]:text-3xl" >{condition}</h1>
                 </span>
 
                 {/* Temp + Feels Like */}
                 <span className=" ml-[6.25rem] w-[15.625rem] flex items-center">
-                    <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem] " data-testid = "temp">{temp}°F</h1>
-                    <p className="text-[35px] ml-4 text-gray-700 font-bold max-[1150px]:text-[2rem]" data-testid = "real-feel">| {feels}°F</p>
+                    <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem] " >{temp}°F</h1>
+                    <p className="text-[35px] ml-4 text-gray-700 font-bold max-[1150px]:text-[2rem]" >| {feels}°F</p>
                 </span>
             </div>
         
             {/* Metrics */}
             <div className="mt-8 flex max-[1150px]:justify-center">
                 { metrics.map((item,index) => (
-                    <span key={index} className="flex text-gray-700 text-xl" data-testid = "metrics">
+                    <span key={index} className="flex text-gray-700 text-xl" >
                         <p className={`mx-4 ${item.icon}`}></p>
                         <p className="mx-4 font-semibold">{item.info} {item.metric}</p>
                     </span>

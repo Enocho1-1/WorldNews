@@ -2,33 +2,30 @@
 import { useState,useEffect } from "react"
 import { SearchLocationDetails } from "../utility"
 
-interface Main{
-  feels_like: number;
-  humidity: number;
-  pressure: number;
-  temp: number;
-  temp_max: number;
-  temp_min: number
+export interface UserSearchObj{
+  coord: {lat:number,lon:number};
+  weather: {description:string,icon:string,id:number,main:string}[];
+  base: string;
+  main: {feels_like:number,grnd_level:number,humidity:number,pressure:number,sea_level:number,temp:number,temp_max:number,temp_min:number};
+  visibility: number;
+  wind: {deg:number,gust:number,speed:number};
+  clouds: {all:number};
+  dt: number;
+  sys:{country:string,sunrise:number,sunset:number};
+  timezone:number;
+  id:number;
+  name:string;
+  cod:number
 }
+
 export const useSearchLocation = (location:any) => {
-    const [main,setMain] = useState("")
-    const [sys,setSys] = useState("")
-    const [weather,setWeather] = useState([])
-    const [wind,setWind] = useState("")
-    const [visibility,setVisibility] = useState("")
+    const [main,setMain] = useState<UserSearchObj | null>(null)
     const [fulfilled,setFulfilled] = useState(false)
     const [response,setResponse] = useState({})
-
-
-
 
     const locationObj = {
       location:location,
       setMain:setMain,
-      setSys:setSys,
-      setWeather:setWeather,
-      setWind:setWind,
-      setVisibility:setVisibility,
       setFulfilled:setFulfilled,
       setResponse:setResponse
     }
@@ -37,5 +34,5 @@ export const useSearchLocation = (location:any) => {
       SearchLocationDetails(locationObj)
     },[location])
 
-  return {main,sys,weather,wind,visibility,fulfilled,response}
+  return {main,fulfilled,response}
 }
