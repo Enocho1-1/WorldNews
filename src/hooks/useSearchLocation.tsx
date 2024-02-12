@@ -1,7 +1,15 @@
 /* eslint-disable */
 import { useState,useEffect } from "react"
-import { userSearchLocation } from "../utility"
+import { SearchLocationDetails } from "../utility"
 
+interface Main{
+  feels_like: number;
+  humidity: number;
+  pressure: number;
+  temp: number;
+  temp_max: number;
+  temp_min: number
+}
 export const useSearchLocation = (location:any) => {
     const [main,setMain] = useState("")
     const [sys,setSys] = useState("")
@@ -10,6 +18,9 @@ export const useSearchLocation = (location:any) => {
     const [visibility,setVisibility] = useState("")
     const [fulfilled,setFulfilled] = useState(false)
     const [response,setResponse] = useState({})
+
+
+
 
     const locationObj = {
       location:location,
@@ -23,7 +34,7 @@ export const useSearchLocation = (location:any) => {
     }
     
     useEffect(() => { 
-        userSearchLocation(locationObj)
+      SearchLocationDetails(locationObj)
     },[location])
 
   return {main,sys,weather,wind,visibility,fulfilled,response}

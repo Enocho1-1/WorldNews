@@ -12,9 +12,7 @@ export const DeniedAccess = () => {
         setLocation(randomCountry.name)
     }
 
-    useEffect(() => {
-      randomLocation(locations)
-    },[])
+    useEffect(() => {randomLocation(locations)},[])
 
     const {fulfilled} = useSearchLocation(location)
 

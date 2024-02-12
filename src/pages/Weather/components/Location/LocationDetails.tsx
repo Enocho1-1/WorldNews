@@ -1,44 +1,49 @@
 import { useSearchLocation } from "../../../../hooks"
 import { unixTimeConvertor,weatherIcon } from "../../../../utility"
 
-export const LocationDetails = ({location}) => {
-    const {main,sys,weather,wind,visibility} = useSearchLocation(location)
-    const { feels_like,humidity,pressure,temp} = main
-    const { country,sunrise} = sys
-    const {main: weather_main,description} = weather
-    const {speed} = wind
-    const metrics = [
-        {
-            info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
-            icon: "bi bi-brightness-alt-high",
-            metric:""
-        },
-        {
-            info: Math.ceil(speed),
-            icon:"bi bi-wind",
-            metric: "km"
-        }
-    ]
+interface  Props{
+    location:any;
+}
 
-    const overviewObj = [
-        {
-            name:"Humidity",
-            value: humidity
-        },
-        {
-            name: "Pressure",
-            value: pressure
-        },
-        {
-            name: "Visibility",
-            value: visibility
-        }
-    ]
+export const LocationDetails = ({location}:Props) => {
+    const {main,sys,weather,wind,visibility} = useSearchLocation(location)
+
+    console.log(main)
+    // const { country,sunrise} = sys
+    // const {main: weather_main,description} = weather
+    // const {speed} = wind
+    // const metrics = [
+    //     {
+    //         info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
+    //         icon: "bi bi-brightness-alt-high",
+    //         metric:""
+    //     },
+    //     {
+    //         info: Math.ceil(speed),
+    //         icon:"bi bi-wind",
+    //         metric: "km"
+    //     }
+    // ]
+
+    // const overviewObj = [
+    //     {
+    //         name:"Humidity",
+    //         value: humidity
+    //     },
+    //     {
+    //         name: "Pressure",
+    //         value: pressure
+    //     },
+    //     {
+    //         name: "Visibility",
+    //         value: visibility
+    //     }
+    // ]
   
 
   return (
     <>
-         <header className="mt-8 flex">
+         {/* <header className="mt-8 flex">
               <span className="flex flex-col mx-4">
                 <h1 className="font-roboto text-gray-800 text-3xl max-[480px]:text-xl flex max-[1150px]:text-3xl">{location.toUpperCase()},{country} <img src={`https://flagsapi.com/${country}/shiny/64.png`} alt={country} className="h-10 w-10 max-[480px]:h-8 max-[480px]:w-8 ml-2 self-end" /></h1>
                 <p className="text-3xl text-orange-400 font-light max-[1150px]:text-lg">{weather_main}</p>
@@ -71,7 +76,7 @@ export const LocationDetails = ({location}) => {
                 ))}
             </div>
 
-            <img src={weatherIcon(weather_main)} alt={weather_main} className="absolute top-[15%] right-[15%] text-[150px] text-gray-400 max-[1150px]:hidden"/>
+            <img src={weatherIcon(weather_main)} alt={weather_main} className="absolute top-[15%] right-[15%] text-[150px] text-gray-400 max-[1150px]:hidden"/> */}
     </>
   )
 }
