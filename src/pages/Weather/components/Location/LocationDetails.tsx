@@ -12,8 +12,8 @@ export const LocationDetails = ({location}:Props) => {
     let sunrise = main?.sys?.sunrise !== undefined ?unixTimeConvertor(main?.sys?.sunrise) : 1
     let weather_main = main?.weather !== undefined ? main?.weather : []
     let wind_speed =  main?.wind?.speed !== undefined ? main?.wind?.speed : 1
-    let temperature = main?.main?.temp !== undefined ? main?.main?.temp : 1
-    let feelTemperature = main?.main?.feels_like !== undefined ? main?.main?.feels_like : 1
+    let temperature = main?.main?.temp !== undefined ? Math.ceil(main?.main?.temp) : 1
+    let feelTemperature = main?.main?.feels_like !== undefined ? Math.ceil(main?.main?.feels_like) : 1
     let humidity = main?.main?.humidity
     let pressure = main?.main?.pressure
     let visibility = main?.visibility
@@ -63,8 +63,8 @@ export const LocationDetails = ({location}:Props) => {
               </span>
             
                 <span className=" ml-[6.25rem] flex max-[490px]:flex-col max-[490px]:ml-[4rem]">
-                    <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem]" data-testid = "temp">{Math.ceil(temperature)}°F</h1>
-                    <p className="text-[2.188rem] ml-4 text-gray-700 font-bold  max-[1150px]:text-[1.5rem] max-[480px]:hidden" data-testid = "real-feel">| {Math.ceil(feelTemperature)}°F</p>
+                    <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem]" data-testid = "temp">{temperature}°F</h1>
+                    <p className="text-[2.188rem] ml-4 text-gray-700 font-bold  max-[1150px]:text-[1.5rem] max-[480px]:hidden" data-testid = "real-feel">| {feelTemperature}°F</p>
                 </span>
             </header>
 
