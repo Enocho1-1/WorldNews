@@ -7,17 +7,17 @@ export interface HourObject{
     temp:number;
     weather:{id:number,main:string,description:string}[];
 }
+
 export const CurrentWeatherInfo = () => {
     const {main} = useCurrentWeather()
 
     let hourly = main?.hourly !== undefined ? main?.hourly.slice(0,8) : []
     let current = main?.current
     let condition = current?.weather[0]?.main !== undefined ? current?.weather[0]?.main : 'clear'
-    let description = current?.weather[0]?.description
     let sunrise = main?.daily[0]?.sunrise
-    let wind = current?.wind_speed
-    let temp = current?.temp
-    let feels = current?.feels_like
+    let wind = current?.wind_speed !== undefined ? Math.ceil(current?.wind_speed) : 1
+    let temp = current?.temp !== undefined ? Math.ceil(current?.temp) : 1
+    let feels = current?.feels_like !== undefined ? Math.ceil(current?.feels_like) : 1
 
 
     const metricsArr = [
@@ -45,7 +45,7 @@ export const CurrentWeatherInfo = () => {
                 </span>
 
              
-                <span className=" ml-[6.25rem] w-[15.625rem] flex items-center">
+                <span className=" ml-[6.25rem] w-fit flex items-center">
                     <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem] " >{temp}°F</h1>
                     <p className="text-[35px] ml-4 text-gray-700 font-bold max-[1150px]:text-[2rem]" >| {feels}°F</p>
                 </span>
