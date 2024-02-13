@@ -10,16 +10,17 @@ export interface HourObject{
 export const CurrentWeatherInfo = () => {
     const {main} = useCurrentWeather()
 
-    let hourly = main?.hourly.slice(0,8)
+    let hourly = main?.hourly !== undefined ? main?.hourly.slice(0,8) : []
     let current = main?.current
-    let condition = current?.weather[0]?.main
+    let condition = current?.weather[0]?.main !== undefined ? current?.weather[0]?.main : 'clear'
     let description = current?.weather[0]?.description
     let sunrise = main?.daily[0]?.sunrise
     let wind = current?.wind_speed
     let temp = current?.temp
     let feels = current?.feels_like
 
-    const metrics = [
+    console.log(hourly)
+    const metricsArr = [
         {
             info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
             icon: "bi bi-brightness-alt-high",
@@ -32,13 +33,10 @@ export const CurrentWeatherInfo = () => {
         }
     ]
    
-
-   
-
   return (
 
     <>
-         {/* <img src={weatherIcon(condition)} alt={condition} className="absolute top-[30%] right-[15%]  text-[150px] text-gray-400 max-[1150px]:hidden" />
+         <img src={weatherIcon(condition)} alt={condition} className="absolute top-[30%] right-[15%]  text-[150px] text-gray-400 max-[1150px]:hidden" />
         <aside className=" mt-5 ml-4 flex flex-col">
             <div className="flex max-[1150px]:justify-center">
               
@@ -55,7 +53,7 @@ export const CurrentWeatherInfo = () => {
         
         
             <div className="mt-8 flex max-[1150px]:justify-center">
-                { metrics.map((item,index) => (
+                { metricsArr.map((item,index) => (
                     <span key={index} className="flex text-gray-700 text-xl" >
                         <p className={`mx-4 ${item.icon}`}></p>
                         <p className="mx-4 font-semibold">{item.info} {item.metric}</p>
@@ -64,12 +62,12 @@ export const CurrentWeatherInfo = () => {
             </div>
 
            
-            <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
+            {/* <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
                 {hourlyChart.map((item,index) => (
                     <HourlyListItem key={index} item={item}/>
                 ))}
-            </ul>
-        </aside>  */}
+            </ul> */}
+        </aside> 
     </>
   )
 }

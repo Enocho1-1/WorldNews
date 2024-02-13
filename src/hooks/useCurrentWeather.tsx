@@ -2,10 +2,11 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../utility";
 
+interface WeatherDetail{clouds:number,dew_point:number,dt:number,feels_like:number,humidity:number,pop:number,pressure:number,temp:number,uvi:number,visibility:number,weather:{id:number,main:string,description:string}[],wind_deg:number,wind_gust:number,wind_speed:number}
 export interface CurrentWeatherApi{
-  current: {clouds:number,dew_point:number,dt:number,feels_like:number,humidity:number,pop:number,pressure:number,temp:number,uvi:number,visibility:number,weather:{id:number,main:string,description:string}[],wind_deg:number,wind_gust:number,wind_speed:number};
+  current: WeatherDetail;
   daily:{dt:number, sunrise:number,sunset:number}[];
-  hourly:{dt:number, sunrise:number,sunset:number}[];
+  hourly:WeatherDetail[];
   lat:number;
   lon:number;
   minutely:{dt:number,precipitation:number}[];
