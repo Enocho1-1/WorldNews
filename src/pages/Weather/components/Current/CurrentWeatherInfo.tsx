@@ -19,7 +19,7 @@ export const CurrentWeatherInfo = () => {
     let temp = current?.temp
     let feels = current?.feels_like
 
-    console.log(hourly)
+
     const metricsArr = [
         {
             info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
@@ -62,11 +62,11 @@ export const CurrentWeatherInfo = () => {
             </div>
 
            
-            {/* <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
-                {hourlyChart.map((item,index) => (
+            <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
+                {hourly.map((item,index) => (
                     <HourlyListItem key={index} item={item}/>
                 ))}
-            </ul> */}
+            </ul>
         </aside> 
     </>
   )
