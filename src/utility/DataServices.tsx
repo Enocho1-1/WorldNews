@@ -17,12 +17,6 @@ export const currentLocationWeather = async (obj: CurrentLocationObj ) => {
         } else{
             const data = await response.json()
             setMain(data)
-            // setHourly(data.hourly)
-            // setCondition(data.current.weather[0].main)
-            // setSun(data.current.sunrise)
-            // setWind(Math.ceil(data.current.wind_speed))
-            // setTemp(Math.ceil(data.current.temp))
-            // setFeels(Math.ceil(data.current.feels_like))
             setFulfilled(true)
         }
    
@@ -43,7 +37,7 @@ export const SearchLocationDetails = async (obj: SearchLocationObj) => {
 }
 
 // Unix Time Convertor
-export const unixTimeConvertor = (time: any) => {
+export const unixTimeConvertor = (time: number) => {
     const date = new Date(time * 1000)
     const hours = date.getHours();
     const minutes = "0" + date.getMinutes();
@@ -93,7 +87,9 @@ export const MoreStoriesFetch = async (setData:Updater,array:string[],id:number)
     throw new Error(response.statusText)
   } else{
     const data = await response.json()
+   
     const filterData = data.results.filter((item:any) => item.keywords !== null)
+    console.log(filterData)
     const filteredArticles = filterData.filter((item:any) => item.article_id !== id && item.keywords.includes(array[0]|| array[1] || array[2] || array[3]))
     setData(filteredArticles)
   }

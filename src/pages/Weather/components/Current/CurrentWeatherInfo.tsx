@@ -14,7 +14,7 @@ export const CurrentWeatherInfo = () => {
     let hourly = main?.hourly !== undefined ? main?.hourly.slice(0,8) : []
     let current = main?.current
     let condition = current?.weather[0]?.main !== undefined ? current?.weather[0]?.main : 'clear'
-    let sunrise = main?.daily[0]?.sunrise
+    let sunrise = main?.daily[0]?.sunrise !== undefined ? main?.daily[0]?.sunrise : 1
     let wind = current?.wind_speed !== undefined ? Math.ceil(current?.wind_speed) : 1
     let temp = current?.temp !== undefined ? Math.ceil(current?.temp) : 1
     let feels = current?.feels_like !== undefined ? Math.ceil(current?.feels_like) : 1

@@ -5,6 +5,7 @@ interface  Props {
 }
 export const HourlyListItem = ({item}:Props) => {
     const {dt,temp,weather} = item
+
     const Temp = Math.ceil(temp)
     const date = new Date(dt * 1000)
     const hours = date.getHours();

@@ -9,7 +9,7 @@ export const LocationDetails = ({location}:Props) => {
     const {main} = useSearchLocation(location)
 
     let country = main?.sys?.country
-    let sunrise = main?.sys?.sunrise
+    let sunrise = main?.sys?.sunrise !== undefined ?unixTimeConvertor(main?.sys?.sunrise) : 1
     let weather_main = main?.weather !== undefined ? main?.weather : []
     let wind_speed =  main?.wind?.speed !== undefined ? main?.wind?.speed : 1
     let temperature = main?.main?.temp !== undefined ? main?.main?.temp : 1
@@ -20,7 +20,7 @@ export const LocationDetails = ({location}:Props) => {
 
     const metricsArr = [
         {
-            info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
+            info:`Sunrise - ${sunrise}`,
             icon: "bi bi-brightness-alt-high",
             metric:""
         },
