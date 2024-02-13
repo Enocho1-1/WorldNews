@@ -2,6 +2,17 @@
 import { useState,useEffect } from "react";
 import { currentLocationWeather } from "../utility";
 
+interface CurrentWeatherApi{
+  current: {dt:number, sunrise:number,sunset:number};
+  daily:{dt:number, sunrise:number,sunset:number}[];
+  hourly:{clouds:number,dew_point:number,dt:number,feels_like:number,humidity:number,pop:number,pressure:number,temp:number,uvi:number,visibility:number,weather:{id:number,main:string,description:string}[],wind_deg:number,wind_gust:number,wind_speed:number}[];
+  lat:number;
+  lon:number;
+  minutely:{dt:number,precipitation:number}[];
+  timezone:string;
+  timezone_offset:number
+}
+
 export const useCurrentWeather = () => {
     const [condition,setCondition] = useState("")
     const [hourly,setHourly] = useState([])

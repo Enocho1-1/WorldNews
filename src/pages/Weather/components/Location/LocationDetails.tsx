@@ -10,10 +10,10 @@ export const LocationDetails = ({location}:Props) => {
 
     let country = main?.sys?.country
     let sunrise = main?.sys?.sunrise
-    let weather_main = main?.weather != undefined ? main?.weather : []
-    let wind_speed =  main?.wind?.speed != undefined ? main?.wind?.speed : 1
-    let temperature = main?.main?.temp != undefined ? main?.main?.temp : 1
-    let feelTemperature = main?.main?.feels_like != undefined ? main?.main?.feels_like : 1
+    let weather_main = main?.weather !== undefined ? main?.weather : []
+    let wind_speed =  main?.wind?.speed !== undefined ? main?.wind?.speed : 1
+    let temperature = main?.main?.temp !== undefined ? main?.main?.temp : 1
+    let feelTemperature = main?.main?.feels_like !== undefined ? main?.main?.feels_like : 1
     let humidity = main?.main?.humidity
     let pressure = main?.main?.pressure
     let visibility = main?.visibility

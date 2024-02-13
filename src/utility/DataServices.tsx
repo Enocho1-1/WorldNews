@@ -1,9 +1,9 @@
 import { NavigateFunction } from "react-router-dom";
 import { Updater,NewsData} from "../hooks/useJustInNews";
-import { UserSearchObj } from "../hooks/useSearchLocation";
+import { WeatherApiObject } from "../hooks/useSearchLocation";
 
 interface CurrentLocationObj{latitude: any; longitude: any; setCondition: any; setHourly: any; setSun: any; setWind: any; setTemp: any; setFeels: any; setFulfilled: any;}
-interface SearchLocationObj{location: string; setMain: (obj:UserSearchObj) => void; setFulfilled: (value:boolean) => void; setResponse: any;}
+interface SearchLocationObj{location: string; setMain: (obj:WeatherApiObject) => void; setFulfilled: (value:boolean) => void; setResponse: any;}
 
 
 // Get User Current Location Weather

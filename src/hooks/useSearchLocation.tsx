@@ -2,7 +2,7 @@
 import { useState,useEffect } from "react"
 import { SearchLocationDetails } from "../utility"
 
-export interface UserSearchObj{
+export interface WeatherApiObject{
   coord: {lat:number,lon:number};
   weather: {description:string,icon:string,id:number,main:string}[];
   base: string;
@@ -18,8 +18,9 @@ export interface UserSearchObj{
   cod:number
 }
 
+
 export const useSearchLocation = (location:any) => {
-    const [main,setMain] = useState<UserSearchObj | null>(null)
+    const [main,setMain] = useState<WeatherApiObject | null>(null)
     const [fulfilled,setFulfilled] = useState(false)
     const [response,setResponse] = useState({})
 
