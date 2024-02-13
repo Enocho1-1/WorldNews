@@ -1,26 +1,28 @@
 import { NavigateFunction } from "react-router-dom";
 import { Updater,NewsData} from "../hooks/useJustInNews";
 import { WeatherApiObject } from "../hooks/useSearchLocation";
+import { CurrentWeatherApi } from "../hooks/useCurrentWeather";
 
-interface CurrentLocationObj{latitude: any; longitude: any; setCondition: any; setHourly: any; setSun: any; setWind: any; setTemp: any; setFeels: any; setFulfilled: any;}
+interface CurrentLocationObj{latitude: number; longitude: number; setMain:(object:CurrentWeatherApi) => void; setFulfilled: (value:boolean) => void}
 interface SearchLocationObj{location: string; setMain: (obj:WeatherApiObject) => void; setFulfilled: (value:boolean) => void; setResponse: any;}
 
 
 // Get User Current Location Weather
 export const currentLocationWeather = async (obj: CurrentLocationObj ) => {
-        const {latitude,longitude,setCondition,setHourly,setSun,setWind,setTemp,setFeels,setFulfilled} = obj
+        const {latitude,longitude,setMain,setFulfilled} = obj
  
         const response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&units=imperial&appid=a9426195c75a3d82140eabc394b3649e`)
         if(!response.ok){
             throw new Error(response.statusText);
         } else{
             const data = await response.json()
-            setHourly(data.hourly)
-            setCondition(data.current.weather[0].main)
-            setSun(data.current.sunrise)
-            setWind(Math.ceil(data.current.wind_speed))
-            setTemp(Math.ceil(data.current.temp))
-            setFeels(Math.ceil(data.current.feels_like))
+            setMain(data)
+            // setHourly(data.hourly)
+            // setCondition(data.current.weather[0].main)
+            // setSun(data.current.sunrise)
+            // setWind(Math.ceil(data.current.wind_speed))
+            // setTemp(Math.ceil(data.current.temp))
+            // setFeels(Math.ceil(data.current.feels_like))
             setFulfilled(true)
         }
    

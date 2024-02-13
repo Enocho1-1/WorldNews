@@ -5,14 +5,23 @@ import { HourlyListItem } from "./HourlyListItem"
 export interface HourObject{
     dt:number;
     temp:number;
-    weather:any[];
+    weather:{id:number,main:string,description:string}[];
 }
 export const CurrentWeatherInfo = () => {
-    const {condition,hourly,sun,wind,temp,feels} = useCurrentWeather()
+    const {main} = useCurrentWeather()
+
+    let hourly = main?.hourly.slice(0,8)
+    let current = main?.current
+    let condition = current?.weather[0]?.main
+    let description = current?.weather[0]?.description
+    let sunrise = main?.daily[0]?.sunrise
+    let wind = current?.wind_speed
+    let temp = current?.temp
+    let feels = current?.feels_like
 
     const metrics = [
         {
-            info:`Sunrise - ${unixTimeConvertor(sun)}`,
+            info:`Sunrise - ${unixTimeConvertor(sunrise)}`,
             icon: "bi bi-brightness-alt-high",
             metric:""
         },
@@ -23,28 +32,28 @@ export const CurrentWeatherInfo = () => {
         }
     ]
    
-    const hourlyChart = hourly.slice(0,8)
+
    
 
   return (
 
     <>
-        <img src={weatherIcon(condition)} alt={condition} className="absolute top-[30%] right-[15%]  text-[150px] text-gray-400 max-[1150px]:hidden" />
+         {/* <img src={weatherIcon(condition)} alt={condition} className="absolute top-[30%] right-[15%]  text-[150px] text-gray-400 max-[1150px]:hidden" />
         <aside className=" mt-5 ml-4 flex flex-col">
             <div className="flex max-[1150px]:justify-center">
-                {/* Conditon + Description */}
+              
                 <span className="flex flex-col">
                     <h1 className="text-5xl text-orange-400 font-light max-[1150px]:text-3xl" >{condition}</h1>
                 </span>
 
-                {/* Temp + Feels Like */}
+             
                 <span className=" ml-[6.25rem] w-[15.625rem] flex items-center">
                     <h1 className="text-[2.813rem] text-orange-400 font-bold max-[1150px]:text-[2rem] " >{temp}°F</h1>
                     <p className="text-[35px] ml-4 text-gray-700 font-bold max-[1150px]:text-[2rem]" >| {feels}°F</p>
                 </span>
             </div>
         
-            {/* Metrics */}
+        
             <div className="mt-8 flex max-[1150px]:justify-center">
                 { metrics.map((item,index) => (
                     <span key={index} className="flex text-gray-700 text-xl" >
@@ -54,13 +63,13 @@ export const CurrentWeatherInfo = () => {
                 ))}
             </div>
 
-            {/* Hourly Chart Display */}
+           
             <ul className="mt-10 mr-8 grid grid-cols-eightcols max-[1150px]:grid-cols-fourcols max-[1150px]:gap-y-4">
                 {hourlyChart.map((item,index) => (
                     <HourlyListItem key={index} item={item}/>
                 ))}
             </ul>
-        </aside>
+        </aside>  */}
     </>
   )
 }
