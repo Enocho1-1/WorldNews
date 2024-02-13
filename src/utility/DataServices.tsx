@@ -87,9 +87,7 @@ export const MoreStoriesFetch = async (setData:Updater,array:string[],id:number)
     throw new Error(response.statusText)
   } else{
     const data = await response.json()
-   
-    const filterData = data.results.filter((item:any) => item.keywords !== null)
-    console.log(filterData)
+    const filterData = data.results.filter((item:NewsData) => item.keywords !== null)
     const filteredArticles = filterData.filter((item:any) => item.article_id !== id && item.keywords.includes(array[0]|| array[1] || array[2] || array[3]))
     setData(filteredArticles)
   }
