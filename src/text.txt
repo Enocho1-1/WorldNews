@@ -1,7 +1,0 @@
-https://newsapi.org/v2/everything?q=general&apiKey=15ba8c0ae9064145a3aa6eebccf162fd
-
- https://newsdata.io/api/1/news?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&country=us&language=en&category=world 
-
- https://newsdata.io/api/1/news?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&q=Business&country=us&language=en&category=business
- 
- https://newsdata.io/api/1/archive?apikey=pub_35547943f78cb2ebe00ce240baf445bbdb4b9&q=ghana&language=en
